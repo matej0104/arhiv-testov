@@ -20,17 +20,21 @@ jobs:
       - name: Compile Test.1.1
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: G3A/Test.1.1.tex
+          root_file: G3A/tex/Test.1.1.tex
 
       - name: Compile Test.1.2
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: G3A/Test.1.2.tex
+          root_file: G3A/tex/Test.1.2.tex
 
-      - name: Create PDF directory
+      - name: Create PDF folder
         run: |
-          mkdir -p pdf/2026_27/G3A
-          cp *.pdf pdf/2026_27/G3A/
+          mkdir -p G3A/pdf
+          find . -maxdepth 1 -name "*.pdf" -exec cp {} G3A/pdf/ \;
+
+      - name: List PDFs
+        run: |
+          find G3A/pdf -name "*.pdf"
 
       - name: Commit PDFs
         uses: stefanzweifel/git-auto-commit-action@v5
