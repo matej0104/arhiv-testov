@@ -1,0 +1,23 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.s*nctex.gz
+*.out
+*.toc
+*.lof
+*.lot
+**xwm
+
+# Latex*k
+*.nav
+*.snm
+*.vr*
+
+# mac*S
+.DS_Store
+
+# Windows
+Thumbs.db
+`*
