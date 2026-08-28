@@ -5,16 +5,17 @@ import glob
 results = []
 
 for root, dirs, files in os.walk("."):
-    
-    if "index.json" not in files:
+
+    if "metadata.json" not in files:
         continue
 
-    meta_file = os.path.join(root, "index.json")
+    meta_file = os.path.join(root, "metadata.json")
 
     try:
         with open(meta_file, encoding="utf-8") as f:
             meta = json.load(f)
-    except:
+    except Exception as e:
+        print(f"Napaka pri branju {meta_file}: {e}")
         continue
 
     pattern = meta.get("pattern", "*.tex")
