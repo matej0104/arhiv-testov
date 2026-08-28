@@ -1,4 +1,4 @@
-name: Build PDFs
+name: Build PDF
 
 on:
   push:
@@ -7,30 +7,19 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate index
-        run: python generate_index.py
-
-      - name: Show generated index
-        run: cat index.json
-
-      - name: Compile TEX files
+      - name: Compile G3A Test
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            Test.1.1.tex
-            Test.1.2.tex
-            Test.1.3.tex
+          root_file: G3A/Test1.1.tex
 
-      - name: Upload PDFs
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: pdfs
-          path: "*.pdf"
+          path: G3A/*.pdf
