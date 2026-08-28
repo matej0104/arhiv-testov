@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,12 +27,12 @@ jobs:
         with:
           root_file: G3A/Test.1.2.tex
 
-      - name: List PDFs
+      - name: Create PDF directory
         run: |
-          find . -name "*.pdf"
+          mkdir -p pdf/2026_27/G3A
+          cp *.pdf pdf/2026_27/G3A/
 
-      - name: Upload PDFs
-        uses: actions/upload-artifact@v4
+      - name: Commit PDFs
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: pdfs
-          path: "**/*.pdf"
+          commit_message: "Auto update PDFs"
