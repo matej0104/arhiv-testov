@@ -20,12 +20,12 @@ jobs:
       - name: Compile Test.1.1
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: G3A/tex/Test.1.1.tex
+          root_file: G3A/Test.1.1.tex
 
       - name: Compile Test.1.2
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: G3A/tex/Test.1.2.tex
+          root_file: G3A/Test.1.2.tex
 
       - name: Create PDF folder
         run: |
