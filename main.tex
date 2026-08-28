@@ -1,6 +1,7 @@
-
 \PassOptionsToPackage{usenames,dvipsnames}{xcolor}
 \documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[english,slovene]{babel}
 \usepackage[tikz]{bclogo}
 \usepackage{qrcode,marvosym}
@@ -15,25 +16,49 @@
 \usepackage{amsmath}
 \usepackage{wallpaper}
 \usepackage{hyperref}
-\usepackage{fancyhdr,enumerate}
+\usepackage{array}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}%%%%
+\newcolumntype{N}{@{}m{0pt}@{}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \usepackage{fancyhdr,enumerate}
+
+ \newcommand{\ora}{\overrightarrow}
+ \renewcommand{\headrulewidth}{3pt}
+ \renewcommand{\headrule}{\hbox to\headwidth{%
+   \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+    \renewcommand{\footrulewidth}{2pt}
+    \renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
 \usepackage{gensymb}
 \usepackage{amssymb} 
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+    \renewcommand{\headrulewidth}{0.3pt}
+   \renewcommand{\footrulewidth}{1.9pt}
+  \definecolor{qqwuqq}{rgb}{1,0,0 }
+  \definecolor{qqqqff}{rgb}{0,0,1}
+  \definecolor{qqffqq}{rgb}{0,1,0}
+  \definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}%{0.92,0.03,0.03}
 \usepackage{mdframed}
 \usepackage{multicol}
+ \definecolor{bgblue}{RGB}{0,0,253}
 \usepackage{eurosym}
-
-% Nastavitve robov (iz tvojega originala)
-\textwidth 20 true cm
-\oddsidemargin -2 true cm
-\evensidemargin -2 true cm
-\topmargin -3.5 true cm
-\textheight 27.5 true cm
-\linespread{1.2}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcounter{tocke}
 \setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
 
-% Stili za okvirje nalog
 \mdfdefinestyle{theoremstyle1}{%
 linecolor=brown,middlelinewidth=1pt,%
 frametitlerule=true,%
@@ -49,84 +74,71 @@ frametitlerulewidth=2pt,
 innertopmargin=\topskip,
 innerbottommargin=\topskip,
 }
-
 \mdtheorem[style=theoremstyle1]{naloga}{Naloga}
-
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \pagestyle{fancy}
 \renewcommand\headrulewidth{0pt}
 \lhead{}\chead{}\rhead{}
 \rfoot{\vspace*{-2\baselineskip}}
 
+
+\renewcommand{\vec}{\overrightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%55\Large
+
 \everymath{\displaystyle}
 
-% Glava testa
 \begin{minipage}{20cm}
-\begin{bclogo}[couleur=brown!40, arrondi=0,ombre=true, couleurOmbre=gray!50, logo =\bcplume, noborder=true]
-{\textrm{{\Large{TEST 4.1} \Huge{}:
-\large{Polinomi in racionalne funkcije} \hfill $G-3$}}}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{TEST 1.1} \Huge{}:
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\large{Eksponentna funkcija. Logaritemska funkcija} \hfill $G-3$}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{bclogo}
 \end{minipage}
-
 \begin{minipage}{20cm}
-\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50, arrondi=0, logo =\bcplume, noborder=true]
+\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50,
+  arrondi=0,
+logo =\bcplume,
+  noborder=true]
+ \setlength{\parskip}{}{}
 {\textsc{{\large{Ime in priimek:}
-\vspace{0.2cm} \raisebox{-1.4ex}{\rule{15cm}{0.2mm}}\hfill }}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\vspace{0.2cm} \rule{15cm}{0.2mm}\hfill }}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{bclogo}
 \end{minipage}
-
-\vspace{0.5cm}
-
-% --- 1. NALOGA: ELIPSA ---
-\def\t1{5}
-\begin{naloga}[\hfill \quad $\t1$ točk] \addtocounter{tocke}{\t1}
-a) 
-Določi parameter $t$, da bo pri deljenju
-$p(x) = 3x^{4} - 7x^{2} + tx - 5$ z deliteljem $x - 3$ imel ostanek enak $10$.
-\end{naloga}
-\newpage
-
-
-\def\t2{6+4}
-\begin{naloga}[\hfill \quad $\t2$ točk] \addtocounter{tocke}{\t2}
-a) Zapiši vse kandidate za racionalne ničle za $p(x)=-x^4+3x^3-x^2-3x+2.$ Ena ničla je sode stopnje, poišči preostali. Zapiši polinom v razcepni obliki.
-
-b) Pokaži, da premica $y=2x+2$ seka graf v natanko dveh točkah. Določi ju.
-\end{naloga}
-
-\newpage
-
 \def\t3{10}
 \begin{naloga}[\hfill \quad $\t3$ točk] \addtocounter{tocke}{\t3}
-
 Dan je polinom $p(x)=ax^3+bx^2+2x+3$.
         \begin{enumerate}[a)]
             \item Določi parametra $a$ in $b$ tako, da bo polinom deljiv z $(x-1)(x-3)$.
                 \item Za določena parametra nariši grafa $p(x)$ in $|p(x)|.$
                 \end{enumerate}
 \end{naloga}
-
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\begin{axis}[
-x=1.0cm,y=1.0cm,
-axis lines=middle,
-ymajorgrids=true,
-xmajorgrids=true,
-xmin=-4.487813538324492,
-xmax=5.554496898257082,
-ymin=-6.24842604820639,
-ymax=7.8432031128032325,
-xtick={-4.0,-3.0,...,5.0},
-ytick={-6.0,-5.0,...,7.0},]
-\clip(-4.487813538324492,-6.24842604820639) rectangle (5.554496898257082,7.8432031128032325);
-\end{axis}
-\end{tikzpicture}
 \vfill
 \mdtheorem[style=theoremstyle1]{kriterij}{Kriterij ocenjevanja}
 \begin{kriterij*}[\hfill \v{s}tevilo vseh to\v{c}k na testu: $\arabic{tocke}$]
  $$
  \begin{array}{||c|c|c|c|c|c||
-{}c|c|}
+>{}c|c|}
  \hline\hline
  \textup{ocena}& 1&2&3&4&5&\textrm{uspe\v{s}nost v } \%& \textrm{\bf OCENA}\\
   \hline\hline
@@ -136,7 +148,7 @@ ytick={-6.0,-5.0,...,7.0},]
  } 
  & \\
  \hline
- \end{array} \hspace*{0.6cm}\vspace*{0.1cm} \qrcode[hyperlink,height=0.8in]{http://www.matej.info}
+ \end{array} \hspace*{0.5cm}\vspace*{-0.3cm} \qrcode[hyperlink,height=0.8in]{http://www.matej.info}
 $$
 \vspace*{0.1cm}
 \end{kriterij*}
