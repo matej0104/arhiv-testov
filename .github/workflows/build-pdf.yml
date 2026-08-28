@@ -16,7 +16,7 @@ jobs:
       - name: Compile G3A Test
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: G3A/Test.1.1.tex
+          root_file: G3A/Test.1.2.tex
 
       - name: Upload PDF
         uses: actions/upload-artifact@v4
