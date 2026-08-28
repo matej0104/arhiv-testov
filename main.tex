@@ -1,1 +1,508 @@
-\documentclass{article} \begin{document} Pozdrav iz GitHub Actions. \end{document}
+
+%\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[english,slovene]{babel}
+%\usepackage{blindtext}
+%\usepackage{pdflscape}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+%\usepackage{color}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage[cp1250]{inputenc}
+\usepackage{array}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}%%%%
+\newcolumntype{N}{@{}m{0pt}@{}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \usepackage{fancyhdr,enumerate}
+
+ \newcommand{\ora}{\overrightarrow}
+ \renewcommand{\headrulewidth}{3pt}
+ \renewcommand{\headrule}{\hbox to\headwidth{%
+   \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+    \renewcommand{\footrulewidth}{2pt}
+    \renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb} 
+
+  \usepackage{fancyhdr}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+    \renewcommand{\headrulewidth}{0.3pt}
+   \renewcommand{\footrulewidth}{1.9pt}
+  \definecolor{qqwuqq}{rgb}{1,0,0 }
+  \definecolor{qqqqff}{rgb}{0,0,1}
+  \definecolor{qqffqq}{rgb}{0,1,0}
+  \definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}%{0.92,0.03,0.03}
+\usepackage{mdframed}
+\usepackage{multicol}
+ \definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{xcolor}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}}, 
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage{venndiagram}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+
+
+\renewcommand{\vec}{\overrightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%55\Large
+
+\everymath{\displaystyle}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{Kotne funkcije 1 - ustno} \Huge{}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\large{} \hfill $G-3$}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{bclogo}
+\end{minipage}
+
+\begin{naloga}
+Zapiši s kotnimi funkcijami ostrih kotov v kotnih stopinjah in izračunaj:
+\begin{multicols}{2}
+a) $
+\dfrac{\cos 405^\circ + \sin(-150^\circ)}{\tan(-765^\circ) \cdot \cot(-240^\circ)}$
+
+b) $
+\dfrac{\sin(1110^\circ - \cos495^\circ}{\tan(-675^\circ) + \cot^2 300^\circ}
+$
+
+c) $
+\dfrac{\cos(-300^\circ) \cdot \sin480^\circ}{\tan1140^\circ - \cot135^\circ}
+$
+
+d) $
+\frac{\cos1080^\circ - \sin(-570^\circ)}{\frac{1}{2}\tan225^\circ + \cot(-390^\circ)}+\sin^2(-30^{\circ})
+$ 
+
+e) $
+\dfrac{\sin^2750^\circ + \cos225^\circ}{\tan(-570^\circ) \cdot \cot330^\circ}
+$
+\end{multicols}
+\end{naloga}
+
+
+\begin{naloga}
+
+Zapiši s kotnimi funkcijami ostrih kotov v radianih in izračunaj:
+\begin{multicols}{2}
+    
+a) 
+$
+\dfrac{\sin\dfrac{17\pi}{4} + \cos\left(-\dfrac{5\pi}{3}\right)}{\tan\left(-\dfrac{9\pi}{2}\right) \cdot \cot^2\left(\dfrac{5\pi}{6}\right)}
+$
+
+b)
+$
+\dfrac{\cos\dfrac{25\pi}{6} - \sin\left(-\dfrac{7\pi}{4}\right)}{\tan\dfrac{19\pi}{3} + \cot\dfrac{3\pi}{4}}\cdot \left(\tan \dfrac{4\pi}{3}-\cot\dfrac{5\pi}{4}\right)
+$
+
+c)
+$
+\dfrac{\sin^2\dfrac{13\pi}{3} \cdot \cos\left(-\dfrac{11\pi}{6}\right)}{\tan\dfrac{15\pi}{4} - \cot\dfrac{4\pi}{3}}
+$
+
+d) $
+\dfrac{\cos\left(-\dfrac{10\pi}{3}\right) + \sin\dfrac{23\pi}{4}}{\tan\dfrac{17\pi}{6} \cdot \cot\left(-\dfrac{5\pi}{4}\right)}+\sin \dfrac{13\pi}{6}$
+
+e) 
+$
+\dfrac{\sin\dfrac{29\pi}{6}- \cos\dfrac{19\pi}{4}}{\tan\left(-\dfrac{11\pi}{3}\right) + \cot^2\dfrac{7\pi}{4}}
+$
+\end{multicols}
+\end{naloga}
+\begin{naloga}
+    Zavrti točko $A(-\dfrac{1}{2},-\dfrac{\sqrt{3}}{2})$ za pravi kot okoli koordinatnega izhodišča v smeri urnega kazalca. Določi koordinate te točke. 
+\end{naloga}
+\begin{naloga}
+    Na krožnici s polmerom 2 leži točka $T(\sqrt{3},y<0).$ 
+     
+     a) Kakšni koordinati ima ta točka, če a) jo zavrtimo okoli koordinatnega izhodišča v nasprotni smeri gibanja urnega kazalca za kot $165^{\circ}?$  
+
+b) če bi jo zavrteli v smeri gibanja urnega kazalca za kot $450^{\circ}?$  
+\end{naloga}
+\newpage
+
+\begin{naloga}
+Poenostavi:
+
+    \vspace{-.5cm}
+    
+\begin{multicols}{2}
+    
+a) $(1+\tan^2 x)(1-\sin^2 x)$
+
+b) $(1+\cot^2 x)(1-\cos^2 x)$
+
+c) $(3\cos x+2\sin x)^2+(3\cos x-2\sin x)^2$
+
+d) $\dfrac{1+\cos x}{\sin x}-\frac{\sin x}{1-\cos x}$
+
+e) $\sin\left(x+\dfrac{\pi}{3}\right)+\sin\left(x-\dfrac{7\pi}{3}\right)$
+
+f) $\cos\left(x+\dfrac{\pi}{4}\right)+\cos\left(x-\dfrac{9\pi}{4}\right)$
+
+g) $\tan\left(x+\dfrac{\pi}{4}\right)\cdot \tan\left(x-\dfrac{5\pi}{4}\right) $
+    
+\end{multicols}
+\end{naloga}
+\begin{naloga}
+    Poenostavi:
+    \vspace{-.5cm}
+    
+\begin{multicols}
+    {3}
+        a) $\dfrac{\sin 2x}{1+\cos 2x}$
+
+    b) $\dfrac{\cot^2 x -1}{2\cot x}\cdot \dfrac{\sin 2x}{2\cos^2 x-1}$
+
+    c) $\cot x- \tan x -2\cot 2x$
+\end{multicols}
+
+\end{naloga}
+\begin{naloga}
+    a) Naj velja za oster kot $x$:  $\tan x=\dfrac{12}{5}$. Izračunaj $\sin 2x$  in $\cos(x-\dfrac{\pi}{4}).$
+
+    b) Naj bo $0<x<\pi$ in   $\cot x=\dfrac{3}{4}$. Izračunaj $\cos 2x$ 
+    in $\tan(x-\dfrac{\pi}{4}).$
+
+    c) Naj bo $\pi<x<2\pi$ in   $\cos x=\dfrac{\sqrt{5}}{3}$. Izračunaj $\tan 2x$ in $\cot(x+\dfrac{\pi}{4}).$
+
+    d) Naj bo $x$ topi kot in   $\sin x=\dfrac{\sqrt{15}}{4}$. Izračunaj $\sin(x+\dfrac{\pi}{4})$ in $\cos(x-\dfrac{5\pi}{4}).$
+
+    e) Naj za ostra kota $x$ in $y$ velja $\sin x =\dfrac{3}{5}$ in $\cos y=\dfrac{5}{13}$. Izračunaj $\tan (x-y)$, $\sin \dfrac{x}{2}$, $\tan\dfrac{y}{2}.$
+
+    f) Naj bo $\dfrac{3\pi}{2}<x<2\pi$ in  $\sin 2x = -\dfrac{24}{25}.$ Izračunaj $\sin x$, $\sin\dfrac{x}{2}.$
+
+    g) Naj bo $\dfrac{\pi}{2}<x<\pi$ in $\cos 2x = \dfrac{40}{41}.$ Izračunaj $\cos x$, $\cos\dfrac{x}{2}.$
+
+    h) Naj bo $x$ oster kot in $\tan 2x = \dfrac{7}{24}.$ Izračunaj $\tan x$, $\tan\dfrac{x}{2}.$
+\end{naloga}
+\begin{naloga}
+
+Dokaži identiteto:
+
+\begin{multicols}{2}
+a) $\frac{\sin(3x)}{\sin x} - \frac{\cos(3x)}{\cos x} = 2$
+
+b) $\sin^4 x = \frac{3 - 4\cos(2x) + \cos(4x)}{8}$
+
+c) $\tan(3x) = \frac{3\tan x - \tan^3 x}{1 - 3\tan^2 x}$
+
+d) $\cos 4x=8\cos^4 x-8\cos^2x+1$
+
+\end{multicols}
+
+
+\end{naloga}
+\begin{naloga}
+
+Dokaži enakost:
+
+a) $\dfrac{\cos x\sin 2x+\cos 2x+1}{\sin x+1}\cdot (1+\tan^2 x)=2$
+
+b) $\dfrac{\cos x+\cos2x+1}{\sin x+\sin 2x}=\cot x$
+
+c) $\dfrac{\sin 2x}{\sin x}(1+\tan^2 x)=\dfrac{2}{\cos x}$
+
+\end{naloga}
+
+\begin{naloga}
+    Zapiši kot produkt in izračunaj:
+\begin{multicols}{2}
+
+    a) $\cos 105^{\circ}-\cos 15^{\circ}$
+
+    b) $\sin 105^{\circ}+\sin 15^{\circ}$
+
+    c) $\cos 15^{\circ}-\sin 15^{\circ}$
+
+    d) $\sin 5^{\circ}+\sin 55^{\circ}-\cos 25^{\circ}$
+    
+    e) $\sin 10^{\circ}+\sin 50^{\circ}-\cos 20^{\circ}$
+
+    f) $\sin 8^{\circ}+\cos 38^{\circ}+\cos 158^{\circ}$
+  \end{multicols}  
+\end{naloga}
+
+\begin{naloga}
+    Zapiši kot vsoto ali razliko:
+\begin{multicols}{2}
+    a) $\cos 7x\cos 5x$
+
+    b) $\sin 2x\sin 7x$
+
+    c) $\sin 6x\cos 4x$
+
+    d) $\sin (2x+3y)\sin(2x-3y)$
+
+    e) $\cos (x+y)\cos(x-y)$
+
+    f) $2\sin (4x+y)\cos(4x-y)$
+    \end{multicols}
+\end{naloga}
+\begin{naloga}
+Pokaži, da v trikotniku velja:
+ $\sin 2\alpha+\sin2\beta+\sin2\gamma=4\sin\alpha\sin\beta\sin\gamma$
+\end{naloga}
+\begin{naloga}
+\begin{multicols}{3}
+    Dokaži enakost:
+
+    a) $\dfrac{2\sin 5x\cdot \sin 4x}{\cos x-\cos 9x}=1$
+
+    b) $\dfrac{\cos 2x\cos 10x}{\cos 12 x+\cos 8x}= \dfrac{1}{2}$
+
+    c) $\frac{\sin 4x + \sin 8x}{\cos 4x - \cos 8x} = \cot 2x
+$
+\end{multicols}
+\end{naloga}
+\newpage
+
+\begin{naloga}
+    Nariši grafe funkcij:
+    \begin{multicols}{2}
+
+    a) $f(x)=2\cos(x+\dfrac{\pi}{4})-1$
+
+    b) $f(x)=-2\sin(x+\pi)-1$
+
+    c) $f(x)=\tan\left(\dfrac{x}{2}-\dfrac{\pi}{4}\right)$
+
+       a) $f(x)=|\cos(x-\dfrac{\pi}{3})|-1$
+
+    b) $f(x)=-|\sin\left(\dfrac{x}{2}+\dfrac{\pi}{4}\right)+2|$
+
+    c) $f(x)=|\cot\left(\dfrac{x}{3}-\dfrac{\pi}{6}\right)|$
+    \end{multicols}
+\end{naloga}
+\begin{naloga}
+Reši enačbo:
+     \begin{multicols}{2}
+\begin{enumerate}[a)]
+     \item  $\cos(x+\dfrac{\pi}{2})=\dfrac{\sqrt{2}}{2}$
+
+     \item $2\sin(x+\pi)=-\sqrt{3}$
+
+    \item  $-3\tan(\dfrac{x}{3}+\dfrac{\pi}{6})=\sqrt{3}$
+
+    \item  $\cot(\dfrac{x}{2}+\dfrac{\pi}{3})=\sqrt{3}$
+
+    \item $\cot^2 x-\dfrac{1}{9}=0$
+   \item  $\sin^2 x-\cos x=1$
+
+   \item  $\sin^2 x -\sin x=2$
+
+   \item $\sin x=\sqrt{3}\cos x $
+   \item $\sin 2x\tan x=\dfrac{3}{2}$
+
+    \item  $\cos3x\sin2x-\cos 3x=0$
+
+    \item  $\sin^2 x + 2\sin x\cos x - 3\cos^2 x = 1$
+
+     \item  $\sin^2 x-6\sin x \cos x -\cos^2 x=3$
+
+\item $cos 2x=5\sin^2x-cos^2x$
+    
+\item $\cos^3 x-\cos x=\sin^2x$
+    \end{enumerate}
+     \end{multicols}
+\end{naloga}
+\end{document}
+
+**Rešitev 1:**
+Kote prevedemo v osnovne:
+- \(405^\circ = 360^\circ + 45^\circ \Rightarrow \cos(405^\circ) = \cos(45^\circ) = \frac{\sqrt{2}}{2}\)
+- \(\sin(-150^\circ) = -\sin(150^\circ) = -\sin(180^\circ - 30^\circ) = -\sin(30^\circ) = -\frac{1}{2}\)
+- \(765^\circ = 2 \cdot 360^\circ + 45^\circ \Rightarrow \tan(765^\circ) = \tan(45^\circ) = 1\)
+- \(240^\circ = 180^\circ + 60^\circ \Rightarrow \cot(240^\circ) = \cot(60^\circ) = \frac{\sqrt{3}}{3}\)
+
+Števec: \(\frac{\sqrt{2}}{2} + \left(-\frac{1}{2}\right) = \frac{\sqrt{2} - 1}{2}\)
+
+Imenovalec: \(1 \cdot \frac{\sqrt{3}}{3} = \frac{\sqrt{3}}{3}\)
+
+Celoten izraz:
+\[
+\frac{\frac{\sqrt{2} - 1}{2}}{\frac{\sqrt{3}}{3}} = \frac{\sqrt{2} - 1}{2} \cdot \frac{3}{\sqrt{3}} = \frac{3(\sqrt{2} - 1)}{2\sqrt{3}} = \frac{\sqrt{3}(\sqrt{2} - 1)}{2}
+\]
+
+**Končni rezultat:**
+\[
+\boxed{\frac{\sqrt{3}(\sqrt{2} - 1)}{2}}
+\]
+
+---
+
+### **Primer 2**
+
+
+
+**Rešitev:**
+Kote prevedemo:
+- \(1110^\circ = 3 \cdot 360^\circ + 30^\circ \Rightarrow \sin(1110^\circ) = \sin(30^\circ) = \frac{1}{2}\)
+- \(495^\circ = 360^\circ + 135^\circ \Rightarrow \cos(495^\circ) = \cos(135^\circ) = -\frac{\sqrt{2}}{2}\)
+- \(-675^\circ = -2 \cdot 360^\circ + 45^\circ \Rightarrow \tan(-675^\circ) = \tan(45^\circ) = 1\)
+- \(300^\circ = 360^\circ - 60^\circ \Rightarrow \cot(300^\circ) = -\cot(60^\circ) = -\frac{\sqrt{3}}{3} \Rightarrow \cot^2(300^\circ) = \frac{1}{3}\)
+
+Števec: \(\frac{1}{2} - \left(-\frac{\sqrt{2}}{2}\right) = \frac{1 + \sqrt{2}}{2}\)
+
+Imenovalec: \(1 + \frac{1}{3} = \frac{4}{3}\)
+
+Celoten izraz:
+\[
+\frac{\frac{1 + \sqrt{2}}{2}}{\frac{4}{3}} = \frac{1 + \sqrt{2}}{2} \cdot \frac{3}{4} = \frac{3(1 + \sqrt{2})}{8}
+\]
+
+**Končni rezultat:**
+\[
+\boxed{\frac{3(1 + \sqrt{2})}{8}}
+\]
+
+---
+
+### **Primer 3**
+
+Poišči numerično vrednost izraza:
+
+
+**Rešitev:**
+Kote prevedemo:
+- \(\cos(-300^\circ) = \cos(300^\circ) = \cos(360^\circ - 60^\circ) = \cos(60^\circ) = \frac{1}{2}\)
+- \(480^\circ = 360^\circ + 120^\circ \Rightarrow \sin(480^\circ) = \sin(120^\circ) = \sin(60^\circ) = \frac{\sqrt{3}}{2}\)
+- \(1140^\circ = 3 \cdot 360^\circ + 60^\circ \Rightarrow \tan(1140^\circ) = \tan(60^\circ) = \sqrt{3}\)
+- \(135^\circ = 180^\circ - 45^\circ \Rightarrow \cot(135^\circ) = -\cot(45^\circ) = -1\)
+
+Števec: \(\frac{1}{2} \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{4}\)
+
+Imenovalec: \(\sqrt{3} - (-1) = \sqrt{3} + 1\)
+
+Celoten izraz:
+\[
+\frac{\frac{\sqrt{3}}{4}}{\sqrt{3} + 1} = \frac{\sqrt{3}}{4(\sqrt{3} + 1)} \cdot \frac{\sqrt{3} - 1}{\sqrt{3} - 1} = \frac{3 - \sqrt{3}}{4(3 - 1)} = \frac{3 - \sqrt{3}}{8}
+\]
+
+**Končni rezultat:**
+\[
+\boxed{\frac{3 - \sqrt{3}}{8}}
+\]
+
+---
+
+### **Primer 4**
+
+Izračunaj vrednost ulomka:
+
+
+**Rešitev:**
+Kote prevedemo:
+- \(750^\circ = 2 \cdot 360^\circ + 30^\circ \Rightarrow \sin(750^\circ) = \sin(30^\circ) = \frac{1}{2} \Rightarrow \sin^2(750^\circ) = \frac{1}{4}\)
+- \(225^\circ = 180^\circ + 45^\circ \Rightarrow \cos(225^\circ) = -\cos(45^\circ) = -\frac{\sqrt{2}}{2}\)
+- \(-540^\circ = -2 \cdot 360^\circ + 180^\circ \Rightarrow \tan(-540^\circ) = \tan(180^\circ) = 0\)
+- \(330^\circ = 360^\circ - 30^\circ \Rightarrow \cot(330^\circ) = -\cot(30^\circ) = -\sqrt{3}\)
+
+Števec: \(\frac{1}{4} + \left(-\frac{\sqrt{2}}{2}\right) = \frac{1 - 2\sqrt{2}}{4}\)
+
+Imenovalec: \(0 \cdot (-\sqrt{3}) = 0\)
+
+Deljenje z nič je nedefinirano.
+
+**Končni rezultat:**
+\[
+\boxed{\text{Nedefinirano}}
+\]
+
+---
+
+### **Primer 5**
+
+Poenostavi in izračunaj:
+
+
+**Rešitev:**
+Kote prevedemo:
+- \(1080^\circ = 3 \cdot 360^\circ + 0^\circ \Rightarrow \cos(1080^\circ) = \cos(0^\circ) = 1\)
+- \(\sin(-570^\circ) = -\sin(570^\circ) = -\sin(360^\circ + 210^\circ) = -\sin(210^\circ) = -(-\sin(30^\circ)) = \frac{1}{2}\)
+- \(150^\circ = 180^\circ - 30^\circ \Rightarrow \tan(150^\circ) = -\tan(30^\circ) = -\frac{\sqrt{3}}{3}\)
+- \(420^\circ = 360^\circ + 60^\circ \Rightarrow \cot(420^\circ) = \cot(60^\circ) = \frac{\sqrt{3}}{3} \Rightarrow \cot^2(420^\circ) = \frac{1}{3}\)
+
+Števec: \(1 - \frac{1}{2} = \frac{1}{2}\)
+
+Imenovalec: \(-\frac{\sqrt{3}}{3} + \frac{1}{3} = \frac{1 - \sqrt{3}}{3}\)
+
+Celoten izraz:
+\[
+\frac{\frac{1}{2}}{\frac{1 - \sqrt{3}}{3}} = \frac{1}{2} \cdot \frac{3}{1 - \sqrt{3}} = \frac{3}{2(1 - \sqrt{3})} \cdot \frac{1 + \sqrt{3}}{1 + \sqrt{3}} = \frac{3(1 + \sqrt{3})}{2(1 - 3)} = \frac{3(1 + \sqrt{3})}{-4} = -\frac{3(1 + \sqrt{3})}{4}
+\]
+
+**Končni rezultat:**
+\[
+\boxed{-\frac{3(1 + \sqrt{3})}{4}}
+\]
+
+
+\end{naloga}
+\end{document}
