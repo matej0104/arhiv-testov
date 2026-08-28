@@ -12,12 +12,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+     
       - name: Compile G3A Test
         uses: xu-cheng/latex-action@v3
         with:
           root_file: G3A/Test1.1.tex
-       
+          
+       - name: Find PDFs
+  run: |
+    find . -name "*.pdf"
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
