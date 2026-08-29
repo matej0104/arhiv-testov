@@ -1,0 +1,34 @@
+name: Restructure Repository
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restructure:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create folders
+        run: |
+          mkdir -p 2026_27/tex
+          mkdir -p 2026_27/pdf
+
+      - name: Move G3A folder
+        run: |
+          mv G3A 2026_27/tex/
+
+      - name: Create PDF folder for G3A
+        run: |
+          mkdir -p 2026_27/pdf/G3A
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Restructure repository to year/tex/pdf layout"
