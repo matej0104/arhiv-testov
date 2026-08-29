@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   restructure:
-    runs-on: ubuntu-latest
+    runs-on:  ubuntu-latest
 
     steps:
 
