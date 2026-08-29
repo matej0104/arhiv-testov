@@ -34,7 +34,7 @@ for root, dirs, files in os.walk("."):
             "tags": meta.get("tags", []),
             "title": name,
             "tex": tex.replace("\\", "/"),
-            "pdf": f"pdf/{meta.get('school_year')}/{meta.get('class')}/{name}.pdf"
+            "pdf": f"PDFs/{meta.get('school_year')}/{meta.get('class')}/{name}.pdf"
         })
 
 with open("index.json", "w", encoding="utf-8") as f:
