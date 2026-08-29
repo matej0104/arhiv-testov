@@ -13,34 +13,34 @@ for root, dirs, files in os.walk("."):
 
     pattern = meta.get("pattern", "*.tex")
 
-    tex_files = glob.glob(*s.path.join(root, pattern))
+    tex_files = glob.glob(os.path.join(root, pattern))
 
-    p*f_dir = os.path.join(
-        "PDF*",
+    pdf_dir = os.path.join(
+        "PDFs",
         meta["school_year"],
-  *     meta["class"]
+        meta["class"]
     )
 
-    os.m*kedirs(pdf_dir, exist_ok=True)
+    os.makedirs(pdf_dir, exist_ok=True)
 
-  * for tex in tex_files:
+    for tex in tex_files:
 
-        pr*nt("Prevajam:", tex)
+        print("Prevajam:", tex)
 
-        subp*ocess.run([
+        subprocess.run([
             "latexmk",
             "-pdf",
             "-interaction=nonstopmode",
             tex
         ])
 
-        pdf_sour*e = os.path.splitext(tex)[0] + ".p*f"
+        pdf_source = os.path.splitext(tex)[0] + ".pdf"
 
-        if os.path.exists(pdf_*ource):
+        if os.path.exists(pdf_source):
 
-            pdf_target = *s.path.join(
-                pdf_d*r,
-                os.path.basenam*(pdf_source)
+            pdf_target = os.path.join(
+                pdf_dir,
+                os.path.basename(pdf_source)
             )
 
-      *     os.replace(pdf_source, pdf_ta*get)
+            os.replace(pdf_source, pdf_target)
