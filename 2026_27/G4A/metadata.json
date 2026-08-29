@@ -1,0 +1,13 @@
+{
+    "class": "G4A",
+    "school_year": "2026_27",
+    "subject": "Matematika",
+    "pattern": "Test*.tex",
+    "tags": [
+        "2026_27",
+        "G4A"
+    ],
+    "teacher": "profM",
+    "title": "",
+    "public": true
+}
