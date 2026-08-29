@@ -1,4 +1,4 @@
-name: Build PDF
+name: Build PDFs
 
 on:
   push:
@@ -20,23 +20,28 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y latexmk texlive-full
+          sudo apt-get install -y texlive-full latexmk
 
-      - name: Compile all tests
+      - name: Compile all TEX files
         run: |
-          find . -name "Test*.tex" | while read file
+          find . -path "*/metadata.json" | while read meta
           do
-            echo "Compiling $file"
-            latexmk -pdf -interaction=nonstopmode "$file"
-          done
+            project_dir=$(dirname "$meta")
 
-      - name: Create PDF folders and copy PDFs
-        run: |
-          find . -name "Test*.pdf" | while read pdf
-          do
-            dir=$(dirname "$pdf")
-            mkdir -p "$dir/pdf"
-            cp "$pdf" "$dir/pdf/"
+            mkdir -p "$project_dir/pdf"
+
+            find "$project_dir" -maxdepth 1 -name "*.tex" | while read tex
+            do
+              echo "Compiling $tex"
+
+              latexmk -pdf -interaction=nonstopmode "$tex"
+
+              pdfname=$(basename "$tex" .tex).pdf
+
+              if [ -f "$pdfname" ]; then
+                mv "$pdfname" "$project_dir/pdf/"
+              fi
+            done
           done
 
       - name: Commit PDFs
