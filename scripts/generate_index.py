@@ -115,7 +115,11 @@ def main():
                 "collection": meta.get("title"),
                 "tags": meta.get("tags", []),
                 "name": name,
-                "title": extract_title(tex) or name,
+                # Naslov je ime datoteke iz projekta (Test.1.1), ker Overleaf
+                # v \title{} zapise ime projekta in to ni naslov naloge.
+                "title": name,
+                # LaTeX \title{} obdrzimo za kontekst bota.
+                "doc_title": extract_title(tex),
                 "tex": rel(tex),
                 "pdf": rel(pdf_path) if pdf_path.exists() else None,
                 "has_pdf": pdf_path.exists(),
