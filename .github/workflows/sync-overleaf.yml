@@ -1,0 +1,55 @@
+name: Sync Overleaf
+
+on:
+  schedule:
+    # Dvakrat na delovni dan (06:00 in 15:00 po nasem casu = 04:00 in 13:00 UTC).
+    # POZOR: pri zasebnem repozitoriju se minute Actions stejejo v brezplacno
+    # kvoto 2000 min/mesec. Pogostejsi urnik (npr. */30) jo hitro porabi.
+    # Ce urnika ne potrebujes, celoten blok "schedule" mirno zbrisi -
+    # gumb "Sinhroniziraj" v WordPressu deluje neodvisno od njega.
+    - cron: "0 4,13 * * 1-5"
+  workflow_dispatch:
+  # WordPress vticnik sprozi z: POST /repos/<owner>/<repo>/dispatches
+  # body: {"event_type": "sync-overleaf"}
+  repository_dispatch:
+    types: [sync-overleaf]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-overleaf
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changes_detected }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync projects from Overleaf
+        env:
+          OVERLEAF_TOKEN: ${{ secrets.OVERLEAF_TOKEN }}
+        run: python scripts/sync_overleaf.py
+
+      - name: Commit source files
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Sync from Overleaf"
+          file_pattern: "**/tex/** **/metadata.json"
+
+  build:
+    needs: sync
+    if: ${{ needs.sync.outputs.changed == 'true' }}
+    uses: ./.github/workflows/build-pdf.yml
+    secrets: inherit
