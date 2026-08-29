@@ -15,11 +15,7 @@ for root, dirs, files in os.walk("."):
 
     tex_files = glob.glob(os.path.join(root, pattern))
 
-    pdf_dir = os.path.join(
-        "PDFs",
-        meta["school_year"],
-        meta["class"]
-    )
+    pdf_dir = os.path.join(root, "pdf")
 
     os.makedirs(pdf_dir, exist_ok=True)
 
@@ -27,12 +23,15 @@ for root, dirs, files in os.walk("."):
 
         print("Prevajam:", tex)
 
-        subprocess.run([
-            "latexmk",
-            "-pdf",
-            "-interaction=nonstopmode",
-            tex
-        ])
+        subprocess.run(
+            [
+                "latexmk",
+                "-pdf",
+                "-interaction=nonstopmode",
+                tex
+            ],
+            check=True
+        )
 
         pdf_source = os.path.splitext(tex)[0] + ".pdf"
 
@@ -44,3 +43,5 @@ for root, dirs, files in os.walk("."):
             )
 
             os.replace(pdf_source, pdf_target)
+
+            print("Shranjen:", pdf_target)
