@@ -2,49 +2,86 @@ name: Build PDFs
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+    paths:
+      - "**/*.tex"
+      - "**/*.sty"
+      - "**/*.cls"
+      - "**/metadata.json"
+      - "scripts/**"
+      - ".github/workflows/build-pdf.yml"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Prevedi vse, tudi ze aktualne PDF-je"
+        type: boolean
+        default: false
+  workflow_call:
+    inputs:
+      force:
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+
+concurrency:
+  group: build-pdf-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Namesto texlive-full (~5 GB, ~10 min) namestimo samo, kar potrebujemo.
+      # Ce kateri paket manjka, ga dodaj v spodnji seznam.
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-full latexmk
+          sudo apt-get install -y --no-install-recommends \
+            latexmk \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-pictures \
+            texlive-science \
+            texlive-lang-european \
+            ghostscript
 
       - name: Compile all TEX files
         run: |
-          find . -path "*/metadata.json" | while read meta
-          do
-            project_dir=$(dirname "$meta")
+          python scripts/build_project.py ${{ (inputs.force && '--force') || '' }}
 
-            mkdir -p "$project_dir/pdf"
+      - name: Generate index.json
+        run: python scripts/generate_index.py
 
-            find "$project_dir" -maxdepth 1 -name "*.tex" | while read tex
-            do
-              echo "Compiling $tex"
-
-              latexmk -pdf -interaction=nonstopmode "$tex"
-
-              pdfname=$(basename "$tex" .tex).pdf
-
-              if [ -f "$pdfname" ]; then
-                mv "$pdfname" "$project_dir/pdf/"
-              fi
-            done
-          done
-
-      - name: Commit PDFs
+      - name: Commit PDFs and index
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto update PDFs"
+          file_pattern: "**/pdf/*.pdf index.json"
+
+      # Obvesti WordPress vticnik, da so na voljo nove datoteke.
+      # Nastavi repository secrets WP_WEBHOOK_URL in WP_WEBHOOK_SECRET (neobvezno).
+      - name: Notify WordPress
+        if: ${{ success() && env.WP_WEBHOOK_URL != '' }}
+        env:
+          WP_WEBHOOK_URL: ${{ secrets.WP_WEBHOOK_URL }}
+          WP_WEBHOOK_SECRET: ${{ secrets.WP_WEBHOOK_SECRET }}
+        run: |
+          curl -sS -X POST "$WP_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -H "X-Arhiv-Secret: $WP_WEBHOOK_SECRET" \
+            -d "{\"event\":\"build-complete\",\"repo\":\"$GITHUB_REPOSITORY\",\"sha\":\"$GITHUB_SHA\"}" \
+            || echo "Opozorilo: obvestilo WordPressu ni uspelo."
