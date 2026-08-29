@@ -1,0 +1,431 @@
+
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[english,slovene]{babel}
+%\usepackage{blindtext}
+%\usepackage{pdflscape}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+%\usepackage{color}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage[cp1250]{inputenc}
+\usepackage{array}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}%%%%
+\newcolumntype{N}{@{}m{0pt}@{}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \usepackage{fancyhdr,enumerate}
+
+ \newcommand{\ora}{\overrightarrow}
+ \renewcommand{\headrulewidth}{3pt}
+ \renewcommand{\headrule}{\hbox to\headwidth{%
+   \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+    \renewcommand{\footrulewidth}{2pt}
+    \renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb} 
+
+  \usepackage{fancyhdr}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+    \renewcommand{\headrulewidth}{0.3pt}
+   \renewcommand{\footrulewidth}{1.9pt}
+  \definecolor{qqwuqq}{rgb}{1,0,0 }
+  \definecolor{qqqqff}{rgb}{0,0,1}
+  \definecolor{qqffqq}{rgb}{0,1,0}
+  \definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}%{0.92,0.03,0.03}
+\usepackage{mdframed}
+\usepackage{multicol}
+ \definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{xcolor}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}}, 
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage{venndiagram}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+
+
+\renewcommand{\vec}{\overrightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%55\Large
+
+\everymath{\displaystyle}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{Test 1.1.} \Huge{}:
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\large{Polinomi in racionalna funkcija} \hfill $G-3$}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50,
+  arrondi=0,
+logo =\bcplume,
+  noborder=true]
+ \setlength{\parskip}{}{}
+{\textsc{{\large{Ime in priimek:}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\vspace{0.2cm} \rule{15cm}{0.2mm}\hfill }}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{bclogo}
+\end{minipage}
+
+
+\def\tocke2{3+3}
+\begin{naloga}[\hfill \quad $\tocke2$
+\qquad \rightsquigarrow \vert a.\qquad|] \addtocounter{tocke}{\tocke2}
+
+Izračunaj s Hormerjevim algoritmom:
+
+a) vrednost polinoma $p(x)= \dfrac{1}{2}x^3-x^2+7x-\dfrac{3}{2}$ v točki $3$,
+
+b) količnik pri deljenju polinoma $p(x)=x^4-2x^3+3x^2-5$ s polinomom $x-2$.
+\end{naloga}
+
+
+
+
+
+\newpage
+\def\tocke18{6}
+\begin{naloga}[\hfill \quad $\tocke18$
+\qquad \rightsquigarrow \vert a.\qquad\vert b.\qquad|
+c.\qquad|] \addtocounter{tocke}{\tocke18}
+
+Ali je polinom $p(x)=x^3-4x^2-x+4$ deljiv s polinomom $x^2-5x+4?$
+Pokaži z računom.
+\end{naloga}
+
+\vspace{10cm}
+\def\tocke6{5}
+\begin{naloga}[\hfill \quad $\tocke6$
+\qquad \rightsquigarrow \vert a.\qquad| b.\qquad| c.\qquad| ] \addtocounter{tocke}{\tocke6}
+Določi ničle polinoma $p(x)=x^3-2x^2-5x+6$ s Hornerjem, tako da najprej zapišeš vse kandidate za celoštevilske ničle.
+\end{naloga}
+
+\newpage
+\def\tocke3{4+3}
+\begin{naloga}[\hfill \quad $\tocke3$
+\qquad \rightsquigarrow \vert a.\qquad\vert b.\qquad|
+c.\qquad|d.\qquad|] \addtocounter{tocke}{\tocke3}
+Nariši graf polinoma $p(x)=2(x+1)^2(x-2)$, tako da prej določiš ničle in njihovo stopnjo ter začetno vrednost.
+
+Koliko je $p(-2)?$
+
+\end{naloga}
+
+\vspace{10cm}
+
+\def\tocke1{4}
+\begin{naloga}[\hfill \quad $\tocke1$
+\qquad \rightsquigarrow \vert a.\qquad\vert b.\qquad|
+c.\qquad|d.\qquad|] \addtocounter{tocke}{\tocke1}
+Reši enačbo: $x^3-3x=2x^2$
+\end{naloga}
+\newpage
+\def\tocke6{8}
+\begin{naloga}[\hfill \quad $\tocke6$
+\qquad \rightsquigarrow \vert a.\qquad| b.\qquad| c.\qquad| ] \addtocounter{tocke}{\tocke6}
+Določi ničlo, pol in asimptoto funkcije $f(x)=\dfrac{2x-6}{x+1}$ in jo nariši.
+\end{naloga}
+
+
+\vfill
+\mdtheorem[style=theoremstyle1]{kriterij}{Kriterij ocenjevanja}
+\begin{kriterij*}[\hfill \v{s}tevilo vseh to\v{c}k na testu: $\arabic{tocke}$]
+ $$
+ \begin{array}{||c|c|c|c|c|c||
+>{}c|c|}
+ \hline\hline
+ \textup{ocena}& 1&2&3&4&5&\textrm{uspe\v{s}nost v } \%& \textrm{\bf OCENA}\\
+  \hline\hline
+ \% & [0,45) &[45,60)&[60,75
+ ) &[75,90)    &    [90,100]& \mbox{\phantom{ \huge{$\frac{5}{445}$
+ 15}}
+ } 
+ & \\
+ \hline
+ \end{array} \hspace*{0.5cm}\vspace*{-0.3cm} \qrcode[hyperlink,height=0.8in]{http://www.matej.info}
+$$
+\vspace*{0.1cm}
+\end{kriterij*}
+
+\newpage
+
+
+%% RE\v{S}ITVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large RE\v{S}ITVE -- Test 1.1.:}
+\large{ Polinomi in racionalna funkcija} \hfill $G-3$}}
+\end{bclogo}
+\end{minipage}
+ 
+\begin{resitev*}[Naloga 1 -- Hornerjev algoritem]
+ 
+\textbf{a)} $p(x)=\tfrac{1}{2}x^3-x^2+7x-\tfrac{3}{2}$, \quad i\v{s}\v{c}emo $p(3)$.
+ 
+Koeficienti: $\tfrac{1}{2},\; -1,\; 7,\; -\tfrac{3}{2}$
+ 
+\[
+\begin{array}{r|rrrr}
+   & \tfrac{1}{2} & -1 & 7 & -\tfrac{3}{2} \\
+ 3 &              & \tfrac{3}{2} & \tfrac{3}{2} & \tfrac{51}{2} \\
+\hline
+   & \tfrac{1}{2} & \tfrac{1}{2} & \tfrac{17}{2} & 24
+\end{array}
+\]
+ 
+$$\boxed{p(3) = 24}$$
+ 
+\textbf{b)} $p(x)=x^4-2x^3+3x^2+0x-5$, \quad delimo z $(x-2)$.
+ 
+\[
+\begin{array}{r|rrrrr}
+   & 1 & -2 & 3 & 0 & -5 \\
+ 2 &   &  2 & 0 & 6 & 12 \\
+\hline
+   & 1 &  0 & 3 & 6 &  7
+\end{array}
+\]
+ 
+$$p(x) = (x-2)(x^3+3x+6)+7$$
+ 
+Koli\v{c}nik: $\boxed{x^3+3x+6}$, \quad ostanek: $7$.
+ 
+\end{resitev*}
+ 
+\begin{resitev*}[Naloga 2 -- Deljivost polinomov]
+ 
+Ali je $p(x)=x^3-4x^2-x+4$ deljiv z $x^2-5x+4$?
+ 
+Najprej faktoriziramo delitelja: $x^2-5x+4 = (x-1)(x-4)$.
+ 
+Po izreku o ni\v{c}lah je $p(x)$ deljiv z $x^2-5x+4$, \v{c}e velja $p(1)=0$ in $p(4)=0$.
+ 
+Preverimo s Hornerjem:
+ 
+$p(1)$: koeficienti $1,\,-4,\,-1,\,4$
+\[
+\begin{array}{r|rrrr}
+   & 1 & -4 & -1 & 4 \\
+ 1 &   &  1 & -3 & -4 \\
+\hline
+   & 1 & -3 & -4 &  0
+\end{array}
+\]
+$p(1)=0$ \checkmark
+ 
+$p(4)$ iz koli\v{c}nika $x^2-3x-4$: koeficienti $1,\,-3,\,-4$
+\[
+\begin{array}{r|rrr}
+   & 1 & -3 & -4 \\
+ 4 &   &  4 &  4 \\
+\hline
+   & 1 &  1 &  0
+\end{array}
+\]
+$p(4)=0$ \checkmark
+ 
+Ker sta obe ni\v{c}li, je $p(x)$ deljiv z $x^2-5x+4$.
+$$\boxed{p(x) = (x^2-5x+4)(x+1) = (x-1)(x-4)(x+1)}$$
+ 
+\end{resitev*}
+ 
+\begin{resitev*}[Naloga 3 -- Ni\v{c}le s Hornerjem]
+ 
+$p(x)=x^3-2x^2-5x+6$
+ 
+Kandidati za celo\v{s}tevilske ni\v{c}le (delitelji prostega \v{c}lena $6$):
+$$\pm1,\;\pm2,\;\pm3,\;\pm6$$
+ 
+Preizkus $x=1$:
+\[
+\begin{array}{r|rrrr}
+   & 1 & -2 & -5 & 6 \\
+ 1 &   &  1 & -1 & -6 \\
+\hline
+   & 1 & -1 & -6 &  0
+\end{array}
+\]
+$p(1)=0$ \checkmark
+ 
+Koli\v{c}nik $x^2-x-6 = (x-3)(x+2)$.
+ 
+$$\boxed{p(x)=(x-1)(x-3)(x+2), \quad \text{ni\v{c}le: } x_1=1,\; x_2=3,\; x_3=-2}$$
+ 
+\end{resitev*}
+ 
+\begin{resitev*}[Naloga 4 -- Graf polinoma]
+ 
+$p(x)=2(x+1)^2(x-2)$
+ 
+\textbf{Ni\v{c}le in njihove stopnje:}
+\begin{itemize}
+  \item $x=-1$ stopnje $2$ (graf se \textit{dotakne} osi $x$, ne pre\v{c}ka)
+  \item $x=2$ stopnje $1$ (graf \textit{pre\v{c}ka} os $x$)
+\end{itemize}
+ 
+\textbf{Za\v{c}etna vrednost:} $p(0)=2\cdot1^2\cdot(-2)=\boxed{-4}$
+ 
+\textbf{Vodilni koeficient:} $2>0$, stopnja $3$ $\Rightarrow$ graf gre iz $-\infty$ (levo) v $+\infty$ (desno).
+ 
+\textbf{Vrednost $p(-2)$:}
+$$p(-2)=2(-2+1)^2(-2-2)=2\cdot(-1)^2\cdot(-4)=2\cdot1\cdot(-4)=\boxed{-8}$$
+ 
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, height=7cm,
+  axis lines=middle,
+  xlabel={$x$}, ylabel={$y$},
+  xmin=-3, xmax=3.5,
+  ymin=-10, ymax=10,
+  xtick={-2,-1,0,1,2,3},
+  ytick={-8,-4,0,4,8},
+  grid=both, grid style={line width=0.3pt, draw=gray!30},
+  tick label style={font=\small},
+]
+\addplot[blue, thick, domain=-2.5:3, samples=100]
+  {2*(x+1)^2*(x-2)};
+\addplot[only marks, mark=*, mark size=2pt, color=red]
+  coordinates {(-1,0) (2,0) (0,-4) (-2,-8)};
+\node[above right, font=\small] at (axis cs:-1,0) {$(-1,0)$};
+\node[above right, font=\small] at (axis cs:2,0) {$(2,0)$};
+\node[right, font=\small] at (axis cs:0,-4) {$(0,-4)$};
+\node[left, font=\small] at (axis cs:-2,-8) {$(-2,-8)$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ 
+\end{resitev*}
+ 
+\begin{resitev*}[Naloga 5 -- Re\v{s}evanje ena\v{c}be]
+ 
+$$x^3-3x=2x^2$$
+$$x^3-2x^2-3x=0$$
+$$x(x^2-2x-3)=0$$
+$$x(x-3)(x+1)=0$$
+ 
+$$\boxed{x_1=0,\quad x_2=3,\quad x_3=-1}$$
+ 
+\end{resitev*}
+ 
+\begin{resitev*}[Naloga 6 -- Racionalna funkcija]
+ 
+$$f(x)=\frac{2x-6}{x+1}$$
+ 
+\textbf{Ni\v{c}la} (tel.~$= 0$): $2x-6=0 \;\Rightarrow\; x=3$. \quad Ni\v{c}la: $\boxed{x=3}$
+ 
+\textbf{Pol} (im.~$= 0$): $x+1=0 \;\Rightarrow\; x=-1$. \quad Pol: $\boxed{x=-1}$
+ 
+\textbf{Vodoravna asimptota} (primerjamo stopnji -- enaki stopnji):
+$$\lim_{x\to\pm\infty} f(x) = \frac{2}{1} = 2 \quad \Rightarrow \quad \boxed{y=2}$$
+ 
+Lahko zapi\v{s}emo tudi: $f(x)=\dfrac{2(x+1)-8}{x+1}=2-\dfrac{8}{x+1}$, kar potrdi $y=2$ in premik standardne hiperbole.
+ 
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=9cm, height=8cm,
+  axis lines=middle,
+  xlabel={$x$}, ylabel={$y$},
+  xmin=-6, xmax=7,
+  ymin=-6, ymax=8,
+  xtick={-5,-4,-3,-2,-1,0,1,2,3,4,5,6},
+  ytick={-4,-2,0,2,4,6},
+  grid=both, grid style={line width=0.3pt, draw=gray!30},
+  tick label style={font=\small},
+]
+% veja x < -1
+\addplot[blue, thick, domain=-6:-1.2, samples=80]
+  {(2*x-6)/(x+1)};
+% veja x > -1
+\addplot[blue, thick, domain=-0.8:6.5, samples=80]
+  {(2*x-6)/(x+1)};
+% pol (navpi\v{c}na asimptota)
+\addplot[red, dashed, thick] coordinates {(-1,-6) (-1,8)};
+% vodoravna asimptota
+\addplot[brown, dashed, thick] coordinates {(-6,2) (7,2)};
+% oznake
+\addplot[only marks, mark=*, mark size=2pt, color=red]
+  coordinates {(3,0) (0,-6)};
+\node[above right, font=\small] at (axis cs:3,0) {$(3,0)$};
+\node[right, font=\small] at (axis cs:0,-6) {$(0,-6)$};
+\node[above left, font=\small, red] at (axis cs:-1,7) {$x=-1$};
+\node[right, font=\small, brown] at (axis cs:5,2.4) {$y=2$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ 
+\end{resitev*}
+
+\end{document}

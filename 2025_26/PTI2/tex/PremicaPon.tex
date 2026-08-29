@@ -1,0 +1,83 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovenian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Vaje iz analitične geometrije: Premice}
+\author{}
+\date{25. marec 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Naloge}
+
+\subsection*{Presečišče in koti}
+\begin{enumerate}
+    \item Dani sta premici $p_1: y = 2x - 1$ in $p_2: y = -x + 5$. Izračunaj njuno presečišče $P$, naklonska kota obeh premic ($\phi_1, \phi_2$) ter kot med premicama ($\varphi$).
+    \item Dani sta premici $p_1: 3x - 4y + 12 = 0$ in $p_2: x + 2y - 6 = 0$. Izračunaj njuno presečišče $P$, naklonska kota obeh premic ($\phi_1, \phi_2$) ter kot med premicama ($\varphi$).
+\end{enumerate}
+
+\subsection*{Vzporednice in pravokotnice}
+\begin{enumerate}
+    \setcounter{enumerate}{2}
+    \item Dana je premica $p: y = 3x + 1$ in točka $A(1, 2)$. Zapiši enačbo premice $k$, ki poteka skozi točko $A$ in je vzporedna premici $p$, ter enačbo premice $l$, ki poteka skozi točko $A$ in je pravokotna na premico $p$.
+    \item Dana je premica $p: 2x - 5y + 10 = 0$ in točka $B(-2, 3)$. Zapiši enačbo premice $v$, ki je vzporedna premici $p$ skozi točko $B$, in enačbo premice $h$, ki je pravokotna na $p$ skozi točko $B$.
+\end{enumerate}
+
+\subsection*{Premica skozi dve točki in simetrala daljice}
+\begin{enumerate}
+    \setcounter{enumerate}{4}
+    \item Podani sta točki $A(1, 1)$ in $B(5, 5)$. Zapiši enačbo premice, ki poteka skozi točki $A$ in $B$, ter enačbo simetrale daljice $AB$ (pravokotnica skozi razpolovišče).
+    \item Podani sta točki $C(-2, 4)$ in $D(4, 0)$. Zapiši enačbo premice skozi točki $C$ in $D$ ter enačbo pravokotnice, ki razpolavlja daljico $CD$.
+\end{enumerate}
+
+\newpage
+
+\section{Rešitve}
+
+\subsection*{1. naloga}
+\begin{itemize}
+    \item \textbf{Presečišče:} $2x - 1 = -x + 5 \Rightarrow 3x = 6 \Rightarrow x = 2, y = 3$. Presečišče je $P(2, 3)$.
+    \item \textbf{Naklonska kota:} $\tan \phi_1 = 2 \Rightarrow \phi_1 \approx 63.43^\circ$; $\tan \phi_2 = -1 \Rightarrow \phi_2 = 135^\circ$.
+    \item \textbf{Kot med premicama:} $\tan \varphi = \left| \frac{k_2 - k_1}{1 + k_1 k_2} \right| = \left| \frac{-1 - 2}{1 + (2)(-1)} \right| = 3 \Rightarrow \varphi \approx 71.57^\circ$.
+\end{itemize}
+
+\subsection*{2. naloga}
+\begin{itemize}
+    \item \textbf{Presečišče:} $y_1 = \frac{3}{4}x + 3$, $y_2 = -\frac{1}{2}x + 3$. Ker imata prosti člen enak, je $P(0, 3)$.
+    \item \textbf{Naklonska kota:} $\tan \phi_1 = 0.75 \Rightarrow \phi_1 \approx 36.87^\circ$; $\tan \phi_2 = -0.5 \Rightarrow \phi_2 \approx 153.43^\circ$.
+    \item \textbf{Kot med premicama:} $\tan \varphi = \left| \frac{-0.5 - 0.75}{1 + (0.75)(-0.5)} \right| = \left| \frac{-1.25}{0.625} \right| = 2 \Rightarrow \varphi \approx 63.43^\circ$.
+\end{itemize}
+
+\subsection*{3. naloga}
+\begin{itemize}
+    \item \textbf{Vzporednica ($k$):} Isti smerni koeficient $k=3$. $y - 2 = 3(x - 1) \Rightarrow y = 3x - 1$.
+    \item \textbf{Pravokotnica ($l$):} Smerni koeficient $k' = -1/3$. $y - 2 = -\frac{1}{3}(x - 1) \Rightarrow y = -\frac{1}{3}x + \frac{7}{3}$.
+\end{itemize}
+
+\subsection*{4. naloga}
+\begin{itemize}
+    \item \textbf{Smerni koeficient p:} $k = 2/5$.
+    \item \textbf{Vzporednica ($v$):} $y - 3 = \frac{2}{5}(x + 2) \Rightarrow y = \frac{2}{5}x + \frac{19}{5}$ (ali $2x - 5y + 19 = 0$).
+    \item \textbf{Pravokotnica ($h$):} $k' = -5/2$. $y - 3 = -\frac{5}{2}(x + 2) \Rightarrow y = -\frac{5}{2}x - 2$ (ali $5x + 2y + 4 = 0$).
+\end{itemize}
+
+\subsection*{5. naloga}
+\begin{itemize}
+    \item \textbf{Premica AB:} $k = \frac{5-1}{5-1} = 1$. Enačba: $y - 1 = 1(x - 1) \Rightarrow y = x$.
+    \item \textbf{Simetrala:} Razpolovišče $S(\frac{1+5}{2}, \frac{1+5}{2}) = S(3, 3)$. Smerni koeficient $k_s = -1$. Enačba: $y - 3 = -1(x - 3) \Rightarrow y = -x + 6$.
+\end{itemize}
+
+\subsection*{6. naloga}
+\begin{itemize}
+    \item \textbf{Premica CD:} $k = \frac{0-4}{4-(-2)} = -\frac{2}{3}$. Enačba: $y - 0 = -\frac{2}{3}(x - 4) \Rightarrow y = -\frac{2}{3}x + \frac{8}{3}$.
+    \item \textbf{Simetrala:} Razpolovišče $S(\frac{-2+4}{2}, \frac{4+0}{2}) = S(1, 2)$. Smerni koeficient $k_s = \frac{3}{2}$. Enačba: $y - 2 = \frac{3}{2}(x - 1) \Rightarrow y = \frac{3}{2}x + \frac{1}{2}$.
+\end{itemize}
+
+\end{document}

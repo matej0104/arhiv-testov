@@ -1,0 +1,361 @@
+
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[english,slovene]{babel}
+%\usepackage{blindtext}
+%\usepackage{pdflscape}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+%\usepackage{color}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage[cp1250]{inputenc}
+\usepackage{array}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}%%%%
+\newcolumntype{N}{@{}m{0pt}@{}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \usepackage{fancyhdr,enumerate}
+
+ \newcommand{\ora}{\overrightarrow}
+ \renewcommand{\headrulewidth}{3pt}
+ \renewcommand{\headrule}{\hbox to\headwidth{%
+   \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+    \renewcommand{\footrulewidth}{2pt}
+    \renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb} 
+
+  \usepackage{fancyhdr}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+    \renewcommand{\headrulewidth}{0.3pt}
+   \renewcommand{\footrulewidth}{1.9pt}
+  \definecolor{qqwuqq}{rgb}{1,0,0 }
+  \definecolor{qqqqff}{rgb}{0,0,1}
+  \definecolor{qqffqq}{rgb}{0,1,0}
+  \definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}%{0.92,0.03,0.03}
+\usepackage{mdframed}
+\usepackage{multicol}
+ \definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{xcolor}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}}, 
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage{titlesec}
+\usepackage{venndiagram}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\subsection}
+  {\normalfont\Large\bfseries\color{brown}}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries\color{brown}}
+  { \thesubsubsection}
+  {1em}
+  {}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+
+
+\renewcommand{\vec}{\overrightarrow}
+
+%%%%%%%%%%%%%%%%%%%%%%55\Large
+
+\everymath{\displaystyle}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{Test 2.3} \Huge{}:
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\large{Eksponentna in logaritemska funkcija. Zaporedja.} \hfill $PTI-2$}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50,
+  arrondi=0,
+logo =\bcplume,
+  noborder=true]
+ \setlength{\parskip}{}{}
+{\textsc{{\large{Ime in priimek:}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TUKAJ VNESI VSEBINO TESTA
+\vspace{0.2cm} \rule{15cm}{0.2mm}\hfill }}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{bclogo}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\tocke2{3+3+3}
+\begin{naloga}[\hfill \quad $\tocke2$
+\qquad \rightsquigarrow \vert a.\qquad|b.\qquad|c.\qquad|] \addtocounter{tocke}{\tocke2}
+Reši enačbo:
+\vspace{-0.5cm}
+\begin{multicols} {3}
+   a) $\log_3(2x+1)=3$
+
+b) $4^x=9^x$
+
+c) $2^x=20$ 
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\def\tocke18{5+1}
+\begin{naloga}[\hfill \quad $\tocke18$
+\qquad \rightsquigarrow \vert a.\qquad\vert b.\qquad|
+c.\qquad|] \addtocounter{tocke}{\tocke18}
+
+a) Nariši graf funkcije $f(x)=3^{x}-2$, tako da najprej izračunaš začetno vrednost in ničlo ter določiš asimptoto.
+
+b) Izračunaj vrednost točke $A(2,y)$, če leži na grafu ter jo označi.
+\end{naloga}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-6,
+xmax=6,
+ymin=-4,
+ymax=8,
+xtick={-6,-5,...,6},
+ytick={-4,-3,...,8},]
+\clip(-6,-4) rectangle (6,8);
+\end{axis}
+\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\def\tocke6{4+4}
+\begin{naloga}[\hfill \quad $\tocke6$
+\qquad \rightsquigarrow \vert a.\qquad| b.\qquad| c.\qquad| ] \addtocounter{tocke}{\tocke6}
+V aritmetičnem zaporedju je prvi člen enak 5, peti člen pa 21. 
+
+a) Izračunaj diferenco zaporedja in tretji člen.
+
+b) Izračunaj vsoto prvih 12 členov tega zaporedja.
+\end{naloga}
+
+\vspace{10cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\tocke6{4+3}
+\begin{naloga}[\hfill \quad $\tocke6$
+\qquad \rightsquigarrow \vert a.\qquad| b.\qquad| c.\qquad| ] \addtocounter{tocke}{\tocke6}
+a) Naj bo $\log a=2, \log b=3,\log c=4.$ Izračunaj $\log x,$ če je 
+\[
+x=\dfrac{ab^2}{\sqrt{c}}.
+\]
+
+b) Izračunaj:
+\[
+\log_2 16-\log_4 2+\ln 1+\log 100-\log 10
+\]
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\def\tocke3{3+4+3}
+\begin{naloga}[\hfill \quad $\tocke3$
+\qquad \rightsquigarrow \vert a.\qquad\vert b.\qquad] \addtocounter{tocke}{\tocke3}
+a) V aritmetičnem zaporedju $\rule{1cm}{0.1mm},\;4\;,9\;,\rule{1cm}{0.1mm}\;\rule{1cm}{0.1mm}, \ldots$ dopolni tri manjkajoče člene.
+
+b) Izračunaj 8. člen in vsoto prvih 8 členov.
+
+c) Na katerem mestu je člen $499\;?$
+\end{naloga}
+
+\vfill
+\mdtheorem[style=theoremstyle1]{kriterij}{Kriterij ocenjevanja}
+\begin{kriterij*}[\hfill \v{s}tevilo vseh to\v{c}k na testu: $\arabic{tocke}$]
+ $$
+ \begin{array}{||c|c|c|c|c|c||
+>{}c|c|}
+ \hline\hline
+ \textup{ocena}& 1&2&3&4&5&\textrm{uspe\v{s}nost v } \%& \textrm{\bf OCENA}\\
+  \hline\hline
+ \% & [0,45) &[45,60)&[60,75
+ ) &[75,90)    &    [90,100]& \mbox{\phantom{ \huge{$\frac{5}{445}$
+ 15}}
+ } 
+ & \\
+ \hline
+ \end{array} \hspace*{0.5cm}\vspace*{-0.3cm} \qrcode[hyperlink,height=0.8in]{http://www.matej.info}
+$$
+\vspace*{0.1cm}
+\end{kriterij*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsection{Rešitve:}
+
+\subsubsection{1. naloga}
+
+a)
+\[
+2x+1=27 \Rightarrow x=13
+\]
+
+b)
+\[
+\left(\frac{4}{9}\right)^x=1 \Rightarrow x=0
+\]
+
+c)
+\[
+x=\log_2 20=\frac{\log 20}{\log 2}
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{2. naloga}
+
+a)
+\[
+f(0)=1-2=-1
+\]
+
+\[
+3^x-2=0 \Rightarrow 3^x=2 \Rightarrow x=\log_3 2
+\]
+
+\[
+y=-2
+\]
+
+b)
+\[
+y=f(2)=9-2=7
+\]
+
+\[
+A(2,7)
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{3.naloga }
+
+\[
+21=5+4d \Rightarrow d=4
+\]
+
+\[
+a_3=5+2\cdot4=13
+\]
+
+\[
+S_{12}=6(10+44)=324
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{4.naloga}
+
+a)
+\[
+\log x=2+2\cdot3-\frac{1}{2}\cdot4=6
+\]
+
+b)
+\[
+4-\frac12+1=\frac{9}{2}
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{5. naloga}
+
+\[
+d=5
+\]
+
+\[
+-1,\;4,\;9,\;14,\;19
+\]
+
+b)
+\[
+a_8=34,\quad S_8=132
+\]
+
+c)
+\[
+n=101
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
