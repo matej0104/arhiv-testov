@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-29T16:25:26+00:00",
-  "count": 2,
+  "generated": "2026-08-29T18:34:43+00:00",
+  "count": 3,
   "items": [
     {
       "id": "2026-27-g3a-test-1-1",
@@ -21,7 +21,7 @@
       "tex_sha": "a3be874ea1b8",
       "pdf_sha": "9a64bc4a88d8",
       "pdf_size": 172485,
-      "updated": "2026-08-29T16:22:43+00:00"
+      "updated": "2026-08-29T18:31:31+00:00"
     },
     {
       "id": "2026-27-g3a-test-1-2",
@@ -42,7 +42,28 @@
       "tex_sha": "5265b3ca01d0",
       "pdf_sha": "e82ca007bd09",
       "pdf_size": 96736,
-      "updated": "2026-08-29T16:22:43+00:00"
+      "updated": "2026-08-29T18:31:31+00:00"
+    },
+    {
+      "id": "2026-27-g4a-test-1-1",
+      "school_year": "2026_27",
+      "class": "G4A",
+      "subject": "Matematika",
+      "teacher": "profM",
+      "collection": "",
+      "tags": [
+        "2026_27",
+        "G4A"
+      ],
+      "name": "Test.1.1",
+      "title": "G4A",
+      "tex": "2026_27/G4A/tex/Test.1.1.tex",
+      "pdf": "2026_27/G4A/pdf/Test.1.1.pdf",
+      "has_pdf": true,
+      "tex_sha": "69b656312044",
+      "pdf_sha": "226345baea70",
+      "pdf_size": 38473,
+      "updated": "2026-08-29T18:31:31+00:00"
     }
   ]
 }
