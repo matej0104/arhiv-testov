@@ -1,18 +1,37 @@
 {
-  "version": 1,
-  "projects": [
-    {
-      "id": "2026_27-G3A",
-      "enabled": true,
-      "overleaf_url": "https://www.overleaf.com/project/000000000000000000000000",
-      "school_year": "2026_27",
-      "class": "G3A",
-      "subject": "Matematika",
-      "teacher": "Matej Mlakar",
-      "title": "Kontrolne naloge G3A",
-      "pattern": "Test*.tex",
-      "tags": ["2026_27", "G3A"],
-      "public": true
-    }
-  ]
+    "version": 1,
+    "projects": [
+        {
+            "id": "2026_27-G4A",
+            "enabled": true,
+            "overleaf_url": "https://www.overleaf.com/project/6a91a5ad80b72fe8202407a4",
+            "school_year": "2026_27",
+            "class": "G4A",
+            "subject": "Matematika",
+            "teacher": "profM",
+            "title": "",
+            "pattern": "Test*.tex",
+            "tags": [
+                "2026_27",
+                "G4A"
+            ],
+            "public": true
+        },
+        {
+            "id": "2026_27-G3A",
+            "enabled": true,
+            "overleaf_url": "https://www.overleaf.com/project/6a91a3fbf1ca2007331fc85a",
+            "school_year": "2026_27",
+            "class": "G3A",
+            "subject": "",
+            "teacher": "",
+            "title": "",
+            "pattern": "Test*.tex",
+            "tags": [
+                "2026_27",
+                "G3A"
+            ],
+            "public": true
+        }
+    ]
 }
