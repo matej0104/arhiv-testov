@@ -36,6 +36,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Cela zgodovina, da je mogoc rebase pred objavo.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -66,11 +69,42 @@ jobs:
       - name: Generate index.json
         run: python scripts/generate_index.py
 
+      # Objava z rebase in ponovnimi poskusi: med prevajanjem lahko WordPress
+      # vticnik (ali ti sam) potisne nov commit in preprost push bi propadel
+      # z "non-fast-forward".
       - name: Commit PDFs and index
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Auto update PDFs"
-          file_pattern: "**/pdf/*.pdf index.json"
+        run: |
+          set -u
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.json || true
+
+          pdf_dirs=$(find . -path ./.git -prune -o -type d -name pdf -print)
+          if [ -n "$pdf_dirs" ]; then
+            git add $pdf_dirs || true
+          fi
+
+          if git diff --cached --quiet; then
+            echo "Ni sprememb za objavo."
+            exit 0
+          fi
+
+          git commit -m "Auto update PDFs"
+
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin "$GITHUB_REF_NAME" \
+               && git push origin "HEAD:$GITHUB_REF_NAME"; then
+              echo "Objavljeno (poskus $attempt)."
+              exit 0
+            fi
+            echo "Objava ni uspela (poskus $attempt), poskusim znova ..."
+            sleep $((attempt * 5))
+          done
+
+          echo "Objava ni uspela niti po petih poskusih."
+          exit 1
 
       # Obvesti WordPress vticnik, da so na voljo nove datoteke.
       # Nastavi repository secrets WP_WEBHOOK_URL in WP_WEBHOOK_SECRET (neobvezno).
