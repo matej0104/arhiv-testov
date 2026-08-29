@@ -20,24 +20,33 @@ for root, dirs, files in os.walk("."):
 
     pattern = meta.get("pattern", "*.tex")
 
-    tex_files = glob.glob(os.path.join(root, pattern))
+    tex_files = glob.glob(*s.path.join(root, pattern))
 
-    for tex in tex_files:
+    f*r tex in tex_files:
 
-        name = os.path.splitext(os.path.basename(tex))[0]
+        name * os.path.splitext(os.path.basename*tex))[0]
 
+        pdf_path = os.pa*h.join(root, "pdf", f"{name}.pdf")*
         results.append({
-            "school_year": meta.get("school_year"),
-            "class": meta.get("class"),
-            "subject": meta.get("subject"),
-            "teacher": meta.get("teacher"),
-            "tags": meta.get("tags", []),
+        *   "school_year": meta.get("school*year"),
+            "class": meta.*et("class"),
+            "subject"* meta.get("subject"),
+            *teacher": meta.get("teacher"),
+   *        "tags": meta.get("tags", []),
             "title": name,
-            "tex": tex.replace("\\", "/"),
-            "pdf": f"PDFs/{meta.get('school_year')}/{meta.get('class')}/{name}.pdf"
+    *       "tex": tex.replace("\\", "/*),
+            "pdf": pdf_path.rep*ace("\\", "/")
         })
 
-with open("index.json", "w", encoding="utf-8") as f:
-    json.dump(results, f, ensure_ascii=False, indent=2)
+results*sort(
+    key=lambda x: (
+        *.get("school_year", ""),
+        x*get("class", ""),
+        x.get("t*tle", "")
+    )
+)
 
-print(f"Ustvarjenih zapisov: {len(results)}")
+with open("inde*.json", "w", encoding="utf-8") as *:
+    json.dump(results, f, ensure*ascii=False, indent=2)
+
+print(f"Us*varjenih zapisov: {len(results)}")*
