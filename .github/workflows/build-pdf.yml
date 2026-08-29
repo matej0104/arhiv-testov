@@ -17,24 +17,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile Test.1.1
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: G3A/Test.1.1.tex
-
-      - name: Compile Test.1.2
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: G3A/Test.1.2.tex
-
-      - name: Create PDF folder
+      - name: Install LaTeX
         run: |
-          mkdir -p G3A/pdf
-          find . -maxdepth 1 -name "*.pdf" -exec cp {} G3A/pdf/ \;
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-full
 
-      - name: List PDFs
+      - name: Compile all tests
         run: |
-          find G3A/pdf -name "*.pdf"
+          find . -name "Test*.tex" | while read file
+          do
+            echo "Compiling $file"
+            latexmk -pdf -interaction=nonstopmode "$file"
+          done
+
+      - name: Create PDF folders and copy PDFs
+        run: |
+          find . -name "Test*.pdf" | while read pdf
+          do
+            dir=$(dirname "$pdf")
+            mkdir -p "$dir/pdf"
+            cp "$pdf" "$dir/pdf/"
+          done
 
       - name: Commit PDFs
         uses: stefanzweifel/git-auto-commit-action@v5
