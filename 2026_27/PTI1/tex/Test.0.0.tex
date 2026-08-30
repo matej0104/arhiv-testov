@@ -1,0 +1,174 @@
+
+\documentclass[a4paper,12pt]{letter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,slovene]{babel}
+
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{gensymb}
+\usepackage{mdframed}
+\usepackage{multicol}
+\usepackage{eurosym}
+\usepackage{tikz-3dplot}
+\usepackage{titlesec}
+\usepackage{venndiagram}
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ora}{\overrightarrow}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+\textwidth 20 true cm
+\oddsidemargin -2 true cm
+\evensidemargin -2 true cm
+\topmargin -3.5 true cm
+\textheight 27.5 true cm
+\linespread{1.2}
+
+\definecolor{bgblue}{RGB}{0,0,253}
+\definecolor{zzuxux}{rgb}{0,0,0}
+
+\newcounter{tocke}
+\setcounter{tocke}{0}
+
+\mdfdefinestyle{theoremstyle}{
+linecolor=brown!40,
+linewidth=1pt,
+frametitlerule=true,
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+
+\mdfdefinestyle{theoremstyle1}{
+linecolor=brown,
+middlelinewidth=1pt,
+frametitlerule=true,
+apptotikzsetting={
+\tikzset{
+mdfframetitlebackground/.append style={
+shade,
+left color=black!40,
+right color=gray!10},
+mdfbackground/.append style={
+top color=white,
+bottom color=black!5}
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{Kriterij ocenjevanja}
+
+\newwatermark[
+allpages,
+color=brown!2,
+angle=45,
+scale=5,
+xpos=-5,
+ypos=0]{matej.info}
+
+\titleformat{\subsection}
+{\normalfont\Large\bfseries\color{brown}}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\normalfont\large\bfseries\color{brown}}
+{\thesubsubsection}{1em}{}
+
+\begin{document}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+
+\renewcommand{\vec}{\overrightarrow}
+\everymath{\displaystyle}
+
+%%%%%%%%%%%%%%%%%%%%def glavo
+%%%%%%%%%%%%%%%%%%%%def
+\def\programletnik{PTI1}
+\def\naslov{Test 0.0 - }
+\def\sklop{Izgled 0.0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%točke VNESI TOČKE ZA POSAMEZNO NALOGO
+\def\tockeA{2+2+2}
+\def\tockeB{2+2+2}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+%%%%%%%%%%%%
+
+
+
+
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\tockeA}
+Reši enačbo:
+
+\end{naloga}
+\newpage 
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\tockeB}
+Reši enačbo:
+
+\end{naloga}
+
+\vfill
+
+\vfill
+
+\begin{kriterij*} \begin{center} \renewcommand{\arraystretch}{2.5}
+
+\begin{tabular}{|>{\columncolor{gray!20}}c||c|c|c|c|c||c|c|c|} \hline Odstotki &$[0,45)$ & $[45,60)$ & $[60,75)$ & $[75,90)$ & $[90,100]$& Št. možnih točk& Dosežene točke & OCENA \\ \hline Ocena & 1 & 2 & 3 & 4 & 5 &\cellcolor{gray!20} $\thetocke$&\cellcolor{gray!20} \phantom{ocena} & \cellcolor{gray!20} \phantom{a} \\ \hline \end{tabular} \end{center} \vspace{0.3cm}  \end{kriterij*} 
+
+
+
+
+\newpage
+\textsc{Rešitve.}
+
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{document}
