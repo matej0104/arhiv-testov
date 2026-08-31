@@ -1,1 +1,10 @@
-{}
+{
+  "Test.0.0.tex": {
+    "deps": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tex": "3b3ebddba7b44329270b546f2e62f8ae382242314cd88b5f003885c7c594a4c4"
+  },
+  "Test.0.1.tex": {
+    "deps": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tex": "27019c116fe6ee740cc91f148f6687f85b6a1b3df5fa4c95ad7e655952fd14b8"
+  }
+}

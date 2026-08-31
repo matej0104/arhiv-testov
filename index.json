@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T05:33:17+00:00",
+  "generated": "2026-08-31T05:52:21+00:00",
   "count": 3,
   "items": [
     {
@@ -17,12 +17,12 @@
       "title": "Test.0.0",
       "doc_title": null,
       "tex": "2026_27/PTI1/tex/Test.0.0.tex",
-      "pdf": null,
-      "has_pdf": false,
+      "pdf": "2026_27/PTI1/pdf/Test.0.0.pdf",
+      "has_pdf": true,
       "tex_sha": "b911d1753143",
-      "pdf_sha": null,
-      "pdf_size": null,
-      "updated": "2026-08-31T05:31:20+00:00"
+      "pdf_sha": "1ae154f9c4dd",
+      "pdf_size": 120691,
+      "updated": "2026-08-31T05:34:38+00:00"
     },
     {
       "id": "2026-27-pti1-test-0-1",
@@ -39,12 +39,12 @@
       "title": "Test.0.1",
       "doc_title": null,
       "tex": "2026_27/PTI1/tex/Test.0.1.tex",
-      "pdf": null,
-      "has_pdf": false,
+      "pdf": "2026_27/PTI1/pdf/Test.0.1.pdf",
+      "has_pdf": true,
       "tex_sha": "e561de091b64",
-      "pdf_sha": null,
-      "pdf_size": null,
-      "updated": "2026-08-31T05:31:20+00:00"
+      "pdf_sha": "7436533f2ecf",
+      "pdf_size": 140395,
+      "updated": "2026-08-31T05:34:38+00:00"
     },
     {
       "id": "2026-27-s1b-test-0-0",
@@ -66,7 +66,7 @@
       "tex_sha": "b4329c2fe9c3",
       "pdf_sha": "c8a1e7501a23",
       "pdf_size": 38426,
-      "updated": "2026-08-31T05:31:20+00:00"
+      "updated": "2026-08-31T05:34:38+00:00"
     }
   ]
 }
