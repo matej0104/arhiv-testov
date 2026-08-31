@@ -34,6 +34,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -156,6 +157,44 @@ def needs_build(tex_file, pdf_file, src_dir, manifest, force=False, siblings=fro
 # ------------------------------------------------------------ prevajanje
 
 
+def explain_failure(output):
+    """Iz dnevnika latexmk izlusci razumljiv vzrok napake."""
+    text = output or ""
+    reasons = []
+
+    # Manjkajoc paket ali datoteka.
+    for match in re.finditer(r"File [`'\"]([^'\"`]+)['\"`] not found", text):
+        name = match.group(1)
+        if name.endswith(".sty"):
+            reasons.append(f"manjka paket LaTeX: {name[:-4]}")
+        elif name.endswith(".cls"):
+            reasons.append(f"manjka razred dokumenta: {name[:-4]}")
+        else:
+            reasons.append(f"manjka datoteka: {name} (je nisi dal v ZIP?)")
+
+    for match in re.finditer(r"! Package ([\w@-]+) Error: ([^\n]+)", text):
+        reasons.append(f"paket {match.group(1)}: {match.group(2).strip()}")
+
+    for match in re.finditer(r"! LaTeX Error: ([^\n]+)", text):
+        message = match.group(1).strip()
+        if "not found" not in message:
+            reasons.append(message)
+
+    if re.search(r"! Undefined control sequence", text):
+        reasons.append("neznan ukaz (preveri crkovanje ali manjkajoc paket)")
+
+    if re.search(r"! Emergency stop|Fatal error occurred", text) and not reasons:
+        reasons.append("prevajanje se je ustavilo - glej izpis zgoraj")
+
+    # Odstranimo ponovitve, vrstni red ohranimo.
+    seen = []
+    for reason in reasons:
+        if reason not in seen:
+            seen.append(reason)
+
+    return seen[:4]
+
+
 def compile_tex(tex_file, src_dir, build_dir, pdf_dir):
     """Prevede eno .tex datoteko. Vrne pot do PDF-ja ali None."""
     build_dir.mkdir(parents=True, exist_ok=True)
@@ -181,16 +220,22 @@ def compile_tex(tex_file, src_dir, build_dir, pdf_dir):
 
     if not produced.exists():
         log(f"    NAPAKA pri prevajanju {tex_file.name} (koda {proc.returncode})")
+
+        reasons = explain_failure((proc.stdout or "") + "\n" + (proc.stderr or ""))
+        for reason in reasons:
+            log(f"      -> {reason}")
+
         for line in (proc.stdout or "").strip().splitlines()[-25:]:
             log(f"      | {line}")
-        return None
+
+        return None, reasons
 
     if proc.returncode != 0:
         log(f"    OPOZORILO: latexmk je vrnil {proc.returncode}, PDF vseeno nastal.")
 
     target = pdf_dir / produced.name
     shutil.copy2(produced, target)
-    return target
+    return target, []
 
 
 def clean_orphans(pdf_dir, expected_names):
@@ -240,7 +285,7 @@ def build_project(project_dir, force=False):
             continue
 
         log(f"    prevajam: {tex.name} ({reason})")
-        result = compile_tex(tex, src_dir, build_dir, pdf_dir)
+        result, reasons = compile_tex(tex, src_dir, build_dir, pdf_dir)
 
         if result:
             built += 1
@@ -250,7 +295,7 @@ def build_project(project_dir, force=False):
             }
             manifest_changed = True
         else:
-            failed.append(str(rel / tex.name))
+            failed.append((str(rel / tex.name), reasons))
             # Zapis odstranimo, da se ob naslednjem zagonu spet poskusi.
             if tex.name in manifest:
                 del manifest[tex.name]
@@ -313,8 +358,10 @@ def main():
 
     if all_failed:
         log("\nNeuspeli prevodi (na strani se ne bodo prikazali):")
-        for name in all_failed:
+        for name, reasons in all_failed:
             log(f"  - {name}")
+            for reason in reasons:
+                log(f"      {reason}")
         log("\nPopravi .tex, znova nalozi ZIP in prevajanje bo poskusilo samodejno.")
 
     # Privzeto ne rusimo zagona: en pokvarjen .tex ne sme prepreciti
