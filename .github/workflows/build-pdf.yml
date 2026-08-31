@@ -45,21 +45,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Namesto texlive-full (~5 GB, ~10 min) namestimo samo, kar potrebujemo.
-      # Ce kateri paket manjka, ga dodaj v spodnji seznam.
+      # Polna distribucija TeX Live -- enaka kot v Overleafu.
+      # Namestitev traja priblizno 8 minut, zato pa se prevede vse, kar se
+      # prevede v Overleafu, brez lovljenja manjkajocih paketov.
+      #
+      # Ce bi kdaj hotel hitrejsi zagon (~2 min), zamenjaj texlive-full s
+      # seznamom: texlive-latex-base texlive-latex-recommended
+      # texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+      # texlive-pictures texlive-science texlive-lang-european
       - name: Install LaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
+            texlive-full \
             latexmk \
-            texlive-latex-base \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-fonts-extra \
-            texlive-pictures \
-            texlive-science \
-            texlive-lang-european \
             ghostscript
 
       - name: Compile all TEX files
