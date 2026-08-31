@@ -1,0 +1,13 @@
+{
+    "class": "S1B",
+    "school_year": "2026_27",
+    "subject": "",
+    "pattern": "Test*.tex",
+    "tags": [
+        "2026_27",
+        "S1B"
+    ],
+    "teacher": "",
+    "title": "",
+    "public": true
+}
