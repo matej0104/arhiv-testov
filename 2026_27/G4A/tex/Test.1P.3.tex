@@ -1,0 +1,173 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+%%%%%%%%%%%%%%%%%%%% podatki testa -- tu spreminjaj
+\def\programletnik{Gim - 4}
+\def\naslov{Test 1.3.P - }
+\def\sklop{Geometrijska telesa}
+%%%%%%%%%%%%%%%%%%%% tocke po nalogah
+\def\tockeA{4+3}
+\def\tockeB{3+3+4}
+\def\tockeC{3+4+3}
+\def\tockeD{4+4}
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\numexpr\tockeA\relax}
+Pravilni \v{s}esterokotni prizmi z osnovnim robom $a=4$ cm in vi\v{s}ino $v=10$ cm je vrisan valj (dotika se vseh \v{s}estih stranskih ploskev).
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj polmer vrisanega valja in njegovo prostornino.
+\item Koliko odstotkov prostornine prizme zavzema valj?
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\numexpr\tockeB\relax}
+Pravilni tristrani piramidi je rob osnovne ploskve $a=6$ cm, stranski rob pa $b=4$ cm.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj vi\v{s}ino piramide.
+\item Izra\v{c}unaj prostornino piramide.
+\item Izra\v{c}unaj kot med stranskim robom in osnovno ploskvijo.
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeC$] \addtocounter{tocke}{\numexpr\tockeC\relax}
+Osni presek sto\v{z}ca je enakostrani\v{c}ni trikotnik s stranico $10$ cm.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj polmer in vi\v{s}ino sto\v{z}ca.
+\item Izra\v{c}unaj prostornino in povr\v{s}ino sto\v{z}ca.
+\item Izra\v{c}unaj kot med stranico sto\v{z}ca in osnovno ploskvijo.
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeD$] \addtocounter{tocke}{\numexpr\tockeD\relax}
+Lik, sestavljen iz pravokotnika s stranicama $8$ cm in $4$ cm ter polkroga s polmerom $4$ cm, ki je pripet na kraj\v{s}o stranico pravokotnika, zavrtimo okoli dalj\v{s}e stranice (osi simetrije) za polni kot.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj prostornino nastalega telesa.
+\item Izra\v{c}unaj povr\v{s}ino nastalega telesa.
+\end{enumerate}
+\end{naloga}
+
+\newpage
+\vfill
+\begin{kriterij*} \begin{center} \renewcommand{\arraystretch}{2.5}
+\begin{tabular}{|>{\columncolor{gray!20}}c||c|c|c|c|c||c|c|c|} \hline Odstotki &$[0,45)$ & $[45,60)$ & $[60,75)$ & $[75,90)$ & $[90,100]$& \v{S}t. mo\v{z}nih to\v{c}k& Dose\v{z}ene to\v{c}ke & OCENA \\ \hline Ocena & 1 & 2 & 3 & 4 & 5 &\cellcolor{gray!20} $\thetocke$&\cellcolor{gray!20} \phantom{ocena} & \cellcolor{gray!20} \phantom{a} \\ \hline \end{tabular} \end{center} \vspace{0.3cm}  \end{kriterij*}
+
+\newpage
+\textsc{Re\v{s}itve.}
+
+\begin{enumerate}
+\item a) $r=2\sqrt3\ \text{cm}\approx3{,}46$ cm, $V_{\text{valj}}=120\pi\ \text{cm}^3\approx376{,}99\ \text{cm}^3$.\quad b) $V_{\text{prizma}}=240\sqrt3\ \text{cm}^3\approx415{,}69\ \text{cm}^3$; valj zavzema $\approx90{,}69\,\%$ prostornine prizme.
+\item a) $v=2$ cm.\quad b) $V=6\sqrt3\ \text{cm}^3\approx10{,}39\ \text{cm}^3$.\quad c) $\varphi=30^{\circ}$.
+\item a) $r=5$ cm, $v=5\sqrt3\ \text{cm}\approx8{,}66$ cm.\quad b) $V=\dfrac{125\sqrt3}{3}\pi\ \text{cm}^3\approx226{,}72\ \text{cm}^3$, $S=75\pi\ \text{cm}^2\approx235{,}62\ \text{cm}^2$.\quad c) $\varphi=60^{\circ}$.
+\item a) $V=\dfrac{512\pi}{3}\ \text{cm}^3\approx536{,}17\ \text{cm}^3$ ($V_{\text{valj}}=128\pi$, $V_{\text{polkrogla}}=\tfrac{128\pi}{3}$).\quad b) $S=112\pi\ \text{cm}^2\approx351{,}86\ \text{cm}^2$.
+\end{enumerate}
+\end{document}
