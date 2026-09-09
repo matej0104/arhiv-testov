@@ -1,0 +1,562 @@
+\documentclass[a4paper,11pt]{letter}
+% POZOR: samo utf8. V starih datotekah je bil za njim še \usepackage[cp1250]{inputenc},
+% kar je prevzelo prednost in lahko pokvari šumnike.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=brown!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!2
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=1pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Rešitev}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Razred "letter" ne pozna ukaza \section, zato si naredimo svoj naslov.
+\newcommand{\razdelek}[1]{%
+  \vspace{0.5cm}
+  \begin{center}
+  \colorbox{brown!25}{\parbox{0.97\textwidth}{\centering\vspace{2pt}\large\textbf{#1}\vspace{2pt}}}
+  \end{center}
+  \vspace{0.2cm}
+}
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+\everymath{\displaystyle}
+
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{NALOGE 1.N.1} \Huge{}:
+\large{Stereometrija -- telesa} \hfill $G-4$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50,
+  arrondi=0,
+logo =\bcplume,
+  noborder=true]
+{\textsc{{\large{Ime in priimek:}
+\vspace{0.2cm} \rule{15cm}{0.2mm}\hfill }}}
+\end{bclogo}
+\end{minipage}
+
+\vspace{0.3cm}
+\small
+Vse oznake za telesa so standardne. Če enota ni zapisana, so dolžine v $m$, ploščine v $m^2$
+in prostornine v $m^3$. Rezultate zapiši z ustreznimi enotami. Kote računaj do kotne minute natančno.
+\normalsize
+
+\razdelek{I. \ Vaje}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V valju s površino $56\pi$ m$^2$ meri polmer 4 m.
+
+a) Izračunaj višino valja.
+
+b) Na eno osnovno ploskev valja nalepimo polkroglo, na drugo pa enakostranični stožec.
+Izračunaj površino in prostornino sestavljenega telesa.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Valj:
+
+a) $V=750\pi,\ v=30$; \quad izračunaj $r,P$.
+
+b) $P=432\pi,\ v=6$; \quad izračunaj $r,V$.
+
+c) $S_{pl}=8,\ P=20{,}64$; \quad izračunaj $r,V$.
+
+d) $S_{pl}=4,\ V=12$; \quad izračunaj $r,v$.
+
+e) $2r=v,\ P=192$; \quad izračunaj $r,V$.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Stožec ($\omega$ je kot med osnovno ploskvijo in stranico stožca):
+
+a) $P=196,\ v=11{,}4$; \quad izračunaj $r,s,V$.
+
+b) $V=623,\ r=7{,}5$; \quad izračunaj $v,s,P$.
+
+c) $P=96\pi,\ r=6$; \quad izračunaj $v,s,V$.
+
+d) $S_{pl}=20\pi,\ S_0=12\pi$; \quad izračunaj $r,V,\omega$.
+
+e) $s=6,\ r=2\sqrt{5}$; \quad izračunaj $v,\omega$.
+
+f) $V=29160\pi,\ r=54$; \quad izračunaj $v,s,P$.
+
+g) $\omega=30^{\circ},\ v=6$; \quad izračunaj $S_{pl}$.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Enakostranični trikotnik s stranico $a=4\sqrt{3}$ dm zavrtimo okoli stranice za polni kot.
+Izračunaj površino in prostornino tako dobljenega telesa.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+a) Kvader ima površino 248 cm$^2$, razmerje robov pa je $2:3:5$.
+Izračunaj prostornino in maso, če je gostota telesa 9 kg/dm$^3$.
+
+b) Kvader ima prostornino 364 m$^3$, razmerje robov pa je $2:14:13$.
+Izračunaj dolžino telesne diagonale kvadra in ploščino trikotnika, ki ga določajo
+ploskovne diagonale kvadra.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+$n$-strana prizma:
+
+a) $n=3,\ a=4,\ b=6,\ c=7,\ v=8$; \quad izračunaj $P,V$.
+
+b) $n=3,\ V=12992,\ a=35,\ b=54,\ c=47$; \quad izračunaj $v,P$.
+
+c) $n=6,\ a=4\sqrt{3}$, pravilna enakoroba; \quad izračunaj $P,V$.
+
+d) osnovna ploskev je paralelogram $a=8,\ b=6,\ \alpha=30^{\circ}$,
+višina prizme je enaka krajši diagonali osnovne ploskve; \quad izračunaj $P,V$.
+
+e) osnovna ploskev je romb $e=8,\ f=6$, prizma je enakoroba; \quad izračunaj $P,V$.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+$n$-strana pokončna piramida ($\omega$ je kot med osnovno in stransko ploskvijo,
+$\alpha$ je kot med osnovnim in stranskim robom):
+
+a) $n=3,\ a=10,\ V=3608$, pravilna; \quad izračunaj $v,P$ in stranski rob.
+
+b) $n=3,\ P=400\sqrt{3}$, pravilna enakoroba; \quad izračunaj $a,v,V$.
+
+c) $n=3,\ v=8\sqrt{2}$, pravilna enakoroba; \quad izračunaj $P,V$.
+
+d) $n=4,\ a=30$, stranski rob meri 70, pravilna; \quad izračunaj $P,V,\omega,\alpha$.
+
+e) $n=4,\ a=14,\ v=24$, pravilna; \quad izračunaj $P,V,\omega,\alpha$.
+
+f) $n=12,\ a=1$, pravilna, višina je enaka polmeru očrtanega kroga osnovni ploskvi;
+\quad izračunaj $P,V,\omega,\alpha$.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Prostornina pokončne štiristrane piramide meri 4480 cm$^3$. V osnovni ploskvi -- pravokotniku --
+je diagonala za 4 cm daljša od prvega osnovnega roba, drugi rob pa meri 24 cm.
+Izračunaj višino in površino piramide.
+\end{naloga}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+a) Kroglo včrtamo v enakostranični stožec s stranico $5\sqrt{3}$.
+Izračunaj površino in prostornino krogle.
+
+b) Kroglo očrtamo kocki z robom $10\sqrt{2}$. Izračunaj razmerje prostornin obeh teles.
+
+c) Kvadru z robovi 3 m, 4 m in 12 m očrtamo kroglo.
+Kolikokrat je prostornina krogle večja od prostornine kvadra?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Pravokotni trikotnik s katetama 12 cm in 5 cm zavrtimo okoli:
+
+a) daljše katete, \quad b) krajše katete, \quad c) hipotenuze.
+
+Katero telo ima največjo prostornino in katero največjo površino?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Enakokraki trapez z osnovnicama 10 dm in 3 dm ter krakoma 5 dm zavrtimo okoli krajše osnovnice.
+
+a) Koliko znašata prostornina in površina rotacijskega telesa?
+
+b) Bi se prostornina kaj spremenila, če bi vrteli okoli daljše osnovnice? Kaj pa površina?
+\end{naloga}
+
+\razdelek{II. \ Naloge s testov 1.0--1.3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V stožcu s stranico 5 m meri površina $24\pi$ m$^2$.
+
+a) Izračunaj polmer, višino in prostornino stožca.
+
+b) Koliko meri kot med stranico in osnovno ploskvijo?
+
+c) Iz stožca izrežemo največjo možno kroglo. Izračunaj polmer te krogle.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V tristrani prizmi merijo osnovni robovi 8 cm, 15 cm in 17 cm.
+Višina prizme je enaka polmeru očrtanega kroga osnovne ploskve.
+Izračunaj prostornino in površino prizme.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V pravilni štiristrani piramidi meri diagonala osnovne ploskve $4\sqrt{2}$ cm,
+vsota vseh stranskih robov pa je $24\sqrt{2}$ cm.
+
+a) Izračunaj rob osnovne ploskve in višino.
+
+b) Izračunaj kot med stranskim in osnovnim robom.
+
+c) Prisekano piramido dobimo tako, da piramido presekamo z ravnino, vzporedno osnovni ploskvi,
+1 cm pod vrhom. Koliko meri prostornina prisekane piramide?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Polkrog s polmerom 5 dm zavrtimo okoli premera za $270^{\circ}$.
+
+a) Izračunaj površino tako dobljene vrtenine.
+
+b) Kolikšna je masa vrtenine, če je gostota snovi $3$ kg/dm$^3$?
+
+c) Telo pretopimo v kocko. Izračunaj dolžino telesne diagonale kocke.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Štiristrana pokončna prizma ima za osnovno ploskev paralelogram, v katerem sta dolžini stranic
+$a=33$ cm in $b=41$ cm, diagonala pa meri 58 cm. Plašč prizme meri 1480 cm$^2$.
+
+a) Izračunaj višino prizme.
+
+b) Koliko meri prostornina prizme?
+
+c) Izračunaj kot med najdaljšo telesno diagonalo in osnovno ploskvijo.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Enakokraki trapez z osnovnicama 10 dm in 4 dm ter krakoma 5 dm zavrtimo okoli krajše osnovnice.
+
+a) Koliko znašata prostornina in površina rotacijskega telesa?
+
+b) Izračunaj polmer polkrogle, ki ima enako površino kot vrtenina.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V pravilni štiristrani pokončni piramidi meri rob osnovne ploskve 14 cm, višina pa 24 cm.
+
+a) Izračunaj površino in prostornino telesa.
+
+b) Izračunaj kot med osnovnim in stranskim robom.
+
+c) Izračunaj kot med osnovno in stransko ploskvijo.
+
+d) Prisekano piramido dobimo tako, da piramido presekamo z ravnino, vzporedno osnovni ploskvi,
+12 cm pod vrhom. V kakšnem razmerju sta prostornini prisekane piramide in dopolnilne piramide?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+a) Kvadru s stranicami 8 cm, 6 cm in 24 cm očrtamo kroglo. Izračunaj polmer krogle.
+
+b) Iz največje ploskve mreže tega kvadra izrežemo plašč valja in ga zvijemo po daljši stranici.
+Koliko meri polmer valja?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Prečni presek stožca je enakokraki trikotnik s ploščino 12 dm$^2$ in stranico 5 dm.
+
+a) Izračunaj površino in prostornino stožca. \emph{(Nalogo imata dve rešitvi.)}
+
+b) Koliko meri središčni kot v ravnino iztegnjenega plašča stožca?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V enakostranični valj s prostornino $250\pi$ cm$^3$ včrtamo kroglo.
+
+a) Izračunaj prostornino krogle.
+
+b) Koliko odstotkov površine valja znaša površina krogle?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Izračunaj prostornino in površino pravilne 8-strane prizme z osnovnim robom $a=6$ dm in višino,
+ki je enaka polmeru očrtanega kroga osnovne ploskve. Rezultat zaokroži na tri decimalna mesta.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V pravilni štiristrani piramidi je osnovna ploskev pravokotnik s stranicama 24 cm in 10 cm,
+prostornina pa meri 400 cm$^3$.
+
+a) Izračunaj višino piramide.
+
+b) Koliko meri plašč piramide? Zapiši točen rezultat.
+
+c) Izračunaj stranski rob piramide in kot med osnovno ploskvijo in stranskim robom.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Romb z diagonalama 24 cm in 10 cm zavrtimo okoli stranice za polni kot.
+Izračunaj površino in prostornino vrtenine.
+\end{naloga}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V tristrani prizmi merijo robovi osnovne ploskve 9 m, 10 m in 17 m.
+
+a) Koliko odstotkov prostornine prizme zavzame valj, ki je včrtan prizmi?
+
+b) Izračunaj površino prizme, ki ima za višino polmer včrtanega kroga osnovni ploskvi.
+\end{naloga}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+a) Izračunaj prostornino pravilne pokončne enakorobe štiristrane piramide,
+če meri dolžina roba piramide $a=3\sqrt{2}$ cm.
+
+b) Piramido presekamo na polovici višine. Izračunaj površino spodnjega dela telesa.
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+Polkrogla in stožec imata skupno osnovno ploskev in enako prostornino.
+
+a) V kakšnem razmerju sta polmer stožca in stranica stožca?
+
+b) V kakšnem razmerju sta površini polsfere in plašča stožca?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}
+V posodo oblike kvadra, ki ima osnovno ploskev z dimenzijama $8\pi$ dm $\times$ $4\pi$ dm,
+potopimo valj s polmerom 12 cm in višino $12\pi$ cm.
+
+a) Za koliko se dvigne voda v posodi?
+
+b) Izračunaj največjo dolžino tanke palice, ki jo še lahko v celoti potopimo v to posodo,
+v kateri je višina tekočine $\pi$ dm.
+\end{naloga}
+
+\vfill
+\begin{center}
+\qrcode[hyperlink,height=0.8in]{http://www.matej.info}
+\end{center}
+
+\newpage
+\razdelek{Končne rešitve}
+
+\small
+\begin{enumerate}
+\item a.) $v=3$ m \quad
+      b.) $P=88\pi\approx 276{,}5$ m$^2$; \ $V=\dfrac{16\pi\left(17+4\sqrt{3}\right)}{3}\approx 400{,}9$ m$^3$
+
+\item a.) $r=5$, $P=350\pi\approx 1099{,}6$ \quad
+      b.) $r=12$, $V=864\pi\approx 2714{,}3$ \quad
+      c.) $r\approx 1{,}418$, $V\approx 5{,}67$ \quad
+      d.) $r=6$, $v=\dfrac{1}{3\pi}\approx 0{,}106$ \quad
+      e.) $r=\sqrt{\dfrac{32}{\pi}}\approx 3{,}192$, $V\approx 204{,}26$
+
+\item a.) $r\approx 3{,}909$, $s\approx 12{,}052$, $V\approx 182{,}41$ \quad
+      b.) $v\approx 10{,}576$, $s\approx 12{,}966$, $P\approx 482{,}21$ \quad
+      c.) $s=10$, $v=8$, $V=96\pi\approx 301{,}59$ \quad
+      d.) $r=2\sqrt{3}$, $V=\dfrac{32\sqrt{3}\,\pi}{3}\approx 58{,}04$, $\omega=53^{\circ}7'48''$ \quad
+      e.) $v=4$, $\omega=41^{\circ}48'37''$ \quad
+      f.) $v=30$, $s=6\sqrt{106}\approx 61{,}77$, $P=\left(2916+324\sqrt{106}\right)\pi\approx 19640{,}6$ \quad
+      g.) $r=6\sqrt{3}$, $s=12$, $S_{pl}=72\sqrt{3}\,\pi\approx 391{,}78$
+
+\item Telo je sestavljeno iz dveh skladnih stožcev s skupno osnovno ploskvijo,
+      $r=6$ dm, $s=4\sqrt{3}$ dm:
+      $P=48\sqrt{3}\,\pi\approx 261{,}19$ dm$^2$, \ $V=48\sqrt{3}\,\pi\approx 261{,}19$ dm$^3$
+
+\item a.) robovi $4$, $6$ in $10$ cm; $V=240$ cm$^3$, $m=2160$ g $=2{,}16$ kg \quad
+      b.) robovi $2$, $14$ in $13$ m; $d=\sqrt{369}=3\sqrt{41}\approx 19{,}21$ m,
+      ploščina trikotnika $=\dfrac{1}{2}\sqrt{a^2b^2+b^2c^2+c^2a^2}\approx 92{,}98$ m$^2$
+
+\item a.) $S_0\approx 11{,}977$, $P\approx 159{,}95$, $V\approx 95{,}81$ \quad
+      b.) $S_0\approx 812{,}24$, $v\approx 16$, $P\approx 3799{,}8$ \quad
+      c.) $S_0=72\sqrt{3}$, $P=288+144\sqrt{3}\approx 537{,}42$, $V=864$ \quad
+      d.) krajša diagonala $=\sqrt{100-48\sqrt{3}}\approx 4{,}106$, $P\approx 162{,}98$, $V\approx 98{,}55$ \quad
+      e.) $a=5$, $P=148$, $V=120$
+
+\item a.) $v=250$, $P\approx 3793{,}6$, stranski rob $\approx 250{,}07$ \quad
+      b.) telo je pravilni tetraeder: $a=20$, $v=\dfrac{20\sqrt{6}}{3}\approx 16{,}33$,
+      $V=\dfrac{2000\sqrt{2}}{3}\approx 942{,}81$ \quad
+      c.) $a=8\sqrt{3}$, $P=192\sqrt{3}\approx 332{,}55$, $V=128\sqrt{6}\approx 313{,}53$ \quad
+      d.) $v=\sqrt{4450}\approx 66{,}708$, $P\approx 5002{,}4$, $V\approx 20012{,}5$,
+      $\omega=77^{\circ}19'38''$, $\alpha=72^{\circ}21'34''$ \quad
+      e.) $P=896$, $V=1568$, $\omega=73^{\circ}44'23''$, $\alpha=67^{\circ}35'6''$ \quad
+      f.) $P\approx 27{,}31$, $V\approx 7{,}21$, $\omega=45^{\circ}59'35''$, $\alpha=45^{\circ}$
+
+\item prvi rob meri 70 cm, $v=8$ cm, $P\approx 3551{,}2$ cm$^2$
+
+\item a.) $\varrho=\dfrac{5}{2}$, $P=25\pi\approx 78{,}54$, $V=\dfrac{125\pi}{6}\approx 65{,}45$ \quad
+      b.) $R=5\sqrt{6}$, \ $V_{krogle}:V_{kocke}=\dfrac{\sqrt{3}\,\pi}{2}\approx 2{,}72$ \quad
+      c.) $R=\dfrac{13}{2}$, \ $V_{krogle}:V_{kvadra}=\dfrac{2197\pi}{864}\approx 7{,}99$
+
+\item a.) $V=100\pi\approx 314{,}16$ cm$^3$, $P=90\pi\approx 282{,}74$ cm$^2$ \quad
+      b.) $V=240\pi\approx 753{,}98$ cm$^3$, $P=300\pi\approx 942{,}48$ cm$^2$ \quad
+      c.) $r=\dfrac{60}{13}$, $V=\dfrac{1200\pi}{13}\approx 289{,}99$ cm$^3$,
+      $P=\dfrac{1020\pi}{13}\approx 246{,}49$ cm$^2$ \\
+      Največjo prostornino \emph{in} največjo površino ima telo iz primera b.).
+
+\item a.) $v=\dfrac{\sqrt{51}}{2}\approx 3{,}571$ dm, $V=\dfrac{391\pi}{4}\approx 307{,}09$ dm$^3$,
+      $P=15\sqrt{51}\,\pi\approx 336{,}53$ dm$^2$ \quad
+      b.) Da, oboje se spremeni: $V=68\pi\approx 213{,}63$ dm$^3$,
+      $P=8\sqrt{51}\,\pi\approx 179{,}48$ dm$^2$
+
+\item a.) $r=3$ m, $v=4$ m, $V=12\pi\approx 37{,}70$ m$^3$ \quad
+      b.) $53^{\circ}7'48''$ \quad
+      c.) $\varrho=1{,}5$ m
+
+\item Osnovna ploskev je pravokotni trikotnik ($8^2+15^2=17^2$): $S_0=60$ cm$^2$, $v=8{,}5$ cm,
+      $V=510$ cm$^3$, $P=460$ cm$^2$
+
+\item a.) $a=4$ cm, stranski rob $=6\sqrt{2}$ cm, $v=8$ cm \quad
+      b.) $\cos\alpha=\dfrac{1}{3}$, $\alpha=70^{\circ}31'44''$ \quad
+      c.) $V=\dfrac{128}{3}-\dfrac{1}{12}=\dfrac{511}{12}\approx 42{,}58$ cm$^3$
+
+\item a.) $P=\dfrac{3}{4}\cdot 4\pi r^2+2\cdot\dfrac{\pi r^2}{2}=100\pi\approx 314{,}16$ dm$^2$ \quad
+      b.) $V=125\pi\approx 392{,}70$ dm$^3$, $m=375\pi\approx 1178{,}1$ kg \quad
+      c.) $a=\sqrt[3]{125\pi}\approx 7{,}323$ dm, $d=a\sqrt{3}\approx 12{,}68$ dm
+
+\item a.) $v=10$ cm \quad
+      b.) $S_0=1320$ cm$^2$, $V=13200$ cm$^3$ \quad
+      c.) telesna diagonala $=\sqrt{3464}\approx 58{,}86$ cm, kot $=9^{\circ}46'57''$
+
+\item a.) $v=4$ dm, $V=128\pi\approx 402{,}12$ dm$^3$, $P=120\pi\approx 376{,}99$ dm$^2$ \quad
+      b.) $3\pi r^2=120\pi$, $r=2\sqrt{10}\approx 6{,}32$ dm
+
+\item a.) $P=896$ cm$^2$, $V=1568$ cm$^3$ \quad
+      b.) $\alpha=67^{\circ}35'6''$ \quad
+      c.) $\omega=73^{\circ}44'23''$ \quad
+      d.) $1372:196=7:1$
+
+\item a.) $R=\dfrac{\sqrt{676}}{2}=13$ cm \quad
+      b.) največja ploskev meri $24\times 8$; $2\pi r=24$, $r=\dfrac{12}{\pi}\approx 3{,}82$ cm
+
+\item Iz $rv=12$ in $r^2+v^2=25$ dobimo dve rešitvi: \\
+      $r=3,\ v=4$: $P=24\pi\approx 75{,}40$ dm$^2$, $V=12\pi\approx 37{,}70$ dm$^3$,
+      središčni kot $216^{\circ}$; \\
+      $r=4,\ v=3$: $P=36\pi\approx 113{,}10$ dm$^2$, $V=16\pi\approx 50{,}27$ dm$^3$,
+      središčni kot $288^{\circ}$
+
+\item $r=5$ cm, $v=10$ cm \quad
+      a.) $V=\dfrac{500\pi}{3}\approx 523{,}60$ cm$^3$ \quad
+      b.) $\dfrac{100\pi}{150\pi}=66{,}\overline{6}\ \%$
+
+\item $R\approx 7{,}839$ dm, $S_0=72\left(1+\sqrt{2}\right)\approx 173{,}823$ dm$^2$,
+      $V\approx 1362{,}667$ dm$^3$, $P\approx 723{,}937$ dm$^2$
+
+\item a.) $v=5$ cm \quad
+      b.) plašč $=130+120\sqrt{2}\approx 299{,}71$ cm$^2$ \quad
+      c.) stranski rob $=\sqrt{194}\approx 13{,}93$ cm, $\alpha=21^{\circ}2'15''$
+
+\item Stranica romba meri 13 cm, višina romba $\dfrac{120}{13}$ cm:
+      $P=480\pi\approx 1507{,}96$ cm$^2$, \ $V=\dfrac{14400\pi}{13}\approx 3479{,}92$ cm$^3$
+
+\item $S_0=36$ m$^2$, polmer včrtanega kroga $\varrho=2$ m \quad
+      a.) $\dfrac{\pi\varrho^2}{S_0}=\dfrac{\pi}{9}\approx 34{,}91\ \%$ \quad
+      b.) $P=144$ m$^2$
+
+\item a.) $v=3$ cm, $V=18$ cm$^3$ \quad
+      b.) $P=\dfrac{45}{2}+\dfrac{27\sqrt{3}}{2}\approx 45{,}88$ cm$^2$
+
+\item Iz $\dfrac{1}{3}\pi r^2v=\dfrac{2}{3}\pi r^3$ sledi $v=2r$ in $s=r\sqrt{5}$. \quad
+      a.) $r:s=1:\sqrt{5}$ \quad
+      b.) $2\pi r^2:\pi rs=2:\sqrt{5}$
+
+\item a.) $V_{valja}=1{,}728\pi^2$ dm$^3$, dvig $=\dfrac{1{,}728\pi^2}{32\pi^2}=0{,}054$ dm $=5{,}4$ mm \quad
+      b.) $d=\sqrt{(8\pi)^2+(4\pi)^2+\pi^2}=9\pi\approx 28{,}27$ dm
+\end{enumerate}
+\normalsize
+
+\end{document}
