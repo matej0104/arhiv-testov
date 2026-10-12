@@ -1,0 +1,345 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+%%%%%%%%%%%%%%%%%%%% podatki testa -- tu spreminjaj
+\def\programletnik{Gim - 3}
+\def\naslov{Test 1.1 - }
+\def\sklop{Eksponentna in logaritemska funkcija}
+%%%%%%%%%%%%%%%%%%%% tocke po nalogah
+\def\tockeA{5+5}
+\def\tockeB{5}
+\def\tockeC{4+4}
+\def\tockeD{4}
+\def\tockeE{4+4}
+\def\tockeF{5}
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\numexpr\tockeA\relax}
+Dana je funkcija $f(x)=\left(\dfrac12\right)^{x-2}-4$.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj ni\v{c}lo funkcije $f$ in dolo\v{c}i to\v{c}ko na grafu  $T\!\left(x,-\dfrac{127}{32}\right)$. Nari\v{s}i graf funkcije $f$ (ozna\v{c}i asimptoto ter obe dobljeni to\v{c}ki).
+\item Zapi\v{s}i inverzno funkcijo $f^{-1}$. Dolo\v{c}i ena\v{c}bo asimptote in ni\v{c}lo funkcije $f^{-1}$.
+\end{enumerate}
+
+\end{naloga}
+
+\vspace{0.3cm}
+\begin{center}
+\begin{tikzpicture}[scale=0.75]
+\draw[very thin,gray!30] (-2,-5) grid (9,5);
+\draw[->,thick] (-2,0) -- (9,0) node[right] {$x$};
+\draw[->,thick] (0,-5) -- (0,5) node[above] {$y$};
+\end{tikzpicture}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\numexpr\tockeB\relax}
+Re\v{s}i ena\v{c}bo, rešitev zapiši na štiri mesta:
+\[
+3^{1-x}=2^{x}
+\]
+\end{naloga}
+
+\vspace{8cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeC$] \addtocounter{tocke}{\numexpr\tockeC\relax}
+Re\v{s}i ena\v{c}bi:
+\begin{enumerate}[a)]
+\item $\log_3\big(\log_2(x+1)\big)=e^{\ln 2}$
+\item $\log_2 x+\log_4 x+\dfrac32=0$
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeD$] \addtocounter{tocke}{\numexpr\tockeD\relax}
+Zapi\v{s}i definicijsko obmo\v{c}je funkcije
+\[
+f(x)=\ln\big((2x-1)(x+1)\big).
+\]
+\end{naloga}\vspace{8 cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeE$] \addtocounter{tocke}{\numexpr\tockeE\relax}
+\begin{enumerate}[a)]
+\item Naj bo $\ln x=\dfrac13$, $\ln y=2$, $\ln z=-\dfrac14$. Izra\v{c}unaj
+\[
+\ln\left(\dfrac{e\,x^3}{\sqrt{y\,z^{-1}}}\right).
+\]
+\item Dolo\v{c}i $x$, \v{c}e je
+\[
+\log x=2\log 3+\dfrac12\log 9-\dfrac{1}{\log_{27}10}.
+\]
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeF$] \addtocounter{tocke}{\numexpr\tockeF\relax}
+Izra\v{c}unaj produkt re\v{s}itev ena\v{c}be
+\[
+\log_2\!\left(x^{\log_2 x}\right)=\log_2\big(x^2\big)+\log_2 4.
+\]
+\end{naloga}
+
+\vfill
+\begin{kriterij*} \begin{center} \renewcommand{\arraystretch}{2.5}
+\begin{tabular}{|>{\columncolor{gray!20}}c||c|c|c|c|c||c|c|c|} \hline Odstotki &$[0,45)$ & $[45,60)$ & $[60,75)$ & $[75,90)$ & $[90,100]$& \v{S}t. mo\v{z}nih to\v{c}k& Dose\v{z}ene to\v{c}ke & OCENA \\ \hline Ocena & 1 & 2 & 3 & 4 & 5 &\cellcolor{gray!20} $\thetocke$&\cellcolor{gray!20} \phantom{ocena} & \cellcolor{gray!20} \phantom{a} \\ \hline \end{tabular} \end{center} \vspace{0.3cm}  \end{kriterij*}
+
+\newpage
+\textsc{\Large Re\v{s}itve s postopki}
+\vspace{0.5cm}
+
+\begin{resitev}[-- eksponentna funkcija in njen inverz]
+Dana je $f(x)=\left(\dfrac12\right)^{x-2}-4$. Funkcija je padajo\v{c}a, njena horizontalna asimptota je $y=-4$.
+
+\textbf{a)} Ni\v{c}lo dobimo iz $f(x)=0$:
+\[
+\left(\frac12\right)^{x-2}=4=\left(\frac12\right)^{-2}\ \Rightarrow\ x-2=-2\ \Rightarrow\ x=0.
+\]
+Funkcija ima ni\v{c}lo pri $x=0$, torej gre graf skozi to\v{c}ko $(0,0)$.
+
+Za drugo to\v{c}ko re\v{s}imo $f(x)=-\dfrac{127}{32}$:
+\[
+\left(\frac12\right)^{x-2}-4=-\frac{127}{32}\ \Rightarrow\ \left(\frac12\right)^{x-2}=4-\frac{127}{32}=\frac{128-127}{32}=\frac{1}{32}=\left(\frac12\right)^{5}.
+\]
+Sledi $x-2=5$, torej $x=7$ in $T\!\left(7,-\dfrac{127}{32}\right)$.
+
+Graf je padajo\v{c}a eksponentna krivulja s horizontalno asimptoto $y=-4$, ki poteka skozi to\v{c}ki $(0,0)$ in $\left(7,-\dfrac{127}{32}\right)$ (slednja je prakti\v{c}no \v{z}e tik ob asimptoti).
+
+\textbf{b)} Inverzno funkcijo dobimo tako, da zamenjamo vlogi $x$ in $y$ ter izrazimo novi $y$:
+\[
+y=\left(\frac12\right)^{x-2}-4\ \Longrightarrow\ x=\left(\frac12\right)^{y-2}-4\ \Longrightarrow\ x+4=\left(\frac12\right)^{y-2}
+\]
+\[
+\Longrightarrow\ y-2=\log_{1/2}(x+4)\ \Longrightarrow\ y=\log_{1/2}(x+4)+2.
+\]
+Torej
+\[
+f^{-1}(x)=\log_{1/2}(x+4)+2,\qquad D_{f^{-1}}=(-4,\infty).
+\]
+Ker je graf $f^{-1}$ zrcalna slika grafa $f$ prek premice $y=x$, je asimptota funkcije $f^{-1}$ \textbf{navpi\v{c}na} premica
+\[
+x=-4.
+\]
+Ni\v{c}lo funkcije $f^{-1}$ dobimo iz $f^{-1}(x)=0$:
+\[
+\log_{1/2}(x+4)+2=0\ \Rightarrow\ \log_{1/2}(x+4)=-2\ \Rightarrow\ x+4=\left(\frac12\right)^{-2}=4\ \Rightarrow\ x=0.
+\]
+(To se ujema s tem, da je $f(0)=0$, zato mora biti tudi $f^{-1}(0)=0$.)
+
+\begin{center}
+\begin{tikzpicture}[scale=0.62]
+\draw[very thin,gray!25] (-5,-5) grid (13,13);
+\draw[->,thick] (-5,0) -- (13,0) node[right] {$x$};
+\draw[->,thick] (0,-5) -- (0,13) node[above] {$y$};
+\draw[dashed,thick,blue!60] (-5,-4) -- (13,-4) node[pos=0.03,below]{$y=-4$};
+\draw[dashed,thick,red!60] (-4,-5) -- (-4,13) node[pos=0.97,right]{$x=-4$};
+\draw[dotted] (-5,-5) -- (13,13);
+\draw[domain=-1:8,smooth,variable=\x,blue,thick] plot ({\x},{0.5^(\x-2)-4});
+\draw[domain=-3.9:12,smooth,variable=\x,red,thick,samples=100] plot ({\x},{-ln(\x+4)/ln(2)+2});
+\filldraw[blue] (0,0) circle (2pt);
+\filldraw[blue] (7,-3.969) circle (2pt) node[below right]{\scriptsize $T(7,-\frac{127}{32})$};
+\filldraw[red] (-3.969,7) circle (2pt) node[above left]{\scriptsize $T'(-\frac{127}{32},7)$};
+\node[blue] at (2.3,3.2) {$f$};
+\node[red] at (3.2,2.3) {$f^{-1}$};
+\end{tikzpicture}
+\end{center}
+\end{resitev}
+
+\begin{resitev}[-- eksponentna ena\v{c}ba]
+Ena\v{c}bo $3^{1-x}=2^x$ re\v{s}imo tako, da logaritmiramo obe strani (naravni logaritem):
+\[
+\ln\!\left(3^{1-x}\right)=\ln\!\left(2^{x}\right)\ \Longrightarrow\ (1-x)\ln3=x\ln2.
+\]
+Izpostavimo $x$:
+\[
+\ln3-x\ln3=x\ln2\ \Longrightarrow\ \ln3=x(\ln2+\ln3)=x\ln6.
+\]
+Sledi
+\[
+x=\frac{\ln3}{\ln6}=\log_6 3=1-\log_6 2\approx0{,}6131.
+\]
+\end{resitev}
+
+\begin{resitev}[-- logaritemski ena\v{c}bi]
+\textbf{a)} $e^{\ln 2} = 2$, $\log_3\big(\log_2(x+1)\big)=2$. Iz definicije logaritma sledi
+\[
+\log_2(x+1)=3^2=9\ \Longrightarrow\ x+1=2^9=512\ \Longrightarrow\ x=511.
+\]
+Preverimo definicijsko obmo\v{c}je: $x+1=512>0$ in $\log_2(x+1)=9>0$, zato je re\v{s}itev veljavna.
+
+\textbf{b)} $\log_2 x+\log_4 x+\dfrac32=0$. Ker je $\log_4 x=\dfrac{\log_2 x}{\log_2 4}=\dfrac{\log_2 x}{2}$, uvedemo substitucijo $t=\log_2 x$:
+\[
+t+\frac t2+\frac32=0\ \Longrightarrow\ \frac32t=-\frac32\ \Longrightarrow\ t=-1.
+\]
+Torej $\log_2 x=-1$, od koder $x=\dfrac12$ (definicijsko obmo\v{c}je $x>0$ je izpolnjeno).
+\end{resitev}
+
+\newpage
+\begin{resitev}[-- definicijsko obmo\v{c}je]
+Ker je $\ln$ definiran le za pozitivne argumente, mora veljati
+\[
+(2x-1)(x+1)>0.
+\]
+Ni\v{c}li izraza sta $x=\dfrac12$ in $x=-1$. Ker je koeficient pri $x^2$ pozitiven ($2x^2+x-1$), je izraz pozitiven \textbf{zunaj} ni\v{c}el, torej za $x<-1$ ali $x>\dfrac12$. Definicijsko obmo\v{c}je je zato
+\[
+D_f=(-\infty,-1)\cup\left(\frac12,\infty\right).
+\]
+\end{resitev}
+
+\begin{resitev}[-- ra\v{c}unanje z logaritmi]
+\textbf{a)} Podano imamo $\ln x=\dfrac13$, $\ln y=2$, $\ln z=-\dfrac14$. Uporabimo pravila za logaritme (produkt, koli\v{c}nik, potenca, koren):
+\[
+\ln\left(\frac{e\,x^3}{\sqrt{y\,z^{-1}}}\right)=\ln e+3\ln x-\frac12\big(\ln y-\ln z\big).
+\]
+Vstavimo vrednosti:
+\[
+=1+3\cdot\frac13-\frac12\left(2-\left(-\frac14\right)\right)=1+1-\frac12\cdot\frac94=2-\frac98=\frac{16-9}{8}=\frac78.
+\]
+Torej je iskana vrednost $\dfrac78$.
+
+\textbf{b)} $\log x=2\log3+\dfrac12\log9-\dfrac{1}{\log_{27}10}$. Ker je $\log_{27}10=\dfrac{\log10}{\log27}=\dfrac{1}{\log27}$ (saj je $\log10=1$), sledi
+\[
+\frac{1}{\log_{27}10}=\log27.
+\]
+Nadalje je $2\log3=\log9$, $\dfrac12\log9=\dfrac12\log(3^2)=\log3$ in $\log27=\log(3^3)=3\log3$. Torej
+\[
+\log x=\log9+\log3-\log27=\log\!\left(\frac{9\cdot3}{27}\right)=\log1=0\ \Longrightarrow\ x=1.
+\]
+\end{resitev}
+
+\begin{resitev}[-- logaritemska ena\v{c}ba s produktom re\v{s}itev]
+Definicijsko obmo\v{c}je: $x>0$. Levo stran preoblikujemo s pravilom $\log_b(a^c)=c\log_b a$:
+\[
+\log_2\!\left(x^{\log_2 x}\right)=(\log_2 x)\cdot(\log_2 x)=(\log_2 x)^2.
+\]
+Desno stran zdru\v{z}imo:
+\[
+\log_2(x^2)+\log_2 4=2\log_2 x+2.
+\]
+Z uvedbo $t=\log_2 x$ dobimo kvadratno ena\v{c}bo
+\[
+t^2=2t+2\ \Longrightarrow\ t^2-2t-2=0.
+\]
+Re\v{s}itvi sta
+\[
+t_{1,2}=\frac{2\pm\sqrt{4+8}}{2}=1\pm\sqrt3.
+\]
+Ker je $t=\log_2 x$, sta re\v{s}itvi za $x$ enaki
+\[
+x_1=2^{\,1+\sqrt3},\qquad x_2=2^{\,1-\sqrt3},
+\]
+obe pa ustrezata definicijskemu obmo\v{c}ju ($x_1,x_2>0$). Produkt re\v{s}itev je
+\[
+x_1\cdot x_2=2^{\,(1+\sqrt3)+(1-\sqrt3)}=2^{2}=\boldsymbol{4}.
+\]
+\end{resitev}
+
+\end{document}
