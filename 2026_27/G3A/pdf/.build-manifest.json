@@ -1,4 +1,12 @@
 {
+  "Test.1.1.tex": {
+    "deps": "5e0ca88367459fb40b6498ce0408b9ec09e2689a546b96f293f9e2dd7260d8b2",
+    "tex": "cd4d6ccd3937a68b7873cb3bc859cd500fcbbb15b0578446ccc864432db2962f"
+  },
+  "Test.1.2.tex": {
+    "deps": "5e0ca88367459fb40b6498ce0408b9ec09e2689a546b96f293f9e2dd7260d8b2",
+    "tex": "6bf9fae3f5c2a8e523c7eae521e5772225b62305e487e6bf7e79760dd8864b29"
+  },
   "Test.1P.1.tex": {
     "deps": "5e0ca88367459fb40b6498ce0408b9ec09e2689a546b96f293f9e2dd7260d8b2",
     "tex": "1543e896417abc3446a91aacba787f6cda6db849d1b93b106bd35d3348b579d0"
