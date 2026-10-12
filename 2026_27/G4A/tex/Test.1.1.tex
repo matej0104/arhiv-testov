@@ -1,0 +1,298 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+%%%%%%%%%%%%%%%%%%%% podatki testa -- tu spreminjaj
+\def\programletnik{Gim - 4}
+\def\naslov{Test 1.1 - }
+\def\sklop{Geometrijska telesa}
+%%%%%%%%%%%%%%%%%%%% tocke po nalogah
+\def\tockeA{4+4+4}
+\def\tockeB{3+3+3+4}
+\def\tockeC{4+3}
+\def\tockeD{4+4}
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\numexpr\tockeA\relax}
+Pravilni tristrani prizmi je osnovni rob $a=4\sqrt3$ cm, vi\v{s}ina prizme pa je enaka polmeru o\v{c}rtanega kroga osnovne ploskve.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj polmer o\v{c}rtanega kroga osnovne ploskve in vi\v{s}ino prizme.
+\item Izra\v{c}unaj prostornino in povr\v{s}ino prizme.
+\item V prizmo vri\v{s}emo najve\v{c}ji mo\v{z}ni valj (os valja sovpada z osjo prizme). Izra\v{c}unaj, koliko odstotkov prostornine prizme zavzema ta valj.
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\numexpr\tockeB\relax}
+Pravilni \v{s}tiristrani piramidi meri povr\v{s}ina $S=360\ \text{cm}^2$, vi\v{s}ina piramide pa je $v=12$ cm.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj rob osnovne ploskve.
+\item Izra\v{c}unaj prostornino piramide.
+\item Izra\v{c}unaj kot med stransko in osnovno ploskvijo (do kotne minute natan\v{c}no).
+\item Izra\v{c}unaj polmer piramidi včrtane krogle.
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeC$] \addtocounter{tocke}{\numexpr\tockeC\relax}
+Dvojni (dvakrat) zlepljeni sto\v{z}ec ima povr\v{s}ino $S=120\pi\ \text{cm}^2$, obseg skupne osnovne kro\v{z}nice pa je $o=12\pi$ cm.
+\begin{enumerate}[a)]
+\item Izra\v{c}unaj prostornino dvojnega sto\v{z}ca.
+\item Izra\v{c}unaj razdaljo med vrhovoma sto\v{z}cev.
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeD$] \addtocounter{tocke}{\numexpr\tockeD\relax}
+Kroglo s polmerom $r=5$ cm prelijemo (preoblikujemo) v $1000$ enako velikih majhnih kroglic.
+\begin{enumerate}[a)]
+\item Kolikokrat se pove\v{c}a skupna povr\v{s}ina, \v{c}e kroglo prelijemo v $1000$ majhnih kroglic?
+\item Izra\v{c}unaj telesno diagonalo najmanj\v{s}e kockaste (kubi\v{c}ne) \v{s}katle, ki jo potrebujemo za skladi\v{s}\v{c}enje vseh kroglic.
+\end{enumerate}
+\end{naloga}
+
+\vfill
+\begin{kriterij*} \begin{center} \renewcommand{\arraystretch}{2.5}
+\begin{tabular}{|>{\columncolor{gray!20}}c||c|c|c|c|c||c|c|c|} \hline Odstotki &$[0,45)$ & $[45,60)$ & $[60,75)$ & $[75,90)$ & $[90,100]$& \v{S}t. mo\v{z}nih to\v{c}k& Dose\v{z}ene to\v{c}ke & OCENA \\ \hline Ocena & 1 & 2 & 3 & 4 & 5 &\cellcolor{gray!20} $\thetocke$&\cellcolor{gray!20} \phantom{ocena} & \cellcolor{gray!20} \phantom{a} \\ \hline \end{tabular} \end{center} \vspace{0.3cm}  \end{kriterij*}
+
+\newpage
+\textsc{\Large Re\v{s}itve s postopki}
+\vspace{0.5cm}
+
+\begin{resitev}[-- tristrana prizma]
+Osnovna ploskev je enakostrani\v{c}en trikotnik z robom $a=4\sqrt3$ cm.
+
+\textbf{a)} Polmer o\v{c}rtanega kroga enakostrani\v{c}nega trikotnika je
+\[
+R=\frac{a}{\sqrt3}=\frac{4\sqrt3}{\sqrt3}=4\ \text{cm}.
+\]
+Ker je vi\v{s}ina prizme enaka temu polmeru, je $v=R=4$ cm.
+
+\textbf{b)} Ploščina osnovne ploskve (enakostrani\v{c}en trikotnik):
+\[
+S_o=\frac{a^2\sqrt3}{4}=\frac{(4\sqrt3)^2\sqrt3}{4}=\frac{48\sqrt3}{4}=12\sqrt3\ \text{cm}^2\approx20{,}78\ \text{cm}^2.
+\]
+Prostornina:
+\[
+V=S_o\cdot v=12\sqrt3\cdot4=48\sqrt3\ \text{cm}^3\approx83{,}14\ \text{cm}^3.
+\]
+Povr\v{s}ina (dve osnovni ploskvi + tri pla\v{s}\v{c}ne pravokotnike $a\times v$):
+\[
+S=2S_o+3av=2\cdot12\sqrt3+3\cdot4\sqrt3\cdot4=24\sqrt3+48\sqrt3=72\sqrt3\ \text{cm}^2\approx124{,}71\ \text{cm}^2.
+\]
+
+\textbf{c)} Najve\v{c}ji valj, ki ga lahko vri\v{s}emo v prizmo (os valja = os prizme), ima za osnovno kro\v{z}nico najve\v{c}ji mo\v{z}ni kroga, ki se \v{s}e prilega enakostrani\v{c}nemu trikotniku -- to je vrisan kro\v{z}nica (in\v{c}rtan krog) trikotnika s polmerom
+\[
+\rho=\frac{a}{2\sqrt3}=\frac{4\sqrt3}{2\sqrt3}=2\ \text{cm},
+\]
+vi\v{s}ina valja pa je enaka vi\v{s}ini prizme, saj se prerez prizme ne spreminja po vi\v{s}ini: $h_{valj}=v=4$ cm.
+\[
+V_{valj}=\rho^2\pi h_{valj}=2^2\pi\cdot4=16\pi\ \text{cm}^3\approx50{,}27\ \text{cm}^3.
+\]
+Dele\v{z} prostornine, ki jo zavzame valj:
+\[
+\frac{V_{valj}}{V}=\frac{16\pi}{48\sqrt3}=\frac{\pi}{3\sqrt3}=\frac{\pi\sqrt3}{9}\approx0{,}6046.
+\]
+Valj torej zavzema pribli\v{z}no $\boldsymbol{60{,}46\,\%}$ prostornine prizme.
+\end{resitev}
+
+\begin{resitev}[-- \v{s}tiristrana piramida]
+Osnova je kvadrat z robom $a$, vi\v{s}ina piramide je $v=12$ cm, apotema pla\v{s}\v{c}a (vi\v{s}ina stranske ploskve) je $m$.
+
+\textbf{a)} Povr\v{s}ina piramide je vsota osnovne ploskve in \v{s}tirih stranskih trikotnikov:
+\[
+S=a^2+4\cdot\frac{am}{2}=a^2+2am,\qquad m=\sqrt{v^2+\left(\frac a2\right)^2}.
+\]
+Z vstavljanjem $v=12$ dobimo $m=\sqrt{144+\tfrac{a^2}4}$. Ena\v{c}bo $a^2+2a\sqrt{144+\tfrac{a^2}4}=360$ re\v{s}imo (ali preverimo) s poskusom $a=10$ cm:
+\[
+m=\sqrt{144+25}=\sqrt{169}=13\ \text{cm},\qquad S=100+2\cdot10\cdot13=100+260=360\ \text{cm}^2.\ \checkmark
+\]
+Rob osnovne ploskve je torej $a=10$ cm (pri tem je $v=12$, $a/2=5$, $m=13$ -- Pitagorejska trojica).
+
+\textbf{b)} Prostornina:
+\[
+V=\frac13a^2v=\frac13\cdot100\cdot12=400\ \text{cm}^3.
+\]
+
+\textbf{c)} Kot $\varphi$ med stransko in osnovno ploskvijo dobimo v pravokotnem trikotniku z vi\v{s}ino $v=12$ in razdaljo od sredi\v{s}\v{c}a osnovne ploskve do sredine roba $a/2=5$:
+\[
+\operatorname{tg}\varphi=\frac{v}{a/2}=\frac{12}{5}=2{,}4\ \Rightarrow\ \varphi\approx67{,}38\degree\approx67\degree23'.
+\]
+
+\textbf{d)} Polmer piramidi vri\v{s}ane krogle (sfera, ki se dotika osnovne ploskve in vseh \v{s}tirih stranskih ploskev) dobimo iz zveze $V=\frac13 r\, S$ (razdelitev telesa na piramide s skupnim vrhom v sredi\v{s}\v{c}u krogle in osnovami, ki so ploskve telesa):
+\[
+r=\frac{3V}{S}=\frac{3\cdot400}{360}=\frac{1200}{360}=\frac{10}{3}\ \text{cm}\approx3{,}33\ \text{cm}.
+\]
+\end{resitev}
+
+\newpage
+\begin{resitev}[-- dvojni zlepljeni sto\v{z}ec]
+Sto\v{z}ca imata skupno osnovno kro\v{z}nico s polmerom $r$ in obsegom $o=2\pi r$, zlepljena sta v svojih osnovah, zunanja povr\v{s}ina pa je sestavljena le iz dveh pla\v{s}\v{c}ev (skupna osnova ni del zunanje povr\v{s}ine).
+
+Iz obsega:
+\[
+2\pi r=12\pi\ \Rightarrow\ r=6\ \text{cm}.
+\]
+Ker ni druga\v{c}e povedano, je dvojni sto\v{z}ec simetri\v{c}en (oba sto\v{z}ca enaka), zato ju ozna\v{c}imo z enako stranico $l$:
+\[
+S=2\pi rl=120\pi\ \Rightarrow\ l=\frac{120\pi}{2\pi\cdot6}=10\ \text{cm}.
+\]
+Vi\v{s}ino vsakega sto\v{z}ca dobimo s Pitagorovim izrekom:
+\[
+v=\sqrt{l^2-r^2}=\sqrt{10^2-6^2}=\sqrt{100-36}=\sqrt{64}=8\ \text{cm}.
+\]
+
+\textbf{a)} Prostornina dvojnega sto\v{z}ca je vsota prostornin obeh (enakih) sto\v{z}cev:
+\[
+V=2\cdot\frac13\pi r^2v=2\cdot\frac13\pi\cdot36\cdot8=192\pi\ \text{cm}^3\approx603{,}19\ \text{cm}^3.
+\]
+
+\textbf{b)} Razdalja med vrhovoma je vsota vi\v{s}in obeh sto\v{z}cev (vrhova le\v{z}ita na skupni osi, na nasprotnih straneh skupne osnovne ravnine):
+\[
+d=v+v=2v=2\cdot8=16\ \text{cm}.
+\]
+\end{resitev}
+
+\begin{resitev}[-- krogla, prelita v $1000$ kroglic]
+Prostornina za\v{c}etne krogle s polmerom $R=5$ cm:
+\[
+V=\frac43\pi R^3=\frac43\pi\cdot125=\frac{500}{3}\pi\ \text{cm}^3.
+\]
+Ker prelijemo kroglo v $1000$ enakih majhnih kroglic, ima vsaka prostornino
+\[
+v=\frac{V}{1000}=\frac{500\pi}{3000}=\frac{\pi}{6}\ \text{cm}^3.
+\]
+Polmer majhne kroglice:
+\[
+\frac43\pi r^3=\frac{\pi}{6}\ \Rightarrow\ r^3=\frac18\ \Rightarrow\ r=\frac12\ \text{cm}=0{,}5\ \text{cm}
+\]
+(kar se ujema tudi z $r=\dfrac{R}{\sqrt[3]{1000}}=\dfrac{5}{10}=0{,}5$ cm).
+
+\textbf{a)} Povr\v{s}ina za\v{c}etne krogle:
+\[
+S_1=4\pi R^2=4\pi\cdot25=100\pi\ \text{cm}^2.
+\]
+Skupna povr\v{s}ina vseh $1000$ majhnih kroglic:
+\[
+S_2=1000\cdot4\pi r^2=1000\cdot4\pi\cdot0{,}25=1000\pi\ \text{cm}^2.
+\]
+Razmerje:
+\[
+\frac{S_2}{S_1}=\frac{1000\pi}{100\pi}=10.
+\]
+Skupna povr\v{s}ina se torej pove\v{c}a $\boldsymbol{10}$-krat.
+
+\textbf{b)} Premer ene majhne kroglice je $d=2r=1$ cm. Ker je $1000=10^3$, kroglice zlo\v{z}imo v pravilno kocakasto mre\v{z}o $10\times10\times10$ kroglic (najenostavnej\v{s}a razporeditev, kroglica ob kroglici v vseh treh smereh). Rob najmanj\v{s}e kocakste \v{s}katle, ki jih vse spravi, je zato
+\[
+b=10\cdot d=10\cdot1=10\ \text{cm}.
+\]
+\v{S}katla mora torej imeti dimenzije $10\ \text{cm}\times10\ \text{cm}\times10\ \text{cm}$. Telesna diagonala: $D=a\sqrt{3}=10\sqrt{3}$ cm.
+\end{resitev}
+
+\end{document}

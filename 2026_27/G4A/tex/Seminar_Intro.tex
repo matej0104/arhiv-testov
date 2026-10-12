@@ -1,0 +1,397 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovene,provide=*]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue]{hyperref}
+
+\definecolor{scred}{RGB}{150,20,30}
+
+\titleformat{\section}{\Large\bfseries\color{scred}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\setlist[itemize]{topsep=2pt,itemsep=2pt,parsep=0pt}
+
+\title{\textbf{Matematične seminarske in raziskovalne naloge}\\[4pt]\large Navodila in predlogi tem za gimnazijo}
+\author{Šolski center Krško--Sevnica}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% =====================================================================
+\section{Raziskovalna naloga}
+% =====================================================================
+
+Raziskovalna naloga je namenjena dijakom, ki si želijo večjega izziva: gre za obsežnejšo, samostojno nalogo (10--15 strani), v primerjavi s krajšo seminarsko nalogo (do 3 strani), ki je predstavljena v razdelku~\ref{sec:seminarska}.
+
+\subsection{Navodila za izdelavo}
+
+\subsubsection*{Struktura naloge}
+
+\begin{enumerate}
+  \item \textbf{Naslovna stran} -- ime šole, predmet (matematika), naslov naloge, ime in razred dijaka, mentor, kraj in datum.
+  \item \textbf{Kazalo vsebine} -- avtomatsko generirano kazalo s stranmi.
+  \item \textbf{Uvod} (pribl.\ pol strani do ene strani) -- zakaj je dijak izbral to temo, kaj je namen/cilj naloge (raziskovalno vprašanje), kratek pregled vsebine.
+  \item \textbf{Osrednji (jedrni) del} -- glavnina naloge:
+  \begin{itemize}
+    \item teoretična osnova: definicije, izreki, dokazi (prilagojeni gimnazijski ravni);
+    \item lastni rešeni primeri -- ne le prepisana teorija, ampak dijakov lasten prikaz razumevanja;
+    \item po možnosti praktični/uporabni del: povezava s stroko, vsakdanjim življenjem ali drugim predmetom;
+    \item grafi, skice, slike (GeoGebra, Desmos, Excel), vse oštevilčene in poimenovane;
+    \item če je smiselno, kratek zgodovinski oris pojma ali matematika, ki ga je odkril.
+  \end{itemize}
+  \item \textbf{Zaključek} -- strnjen povzetek ugotovitev, lasten razmislek (kaj je dijak izvedel, kje so bile težave, kaj bi raziskal naprej).
+  \item \textbf{Viri in literatura} -- enoten citatni slog (npr.\ APA), ločeno knjige in spletni viri (z datumom dostopa); vsak prevzet podatek, slika ali trditev ima naveden vir.
+  \item \textbf{Priloge} (po potrebi) -- dodatni izračuni, izpeljave, podatkovne tabele, izvorna koda.
+\end{enumerate}
+
+\subsubsection*{Oblikovanje}
+
+\begin{itemize}
+  \item Obseg: običajno 10--15 strani vsebine (brez naslovnice, kazala in prilog).
+  \item Pisava: Times New Roman 12~pt ali Arial 11~pt, razmik vrstic 1,5.
+  \item Enačbe urejene z urejevalnikom enačb (Word Equation, \LaTeX) -- ne kot slike, če se le da.
+  \item Strani oštevilčene; slike in tabele naslovljene ter oštevilčene (npr.\ ,,Slika 3: \dots{}``).
+\end{itemize}
+
+\subsubsection*{Nasveti za kakovostno nalogo}
+
+\begin{itemize}
+  \item Tema naj bo dovolj ozka, da jo je mogoče poglobljeno obdelati na 10--15 straneh.
+  \item Vključi vsaj en izviren, samostojno rešen primer ali problem.
+  \item Pokaži povezavo matematike z realnim svetom, drugo stroko ali zgodovino.
+  \item Dokaze prilagodi ravni gimnazije: poudarek na razumevanju ideje, ne na formalni strogosti.
+  \item Uporabi vizualizacije (grafi, geometrijske skice) povsod, kjer pomagajo razumevanju.
+  \item Naloga naj se konča z lastnim zaključkom, ne le s ,,prepisanim`` povzetkom vira.
+\end{itemize}
+
+\subsubsection*{Okviren časovni potek}
+
+\begin{enumerate}
+  \item Izbira in potrditev teme pri mentorju.
+  \item Zbiranje virov in literature.
+  \item Izdelava grobega osnutka (struktura + jedro).
+  \item Pregled pri mentorju, popravki.
+  \item Izdelava končne različice.
+  \item Priprava na ustno predstavitev/zagovor (če je predviden).
+\end{enumerate}
+
+\subsection{Predlogi naslovov po področjih}
+
+\subsubsection*{Zgodovina matematike}
+\begin{itemize}
+  \item Zlati rez skozi zgodovino, naravo in umetnost
+  \item Fibonaccijevo zaporedje in njegova uporaba v naravi
+  \item Pitagorov izrek: različni dokazi skozi zgodovino
+  \item Zgodovina in izračun števila $\pi$
+  \item Nastanek neevklidskih geometrij
+  \item Kriptografija skozi zgodovino -- od Cezarjeve šifre do RSA
+\end{itemize}
+
+\subsubsection*{Algebra}
+\begin{itemize}
+  \item Kompleksna števila in njihova uporaba v elektrotehniki
+  \item Reševanje enačb 3.\ in 4.\ stopnje (Cardano, Ferrari)
+  \item Matrike pri reševanju sistemov linearnih enačb
+  \item Polinomi in Hornerjev algoritem
+  \item Uvod v teorijo grup na preprostih primerih
+\end{itemize}
+
+\subsubsection*{Geometrija}
+\begin{itemize}
+  \item Platonska telesa in njihove lastnosti
+  \item Fraktali -- geometrija narave
+  \item Zlati rez v arhitekturi
+  \item Trigonometrija in triangulacija v navigaciji/GPS
+  \item Stožnice (elipsa, parabola, hiperbola) in njihova uporaba
+  \item Neevklidske geometrije -- kaj se zgodi, če Evklidov 5.\ postulat ne velja
+\end{itemize}
+
+\subsubsection*{Matematična analiza}
+\begin{itemize}
+  \item Odvod pri reševanju optimizacijskih problemov (npr.\ najmanjša poraba materiala)
+  \item Uporaba integralov pri izračunu površin in prostornin vrtenin
+  \item Zenonovi paradoksi in pojem limite
+  \item Diferencialne enačbe pri modeliranju rasti populacij
+  \item Taylorjeva vrsta in aproksimacija funkcij
+\end{itemize}
+
+\subsubsection*{Verjetnost in statistika}
+\begin{itemize}
+  \item Verjetnost pri igrah na srečo (kocke, karte, loto)
+  \item Statistična analiza podatkov (npr.\ rezultati dijakov, športni podatki)
+  \item Bayesov izrek in njegova uporaba (npr.\ medicinsko testiranje)
+  \item Slučajni sprehodi (random walk)
+  \item Zakon velikih števil na simulacijah
+\end{itemize}
+
+\subsubsection*{Diskretna matematika in kombinatorika}
+\begin{itemize}
+  \item Teorija grafov in problem štirih barv
+  \item Pascalov trikotnik in binomski izrek
+  \item Osnove teorije iger
+  \item Problem trgovskega potnika
+\end{itemize}
+
+\subsubsection*{Uporabna matematika}
+\begin{itemize}
+  \item Matematika v kriptografiji in varnosti podatkov
+  \item Obrestno obrestovanje in matematika financ
+  \item Matematika v računalniški grafiki
+  \item Matematika glasbe -- frekvence, harmonija, intervali
+  \item Matematični modeli širjenja epidemij (SIR model)
+  \item Matematika pri gradnji mostov in zgradb
+  \item GPS in matematika trilateracije
+\end{itemize}
+
+\subsubsection*{Teorija števil}
+\begin{itemize}
+  \item Praštevila in njihova vloga v kriptografiji
+  \item Popolna in prijateljska števila
+  \item Diofantske enačbe
+  \item Modularna aritmetika in njena uporaba
+\end{itemize}
+
+\bigskip
+\noindent\textit{Dijak se usmeri glede na njegov interes (npr.\ šport, glasba, računalništvo, ekonomija) -- tako je motivacija za samostojno delo večja, naloga pa bolj izvirna.}
+
+\newpage
+% =====================================================================
+\section{Seminarska naloga}
+\label{sec:seminarska}
+% =====================================================================
+
+Kratka seminarska naloga (do 3 strani, \LaTeX/Overleaf) -- strogo se drži naslova in uporablja samo formule, obravnavane v gimnaziji. Struktura: uvod (situacija, zgodovina/kontekst) -- jedro (matematično ozadje in konkreten izračun) -- zaključek (ugotovitve) -- literatura. Dijak lahko pri pisanju uporabi AI kot pomoč, vsebinsko pa mora ostati tesno vezan na izbrano temo in sklop snovi.
+
+\medskip
+\noindent Snov je navedena z oznako poglavja iz dokumenta \textit{Matematika na maturi -- cilji}, da lahko nalogo neposredno povežemo s standardi znanja.
+
+\subsection{1.--2.\ letnik}
+
+\subsubsection*{1. Naravna in cela števila}
+\begin{itemize}
+  \item \textbf{Usklajevanje izmen na dveh strojih/linijah} -- najmanjši skupni večkratnik  ciklov, kdaj se urnika znova poravnata.
+  \item \textbf{Zobniki različnih velikosti} -- zakaj imajo zobniki pogosto praštevilsko število zob (enakomerna obraba), v/D pri vrtenju.
+  \item \textbf{Kontrolna števka pri EAN/ISBN kodi} -- deljivost in modularni izračun kontrolne števke izdelka/knjige.
+  \item \textbf{Shranjevanje podatkov v računalniku} -- pretvorba med desetiškim in dvojiškim zapisom (bit, bajt).
+\end{itemize}
+
+\subsubsection*{2. Algebrski izrazi, enačbe in neenačbe}
+\begin{itemize}
+  \item \textbf{Mešanje raztopin različnih koncentracij} -- npr.\ sirup, čistilo, kislina; linearna enačba za želeno mešanico.
+  \item \textbf{Delitev računa/najema med prijatelji glede na porabo} -- postavitev in reševanje enačbe.
+  \item \textbf{Prilagajanje recepta za drugo število oseb} -- sorazmerja in enačbe.
+  \item \textbf{Načrtovanje žepnine/proračuna za izlet} -- neenačbe (koliko največ lahko porabim).
+  \item \textbf{Vietovo pravilo pri hitrem preverjanju rešitev kvadratne enačbe} -- npr.\ pri nalogah o metu žoge (čas leta).
+\end{itemize}
+
+\subsubsection*{3. Osnove logike}
+\begin{itemize}
+  \item \textbf{Logična vezja v elektronskih napravah} -- AND, OR, NOT vezja in njihova uporaba.
+  \item \textbf{Iskanje po spletu ali bazi podatkov z logičnimi operatorji} -- AND/OR/NOT pri iskalnih poizvedbah.
+  \item \textbf{Uganke o resnicoljubcih in lažnivcih} -- logično sklepanje in izjavni račun.
+  \item \textbf{Veljavnost pravnih/sodnih sklepov} -- osnovni silogizmi in pravilno sklepanje.
+\end{itemize}
+
+\subsubsection*{4. Množice}
+\begin{itemize}
+  \item \textbf{Vennovi diagrami pri šolski anketi} -- npr.\ dijaki, ki obiskujejo matematični IN športni krožek.
+  \item \textbf{Filtri v spletni trgovini} -- presek in unija množic izdelkov.
+  \item \textbf{Poizvedbe v Excelu/bazi podatkov} -- unija, presek, razlika podatkovnih naborov.
+  \item \textbf{Alergije in sestavljanje jedilnika} -- dovoljena/prepovedana živila kot množice.
+\end{itemize}
+
+\subsubsection*{5. Racionalna števila}
+\begin{itemize}
+  \item \textbf{Popusti in akcije v trgovini} -- odstotki, promili, primerjava dejanskih prihrankov.
+  \item \textbf{Obrestna mera pri potrošniškem kreditu} -- odstotni račun na konkretnem primeru ponudbe.
+  \item \textbf{Statistika metov v košarki ali strelov na gol} -- odstotek uspešnosti.
+  \item \textbf{Recepti in razredčevanje} -- barve, čistila; razmerja in deleži.
+\end{itemize}
+
+\subsubsection*{6. Realna števila}
+\begin{itemize}
+  \item \textbf{Zaokroževanje pri tehničnih meritvah} -- napake meritev v gradbeništvu ali strojništvu.
+  \item \textbf{Dokaz iracionalnosti $\sqrt{2}$} -- Pitagorejci in diagonala kvadrata ter razlogi za propad pitagorejske šole.
+  \item \textbf{Natančnost GPS koordinat} -- koliko decimalnih mest dejansko pomeni na terenu.
+  \item \textbf{Merilna negotovost pri meritvi temperature ali dolžine} -- zapis z intervalom.
+\end{itemize}
+
+\subsubsection*{7. Pravokotni koordinatni sistem}
+\begin{itemize}
+  \item \textbf{Igra Bojne ladje ali šahovnica} -- koordinatni sistem v praksi.
+  \item \textbf{Iskanje lokacij na zemljevidu/GPS} -- uporaba koordinat.
+  \item \textbf{Zračna razdalja med dvema krajema} (npr.\ Krško--Ljubljana) -- izračun s formulo za razdaljo med točkama.
+  \item \textbf{Piksli na zaslonu telefona/računalnika} -- koordinatni sistem digitalne slike.
+\end{itemize}
+
+\subsubsection*{8. Linearna funkcija}
+\begin{itemize}
+  \item \textbf{Cenik taksija ali parkirišča} -- začetna postavka + cena na km/uro kot linearna funkcija.
+  \item \textbf{Poraba goriva glede na prevoženo razdaljo}.
+  \item \textbf{Pretvorba temperature med Celzijem in Fahrenheitom} -- linearna zveza.
+  \item \textbf{Najem opreme (kolesa, šotora, ozvočenja)} -- fiksni in spremenljivi stroški.
+  \item \textbf{Načrtovanje proizvodnje z omejenimi viri} (npr.\ pekarna, čebelarstvo) -- linearno programiranje.
+\end{itemize}
+
+\subsubsection*{9. Evklidska geometrija v ravnini}
+\begin{itemize}
+  \item \textbf{Merjenje širine reke ali druge nedostopne razdalje} -- podobnost trikotnikov.
+  \item \textbf{Načrtovanje vrta ali igrišča} -- obseg in ploščina lika.
+  \item \textbf{Talesov izrek in obodni/središčni kot} -- pri načrtovanju krožnih objektov (rondo, kupola, kolo).
+  \item \textbf{Zlati rez v oblikovanju} -- logotip, fotografija, embalaža.
+\end{itemize}
+
+\subsubsection*{10. Vektorji v ravnini in prostoru}
+\begin{itemize}
+  \item \textbf{Vlečenje sani ali vozička pod kotom} -- seštevanje sil kot vektorjev.
+  \item \textbf{Navigacija čolna ali letala ob vetru/toku} -- vektorsko seštevanje hitrosti.
+  \item \textbf{Premikanje lika v videoigri} -- vektor premika in hitrosti.
+  \item \textbf{Smer in razdalja pri GPS navigaciji} -- zapis poti kot vektorja.
+\end{itemize}
+
+\subsubsection*{11. Potence z racionalnimi eksponenti}
+\begin{itemize}
+  \item \textbf{Škaliranje arhitekturnih maket} -- koreni pri preračunu površin/prostornin ob spremembi merila.
+  \item \textbf{Čas prostega pada predmeta} -- koren v formuli za čas padca z dane višine.
+  \item \textbf{Izračun stranice kvadrata ali polmera kroga iz znane ploščine} -- korenjenje.
+\end{itemize}
+
+\subsubsection*{12. Kompleksna števila}
+\begin{itemize}
+  \item \textbf{Izmenični tok v elektrotehniki} -- impedanca kot kompleksno število.
+  \item \textbf{Fraktali (Mandelbrotova množica)} -- kompleksna ravnina in iteracija.
+  \item \textbf{Nihanje/dušenje v fiziki} -- kvadratne enačbe brez realnih rešitev.
+\end{itemize}
+
+\subsubsection*{13. Funkcije in njene lastnosti}
+\begin{itemize}
+  \item \textbf{Cenik vozovnice ali parkirnine po conah} -- odsekoma podana funkcija.
+  \item \textbf{Dnevni diagram porabe elektrike ali vode} -- branje lastnosti funkcije (naraščanje, ničle, ekstremi) iz grafa.
+  \item \textbf{Pretvorbe med valutami ali merskimi enotami} -- funkcija in njen predpis.
+\end{itemize}
+
+\subsubsection*{14. Potenčna in korenska funkcija}
+\begin{itemize}
+  \item \textbf{Odvisnost prostornine/površine posode od dolžine roba} -- kvadratna/kubična rast.
+  \item \textbf{Odpor zraka pri padalstvu} -- korenska odvisnost hitrosti padanja.
+  \item \textbf{Keplerjev tretji zakon} -- odvisnost obhodnega časa planeta ($T$) od velike polosi tirnice ($a$): $T^2 \sim a^3$.
+\end{itemize}
+
+\subsubsection*{15. Kvadratna funkcija}
+\begin{itemize}
+  \item \textbf{Višina žoge v odvisnosti od časa pri metu} -- košarka, nogomet, odbojka.
+  \item \textbf{Optimizacija ograjenega vrta pri dani dolžini ograje} -- največja možna ploščina.
+  \item \textbf{Dobiček podjetja v odvisnosti od cene izdelka} -- kvadratni model dobička.
+  \item \textbf{Oblika mostu ali loka} -- parabolični profil konstrukcije.
+\end{itemize}
+
+\subsection{3.--4.\ letnik}
+
+\subsubsection*{16. Eksponentna in logaritemska funkcija}
+\begin{itemize}
+  \item \textbf{Rihterjeva lestvica merjenja potresov} -- logaritemska lestvica jakosti; primerjava potresov v Sloveniji (npr.\ Krško 1917, Posočje 1998/2004).
+  \item \textbf{pH lestvica} -- logaritemska lestvica kislosti/bazičnosti; primeri iz vsakdana (voda, kisline v gospodinjstvu).
+  \item \textbf{Decibelna lestvica jakosti zvoka} -- zakaj je zvok merjen logaritemsko; primerjava glasnosti prometa, koncerta, praga bolečine.
+  \item \textbf{Obrestno obrestovanje} -- rast privarčevanega zneska/posojila; primerjava ponudb slovenskih bank.
+  \item \textbf{Razpolovni čas radioaktivnih snovi} -- ogljikovo datiranje (C-14) pri arheoloških najdbah.
+  \item \textbf{Eksponentna rast populacije bakterij/prebivalstva} -- modeliranje z eksponentno funkcijo.
+  \item \textbf{Newtonov zakon ohlajanja} -- ohlajanje kave/telesa, eksponentni upad temperature.
+  \item \textbf{Amortizacija vrednosti avtomobila} -- eksponentni padec vrednosti rabljenega vozila skozi leta.
+  \item \textbf{Širjenje virusa v začetni fazi epidemije} -- eksponentni model rasti (npr.\ gripa, COVID-19 v prvih tednih).
+\end{itemize}
+
+\subsubsection*{17. Kotne funkcije}
+\begin{itemize}
+  \item \textbf{Merjenje višine objekta s kotnimi funkcijami} -- npr.\ dimnik TEB Brestanica, cerkveni zvonik, drevo; merjenje kota in razdalje ter izračun višine.
+  \item \textbf{Dolžina sence skozi dan/leto} -- odvisnost od sončne elevacije, trigonometrični model.
+  \item \textbf{Nihanje gugalnice ali nihala} -- modeliranje odmika s sinusno funkcijo.
+  \item \textbf{Plimovanje} -- nihanje višine morja kot sinusna funkcija časa.
+  \item \textbf{Izmenična električna napetost (AC)} -- sinusni signal v gospodinjskem omrežju (230~V, 50~Hz).
+  \item \textbf{Koti med kazalci ure} -- izračun kota med urnim in minutnim kazalcem ob poljubni uri.
+  \item \textbf{GPS in triangulacija} -- določanje lege s pomočjo kotov/razdalj do znanih točk.
+\end{itemize}
+
+\subsubsection*{18. Krivulje drugega reda (stožnice)}
+\begin{itemize}
+  \item \textbf{Parabolične satelitske antene} -- lastnost žarišča parabole in zbiranje signala.
+  \item \textbf{Balistika -- let žoge ali izstrelka} -- parabolična trajektorija, doseg in največja višina.
+  \item \textbf{Keplerjevi zakoni -- eliptične tirnice planetov} -- Zemljina tirnica kot elipsa.
+  \item \textbf{Viseči most vs.\ verižnica in parabola} -- primerjava oblik nosilnih kablov (npr.\ na konkretnem mostu).
+  \item \textbf{Šepetalnice (whispering galleries)} -- eliptična lastnost odboja zvoka v prostorih eliptičnega tlorisa.
+  \item \textbf{Sončna peč / solarni koncentrator} -- uporaba parabole za zbiranje sončne energije.
+\end{itemize}
+
+\subsubsection*{19. Polinomi in racionalne funkcije}
+\begin{itemize}
+  \item \textbf{Optimalna prostornina škatle iz pole papirja} -- kubični polinom in iskanje maksimuma (lahko brez odvoda, z grafom/tabelo).
+  \item \textbf{Modeliranje stroškov proizvodnje} -- polinomska funkcija skupnih stroškov v odvisnosti od količine.
+  \item \textbf{Aproksimacija izmerjenih podatkov s polinomom} -- npr.\ dnevno nihanje temperature.
+  \item \textbf{Zavorna pot vozila} -- odvisnost zavorne poti od hitrosti (kvadratni/polinomski model).
+\end{itemize}
+
+\subsubsection*{22. Zaporedja}
+\begin{itemize}
+  \item \textbf{Hanojski stolpi} -- število potez kot geometrijsko zaporedje/eksponentna rast.
+  \item \textbf{Prepogibanje papirja} -- geometrijsko zaporedje debeline lista (in zakaj je 7-krat praktična meja).
+  \item \textbf{Verižna pisma / piramidne sheme} -- geometrijska rast števila udeležencev.
+  \item \textbf{Anuitetno varčevanje ali odplačevanje kredita} -- aritmetično/geometrijsko zaporedje obrokov.
+  \item \textbf{Fibonaccijevo zaporedje v naravi} -- storžki, sončnice, razporeditev listov.
+\end{itemize}
+
+\subsubsection*{23. Diferencialni račun}
+\begin{itemize}
+  \item \textbf{Optimizacija embalaže} -- pločevinka ali škatla z najmanjšo porabo materiala pri dani prostornini.
+  \item \textbf{Hitrost in pospešek vozila} -- odvod poti po času iz podatkov o vožnji (npr.\ GPS sledenje).
+  \item \textbf{Mejni stroški in mejni dobiček} -- odvod funkcije stroškov/prihodka v ekonomiji, optimalna cena izdelka.
+  \item \textbf{Reševalec na plaži (Snellov problem)} -- najhitrejša pot do tonočega ob spremembi hitrosti (voda/pesek).
+  \item \textbf{Oblika mostu ali loka za minimalno porabo materiala} -- optimizacijski problem z odvodom.
+\end{itemize}
+
+\subsubsection*{24. Integralni račun}
+\begin{itemize}
+  \item \textbf{Prevožena pot iz grafa hitrosti} -- integral hitrosti po času (npr.\ iz podatkov vozila ali kolesarjenja).
+  \item \textbf{Površina nepravilne parcele ali jezera} -- numerična ocena s pomočjo integrala/vsote pravokotnikov.
+  \item \textbf{Prostornina vrtenine} -- kozarec, sod ali vaza kot telo, dobljeno z vrtenjem krivulje.
+  \item \textbf{Delo raztezanja vzmeti (Hookov zakon)} -- izračun opravljenega dela z integralom sile.
+  \item \textbf{Poraba goriva iz diagrama hitrosti/pretoka} -- skupna poraba kot ploščina pod grafom.
+\end{itemize}
+
+\subsubsection*{25. Kombinatorika}
+\begin{itemize}
+  \item \textbf{Varnost gesel in PIN kod} -- število možnih kombinacij glede na dolžino in nabor znakov.
+  \item \textbf{Žreb športne lige ali turnirja} -- število možnih razporedov/parov tekem.
+  \item \textbf{Registrske tablice} -- koliko različnih kombinacij dopušča slovenski sistem tablic.
+  \item \textbf{Loto 7 od 39} -- verjetnost zadetka glede na število možnih kombinacij.
+\end{itemize}
+
+\subsubsection*{26. Verjetnostni račun}
+\begin{itemize}
+  \item \textbf{Verjetnost pri igrah na srečo} -- kocka, karte, ruleta.
+  \item \textbf{Medicinsko testiranje in Bayesov izrek} -- verjetnost dejanske bolezni ob pozitivnem testu (lažno pozitivni rezultati).
+  \item \textbf{Rojstnodnevni paradoks} -- verjetnost, da imata dva dijaka v razredu isti rojstni dan.
+  \item \textbf{Zavarovalna premija glede na tveganje} -- osnovni izračun pričakovane vrednosti izplačila.
+  \item \textbf{Vremenska napoved -- verjetnost padavin} -- kako razumeti in interpretirati odstotek verjetnosti.
+\end{itemize}
+
+\subsubsection*{27. Statistika}
+\begin{itemize}
+  \item \textbf{Analiza uspeha dijakov pri maturi} -- statistična obdelava (povprečje, mediana, standardni odklon) realnih ali javno dostopnih podatkov.
+  \item \textbf{Anketa med dijaki šole} -- zbiranje in statistična obdelava lastnih podatkov (npr.\ čas za domačo nalogo, raba telefona).
+  \item \textbf{Statistika prometnih nesreč v Posavju} -- analiza javno dostopnih podatkov (npr.\ AVP, SURS).
+  \item \textbf{Športna statistika} -- analiza rezultatov kluba ali reprezentance (povprečja, odstopanja).
+  \item \textbf{Poraba elektrike/vode v gospodinjstvu čez leto} -- statistična analiza in iskanje trenda.
+\end{itemize}
+
+\bigskip
+\noindent\textit{Namig: pri izbiri naj dijak preveri, da za izbrano situacijo obstajajo dostopni realni podatki (uradne statistike, meritve, javno dostopni viri), saj to nalogo naredi bolj konkretno in verodostojno.}
+
+\end{document}
