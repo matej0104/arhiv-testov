@@ -2,18 +2,18 @@
     "version": 1,
     "projects": [
         {
-            "id": "2026_27-G4A",
+            "id": "2026_27-PTI1",
             "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/6a91a5ad80b72fe8202407a4",
+            "overleaf_url": "https://www.overleaf.com/project/6a91a5f2baaa2c6b68f6de59",
             "school_year": "2026_27",
-            "class": "G4A",
+            "class": "PTI1",
             "subject": "Matematika",
             "teacher": "profM",
-            "title": "",
+            "title": "Gradivo",
             "pattern": "Test*.tex",
             "tags": [
                 "2026_27",
-                "G4A"
+                "PTI1"
             ],
             "public": true
         },
@@ -25,7 +25,7 @@
             "class": "G3A",
             "subject": "Matematika",
             "teacher": "",
-            "title": "",
+            "title": "Gradivo",
             "pattern": "Test*.tex",
             "tags": [
                 "2026_27",
@@ -34,146 +34,66 @@
             "public": true
         },
         {
-            "id": "2025_26-G3A",
+            "id": "2026_27-G4A",
             "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/68b70417d37edff59d19a4ef",
-            "school_year": "2025_26",
-            "class": "G3A",
-            "subject": "Matematika",
-            "teacher": "",
-            "title": "",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2025_26",
-                "G3A"
-            ],
-            "public": true
-        },
-        {
-            "id": "2025_26-E4A",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/68b703ea1c5f4842356709f7",
-            "school_year": "2025_26",
-            "class": "E4A",
-            "subject": "Matematika",
-            "teacher": "",
-            "title": "",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2025_26",
-                "E4A"
-            ],
-            "public": true
-        },
-        {
-            "id": "2025_26-G2A",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/68b70402c063a7832e649908",
-            "school_year": "2025_26",
-            "class": "G2A",
-            "subject": "",
-            "teacher": "",
-            "title": "",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2025_26",
-                "G2A"
-            ],
-            "public": true
-        },
-        {
-            "id": "2025_26-S1B",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/68b7042c356552c78866d05a",
-            "school_year": "2025_26",
-            "class": "S1B",
-            "subject": "",
-            "teacher": "",
-            "title": "",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2025_26",
-                "S1B"
-            ],
-            "public": true
-        },
-        {
-            "id": "2025_26-S4A",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/68b703ab1b73c66bfb6ef955",
-            "school_year": "2025_26",
-            "class": "S4A",
-            "subject": "",
-            "teacher": "",
-            "title": "",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2025_26",
-                "S4A"
-            ],
-            "public": true
-        },
-        {
-            "id": "2025_26-PTI2",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/68b70448186a134b871538e7",
-            "school_year": "2025_26",
-            "class": "PTI2",
-            "subject": "",
-            "teacher": "",
-            "title": "",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2025_26",
-                "PTI2"
-            ],
-            "public": true
-        },
-        {
-            "id": "2026_27-S1B",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/6a91a5d480b72fe8202419c1",
+            "overleaf_url": "https://www.overleaf.com/project/6a91a5ad80b72fe8202407a4",
             "school_year": "2026_27",
-            "class": "S1B",
-            "subject": "",
+            "class": "G4A",
+            "subject": "Matematika",
             "teacher": "",
-            "title": "",
+            "title": "Gradivo",
             "pattern": "Test*.tex",
             "tags": [
                 "2026_27",
-                "S1B"
+                "G4A"
             ],
             "public": true
         },
         {
-            "id": "2026_27-S1A",
+            "id": "2026_27-S1AB",
             "enabled": true,
             "overleaf_url": "https://www.overleaf.com/project/6a91a5c080b72fe82024112a",
             "school_year": "2026_27",
-            "class": "S1A",
-            "subject": "",
+            "class": "S1AB",
+            "subject": "Matematika",
             "teacher": "",
-            "title": "",
+            "title": "Gradivo",
             "pattern": "Test*.tex",
             "tags": [
                 "2026_27",
-                "S1A"
+                "S1AB"
             ],
             "public": true
         },
         {
-            "id": "2026_27-PTI1",
+            "id": "2026_27-S2B",
             "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/6a91a5f2baaa2c6b68f6de59",
+            "overleaf_url": "https://www.overleaf.com/project/6a91a5e180b72fe820241e0e",
             "school_year": "2026_27",
-            "class": "PTI1",
-            "subject": "",
+            "class": "S2B",
+            "subject": "Matematika",
             "teacher": "",
-            "title": "",
+            "title": "Gradivo",
             "pattern": "Test*.tex",
             "tags": [
                 "2026_27",
-                "PTI1"
+                "S2B"
+            ],
+            "public": true
+        },
+        {
+            "id": "2026_27-S2K",
+            "enabled": true,
+            "overleaf_url": "https://www.overleaf.com/project/6a91a623d84565980ef08101",
+            "school_year": "2026_27",
+            "class": "S2K",
+            "subject": "Matematika",
+            "teacher": "",
+            "title": "Gradivo",
+            "pattern": "Test*.tex",
+            "tags": [
+                "2026_27",
+                "S2K"
             ],
             "public": true
         }
