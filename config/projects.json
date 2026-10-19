@@ -50,22 +50,6 @@
             "public": true
         },
         {
-            "id": "2026_27-S1AB",
-            "enabled": true,
-            "overleaf_url": "https://www.overleaf.com/project/6a91a5c080b72fe82024112a",
-            "school_year": "2026_27",
-            "class": "S1AB",
-            "subject": "Matematika",
-            "teacher": "",
-            "title": "Gradivo",
-            "pattern": "Test*.tex",
-            "tags": [
-                "2026_27",
-                "S1AB"
-            ],
-            "public": true
-        },
-        {
             "id": "2026_27-S2B",
             "enabled": true,
             "overleaf_url": "https://www.overleaf.com/project/6a91a5e180b72fe820241e0e",
@@ -94,6 +78,22 @@
             "tags": [
                 "2026_27",
                 "S2K"
+            ],
+            "public": true
+        },
+        {
+            "id": "2026_27-S1AB",
+            "enabled": true,
+            "overleaf_url": "https://www.overleaf.com/project/6ad5ac521b19402bae6fa0d7",
+            "school_year": "2026_27",
+            "class": "S1AB",
+            "subject": "Matematika",
+            "teacher": "",
+            "title": "Gradivo",
+            "pattern": "Test*.tex",
+            "tags": [
+                "2026_27",
+                "S1AB"
             ],
             "public": true
         }
