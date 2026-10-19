@@ -1,0 +1,557 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+%%%%%%%%%%%%%%%%%%%% podatki testa -- tu spreminjaj
+\def\programletnik{1. letnik}
+\def\naslov{Test 1.1 - }
+\def\sklop{Potence, izrazi, enačbe in neenačbe}
+%%%%%%%%%%%%%%%%%%%% tocke po nalogah
+\def\tockeA{0}
+\def\tockeB{0}
+\def\tockeC{0}
+\def\tockeD{0}
+\def\tockeE{0}
+\def\tockeF{0}
+\def\tockeG{0}
+\def\tockeH{0}
+\def\tockeI{0}
+\def\tockeJ{0}
+\def\tockeK{0}
+\def\tockeL{0}
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\numexpr\tockeA\relax}
+Izra\v{c}unaj (potence in cela \v{s}tevila).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle (-2)^3\cdot5-(-3)^2+4\cdot(-6)$
+\item $\displaystyle -2^4+(-2)^4-3\cdot(-1)^7+2^0$
+\item $\displaystyle \big(5-3\cdot(-2)\big)^2-2\cdot(-4+7)^3$
+\item $\displaystyle (-3)^2\cdot2^3-5\cdot(-4)+(-7+3^2)^3$
+\item $\displaystyle 10-\big\{3\cdot[\,2-(-1)^5\cdot4\,]-(-2)^2\big\}$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle (-1)^{10}\cdot3^3-(-2)^5\cdot2+(-4)^2$
+\item $\displaystyle (2-5)^3\cdot(-2)+(-3)\cdot(4-7)^2$
+\item $\displaystyle -(-3)^2-\big[(-2)^3-4\cdot(-5)\big]\cdot(-2)$
+\item $\displaystyle 5^2-2\cdot(3-8)^2+(-1)^{2027}\cdot10$
+\item $\displaystyle -3\cdot\big(4-(-2)^3\big)+(2-6)^2\cdot(-2)$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\numexpr\tockeB\relax}
+Poenostavi izraz (\v{c}e nastopa, je $n\in\mathbb{N}$).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle a^5\cdot a^{3}\cdot a^{4}$
+\item $\displaystyle \big(2x^3y^{2}\big)^{3}\cdot\big(4xy\big)^{2}$
+\item $\displaystyle (a^{2}b^{3})^{4}\cdot a^{5}$
+\item $\displaystyle \big(x^{n+2}\big)^{2}\cdot x^{2n-1}$
+\item $\displaystyle \big(3a^{2}b\big)^{2}\cdot\big(2ab^{3}\big)^{3}$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle (x^2)^3\cdot(x^4)^2\cdot x$
+\item $\displaystyle (-2ab^2)^3\cdot(a^2b)^2$
+\item $\displaystyle \big(x^{2n}\big)^{2}\cdot x^{n-1}$
+\item $\displaystyle (3x^2y)^3\cdot(-xy^2)^2$
+\item $\displaystyle \big(a^{m+1}\big)^{2}\cdot\big(a^{2}\big)^{m}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeC$] \addtocounter{tocke}{\numexpr\tockeC\relax}
+Izra\v{c}unaj (kvadrat dvo\v{c}lenika).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle (x+5)^2$
+\item $\displaystyle (3a-2b)^2$
+\item $\displaystyle (5x+4y)^2$
+\item $\displaystyle (-2m+3n^2)^2$
+\item $\displaystyle (x+3)^2-(x-2)^2-(2x+1)(x-4)$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle (x-6)^2$
+\item $\displaystyle (2a+7b)^2$
+\item $\displaystyle (3x^2-y)^2$
+\item $\displaystyle (-x-4)^2$
+\item $\displaystyle (2x-3)^2-(x+1)^2+(x-5)(x+5)$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+\newpage
+
+\begin{naloga}[\hfill $\tockeD$] \addtocounter{tocke}{\numexpr\tockeD\relax}
+Izra\v{c}unaj (kub dvo\v{c}lenika).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle (x+2)^3$
+\item $\displaystyle (a-3)^3$
+\item $\displaystyle (2x+y)^3$
+\item $\displaystyle (3m-2n)^3$
+\item $\displaystyle (x+1)^3-(x-1)^3$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle (x-4)^3$
+\item $\displaystyle (2a+3)^3$
+\item $\displaystyle (x^2+y)^3$
+\item $\displaystyle (4m-n)^3$
+\item $\displaystyle (x+2)^3+(x-2)^3$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeE$] \addtocounter{tocke}{\numexpr\tockeE\relax}
+Razstavi izraz do konca.
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle x^2+7x+12$
+\item $\displaystyle x^2-x-20$
+\item $\displaystyle x^2+10x+25$
+\item $\displaystyle ax+ay-3x-3y$
+\item $\displaystyle 2x^2-8x-24$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle x^2-9x+20$
+\item $\displaystyle x^2+3x-10$
+\item $\displaystyle x^2-12x+36$
+\item $\displaystyle xy+2x+3y+6$
+\item $\displaystyle 3x^2-12x+9$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeF$] \addtocounter{tocke}{\numexpr\tockeF\relax}
+Izpostavi skupni faktor.
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle 6x^2-9x$
+\item $\displaystyle 12a^3b^2-18a^2b^3+6ab$
+\item $\displaystyle x(a-2)+3(a-2)$
+\item $\displaystyle 5m(x+y)-10n(x+y)$
+\item $\displaystyle (x-1)^2-3(x-1)$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle 8x^3-12x^2$
+\item $\displaystyle 15a^2b-10ab^2+5ab$
+\item $\displaystyle y(x+4)-2(x+4)$
+\item $\displaystyle 7a(m-n)+14b(m-n)$
+\item $\displaystyle (x+2)^2+5(x+2)$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+\newpage
+
+\begin{naloga}[\hfill $\tockeG$] \addtocounter{tocke}{\numexpr\tockeG\relax}
+Razstavi izraz (razlika kvadratov).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle x^2-49$
+\item $\displaystyle 9a^2-16b^2$
+\item $\displaystyle 25x^4-1$
+\item $\displaystyle x^2y^2-4$
+\item $\displaystyle (x+3)^2-(2x-1)^2$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle 4x^2-25$
+\item $\displaystyle 100-9a^2$
+\item $\displaystyle 81x^4-16$
+\item $\displaystyle a^2b^4-36$
+\item $\displaystyle (2x+1)^2-(x-3)^2$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeH$] \addtocounter{tocke}{\numexpr\tockeH\relax}
+Razstavi izraz (vsota in razlika kubov).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle x^3+8$
+\item $\displaystyle 27a^3-1$
+\item $\displaystyle 8x^3+27y^3$
+\item $\displaystyle m^6-64$
+\item $\displaystyle x^4-x$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle 64x^3-125$
+\item $\displaystyle a^3b^3+1$
+\item $\displaystyle 125x^3+8y^3$
+\item $\displaystyle x^6+1$
+\item $\displaystyle 2x^3-16$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeI$] \addtocounter{tocke}{\numexpr\tockeI\relax}
+Re\v{s}i linearne ena\v{c}be.
+\begin{enumerate}[a)]
+\item $\displaystyle 3x-7=2x+5$
+\item $\displaystyle 4(x-3)-2(3x+1)=-8$
+\item $\displaystyle 5(x-2)-3(2x+1)=2x+2$
+\item $\displaystyle 2(3x-1)-(x+4)=3(x-2)+4$
+\item $\displaystyle (x+3)^2-(x-2)(x+2)=5x+21$
+\end{enumerate}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeJ$] \addtocounter{tocke}{\numexpr\tockeJ\relax}
+Re\v{s}i linearne neena\v{c}be, re\v{s}itev zapi\v{s}i z intervalom in jo nari\v{s}i na \v{s}tevilski premici.
+\begin{enumerate}[a)]
+\item $\displaystyle 2x-5<9$
+\item $\displaystyle 7-3x\ge1$
+\item $\displaystyle 4(x+1)-3(2x-1)>x+10$
+\item $\displaystyle 2(x-1)-3(2x+1)\le x+10$
+\item $\displaystyle -2<3x+1\le10$
+\end{enumerate}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeK$] \addtocounter{tocke}{\numexpr\tockeK\relax}
+Razstavi izraz do konca (uporabi razli\v{c}ne postopke razstavljanja).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle 6x^2y-9xy^2$
+\item $\displaystyle x^2-64$
+\item $\displaystyle x^2+2x-15$
+\item $\displaystyle 4a^2+12a+9$
+\item $\displaystyle x^3-27$
+\item $\displaystyle 2x^3-18x$
+\item $\displaystyle ax-ay+bx-by$
+\item $\displaystyle 8a^3+1$
+\item $\displaystyle x^4-16$
+\item $\displaystyle 3x^2-3x-18$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{10}
+\item $\displaystyle 25a^2-30ab+9b^2$
+\item $\displaystyle x^3+x^2-4x-4$
+\item $\displaystyle 5x^3y^2-20xy^2$
+\item $\displaystyle x^2-14x+49$
+\item $\displaystyle 27x^3-8y^3$
+\item $\displaystyle (x+1)^2-16$
+\item $\displaystyle x^2+x-56$
+\item $\displaystyle x^5-x^2$
+\item $\displaystyle 4x^2-(y+3)^2$
+\item $\displaystyle a^3-a^2b-ab^2+b^3$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeL$] \addtocounter{tocke}{\numexpr\tockeL\relax}
+Izraz najprej poenostavi (zmnoži oklepaje, se\v{s}tej \v{c}lene), nato rezultat razstavi do konca.
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle (x+2)^2+(x-3)(x+5)+15$
+\item $\displaystyle (2x+3)^2-(x-1)^2$
+\item $\displaystyle (x+y)^3-(x-y)^3$
+\item $\displaystyle (x+2)^3-x^3-8$
+\item $\displaystyle (2x-1)(2x+1)-(x-3)^2+10$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle (x+5)^2-(x+5)(x-1)$
+\item $\displaystyle (a+3)(a-3)+(a-2)^2+5$
+\item $\displaystyle (x-1)^3+(x+1)^3$
+\item $\displaystyle (2a-b)^2-(a+b)^2$
+\item $\displaystyle (x+1)^2(x-1)-(x-1)^2(x+1)$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\small
+\newpage
+\textsc{\Large Re\v{s}itve s postopki}
+\vspace{0.5cm}
+
+\begin{resitev}[-- Potence in cela \v{s}tevila]
+\begin{enumerate}[a)]
+\item $\displaystyle -8\cdot5-9-24=-40-9-24=-73$
+\item $\displaystyle -16+16+3+1=4$
+\item $\displaystyle 11^2-2\cdot3^3=121-54=67$
+\item $\displaystyle 9\cdot8+20+2^3=72+20+8=100$
+\item $\displaystyle 2-(-1)\cdot4=6;\ \ 3\cdot6-4=14;\ \ 10-14=-4$
+\item $\displaystyle 27-(-32)\cdot2+16=27+64+16=107$
+\item $\displaystyle (-3)^3\cdot(-2)-3\cdot9=54-27=27$
+\item $\displaystyle -9-\big[-8+20\big]\cdot(-2)=-9+24=15$
+\item $\displaystyle 25-2\cdot25-10=-35$
+\item $\displaystyle -3\cdot12+16\cdot(-2)=-36-32=-68$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Poenostavljanje potenc]
+\begin{enumerate}[a)]
+\item $\displaystyle a^{5+3+4}=a^{12}$
+\item $\displaystyle 8x^9y^6\cdot16x^2y^2=128x^{11}y^8$
+\item $\displaystyle a^8b^{12}\cdot a^5=a^{13}b^{12}$
+\item $\displaystyle x^{2n+4}\cdot x^{2n-1}=x^{4n+3}$
+\item $\displaystyle 9a^4b^2\cdot8a^3b^9=72a^7b^{11}$
+\item $\displaystyle x^6\cdot x^8\cdot x=x^{15}$
+\item $\displaystyle -8a^3b^6\cdot a^4b^2=-8a^7b^8$
+\item $\displaystyle x^{4n}\cdot x^{n-1}=x^{5n-1}$
+\item $\displaystyle 27x^6y^3\cdot x^2y^4=27x^8y^7$
+\item $\displaystyle a^{2m+2}\cdot a^{2m}=a^{4m+2}$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Kvadrat dvo\v{c}lenika]
+\begin{enumerate}[a)]
+\item $\displaystyle x^2+10x+25$
+\item $\displaystyle 9a^2-12ab+4b^2$
+\item $\displaystyle 25x^2+40xy+16y^2$
+\item $\displaystyle 4m^2-12mn^2+9n^4$
+\item $\displaystyle (x^2+6x+9)-(x^2-4x+4)-(2x^2-7x-4)=-2x^2+17x+9$
+\item $\displaystyle x^2-12x+36$
+\item $\displaystyle 4a^2+28ab+49b^2$
+\item $\displaystyle 9x^4-6x^2y+y^2$
+\item $\displaystyle x^2+8x+16$
+\item $\displaystyle (4x^2-12x+9)-(x^2+2x+1)+(x^2-25)=4x^2-14x-17$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Kub dvo\v{c}lenika]
+\begin{enumerate}[a)]
+\item $\displaystyle x^3+6x^2+12x+8$
+\item $\displaystyle a^3-9a^2+27a-27$
+\item $\displaystyle 8x^3+12x^2y+6xy^2+y^3$
+\item $\displaystyle 27m^3-54m^2n+36mn^2-8n^3$
+\item $\displaystyle (x^3+3x^2+3x+1)-(x^3-3x^2+3x-1)=6x^2+2$
+\item $\displaystyle x^3-12x^2+48x-64$
+\item $\displaystyle 8a^3+36a^2+54a+27$
+\item $\displaystyle x^6+3x^4y+3x^2y^2+y^3$
+\item $\displaystyle 64m^3-48m^2n+12mn^2-n^3$
+\item $\displaystyle (x^3+6x^2+12x+8)+(x^3-6x^2+12x-8)=2x^3+24x$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Razstavljanje]
+\begin{enumerate}[a)]
+\item $\displaystyle (x+3)(x+4)\quad(3+4=7,\ 3\cdot4=12)$
+\item $\displaystyle (x-5)(x+4)\quad(-5+4=-1,\ -5\cdot4=-20)$
+\item $\displaystyle (x+5)^2$
+\item $\displaystyle x(a-3)+y(a-3)=(a-3)(x+y)$
+\item $\displaystyle 2(x^2-4x-12)=2(x-6)(x+2)$
+\item $\displaystyle (x-4)(x-5)$
+\item $\displaystyle (x-2)(x+5)$
+\item $\displaystyle (x-6)^2$
+\item $\displaystyle x(y+2)+3(y+2)=(y+2)(x+3)$
+\item $\displaystyle 3(x^2-4x+3)=3(x-1)(x-3)$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Izpostavljanje skupnega faktorja]
+\begin{enumerate}[a)]
+\item $\displaystyle 3x(2x-3)$
+\item $\displaystyle 6ab(2a^2b-3ab^2+1)$
+\item $\displaystyle (a-2)(x+3)$
+\item $\displaystyle 5(x+y)(m-2n)$
+\item $\displaystyle (x-1)\big[(x-1)-3\big]=(x-1)(x-4)$
+\item $\displaystyle 4x^2(2x-3)$
+\item $\displaystyle 5ab(3a-2b+1)$
+\item $\displaystyle (x+4)(y-2)$
+\item $\displaystyle 7(m-n)(a+2b)$
+\item $\displaystyle (x+2)\big[(x+2)+5\big]=(x+2)(x+7)$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Razlika kvadratov]
+\begin{enumerate}[a)]
+\item $\displaystyle (x-7)(x+7)$
+\item $\displaystyle (3a-4b)(3a+4b)$
+\item $\displaystyle (5x^2-1)(5x^2+1)$
+\item $\displaystyle (xy-2)(xy+2)$
+\item $\displaystyle \big[(x+3)-(2x-1)\big]\big[(x+3)+(2x-1)\big]=(4-x)(3x+2)$
+\item $\displaystyle (2x-5)(2x+5)$
+\item $\displaystyle (10-3a)(10+3a)$
+\item $\displaystyle (9x^2-4)(9x^2+4)=(3x-2)(3x+2)(9x^2+4)$
+\item $\displaystyle (ab^2-6)(ab^2+6)$
+\item $\displaystyle \big[(2x+1)-(x-3)\big]\big[(2x+1)+(x-3)\big]=(x+4)(3x-2)$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Vsota in razlika kubov]
+\begin{enumerate}[a)]
+\item $\displaystyle (x+2)(x^2-2x+4)$
+\item $\displaystyle (3a-1)(9a^2+3a+1)$
+\item $\displaystyle (2x+3y)(4x^2-6xy+9y^2)$
+\item $\displaystyle (m^3-8)(m^3+8)=(m-2)(m^2+2m+4)(m+2)(m^2-2m+4)$
+\item $\displaystyle x(x^3-1)=x(x-1)(x^2+x+1)$
+\item $\displaystyle (4x-5)(16x^2+20x+25)$
+\item $\displaystyle (ab+1)(a^2b^2-ab+1)$
+\item $\displaystyle (5x+2y)(25x^2-10xy+4y^2)$
+\item $\displaystyle (x^2+1)(x^4-x^2+1)$
+\item $\displaystyle 2(x^3-8)=2(x-2)(x^2+2x+4)$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Linearne ena\v{c}be]
+\begin{enumerate}[a)]
+\item $\displaystyle x=12$
+\item $\displaystyle 4x-12-6x-2=-8\ \Rightarrow\ -2x-14=-8\ \Rightarrow\ -2x=6\ \Rightarrow\ x=-3$
+\item $\displaystyle 5x-10-6x-3=2x+2\ \Rightarrow\ -x-13=2x+2\ \Rightarrow\ -3x=15\ \Rightarrow\ x=-5$
+\item $\displaystyle 6x-2-x-4=3x-6+4\ \Rightarrow\ 5x-6=3x-2\ \Rightarrow\ 2x=4\ \Rightarrow\ x=2$
+\item $\displaystyle x^2+6x+9-x^2+4=5x+21\ \Rightarrow\ 6x+13=5x+21\ \Rightarrow\ x=8$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Linearne neena\v{c}be]
+\begin{enumerate}[a)]
+\item $\displaystyle 2x<14\ \Rightarrow\ x<7,\quad x\in(-\infty,7)$
+\item $\displaystyle -3x\ge-6\ \Rightarrow\ x\le2\ \ (\text{pri mno\v{z}enju z negativnim \v{s}tevilom obrnemo znak}),\quad x\in(-\infty,2]$
+\item $\displaystyle 4x+4-6x+3>x+10\ \Rightarrow\ -2x+7>x+10\ \Rightarrow\ -3x>3\ \Rightarrow\ x<-1,\quad x\in(-\infty,-1)$
+\item $\displaystyle 2x-2-6x-3\le x+10\ \Rightarrow\ -4x-5\le x+10\ \Rightarrow\ -5x\le15\ \Rightarrow\ x\ge-3,\quad x\in[-3,\infty)$
+\item $\displaystyle -3<3x\le9\ \Rightarrow\ -1<x\le3,\quad x\in(-1,3]$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Me\v{s}ano razstavljanje]
+\begin{enumerate}[a)]
+\item $\displaystyle 3xy(2x-3y)$
+\item $\displaystyle (x-8)(x+8)$
+\item $\displaystyle (x+5)(x-3)\quad(5-3=2,\ 5\cdot(-3)=-15)$
+\item $\displaystyle (2a+3)^2$
+\item $\displaystyle (x-3)(x^2+3x+9)$
+\item $\displaystyle 2x(x^2-9)=2x(x-3)(x+3)$
+\item $\displaystyle a(x-y)+b(x-y)=(x-y)(a+b)$
+\item $\displaystyle (2a+1)(4a^2-2a+1)$
+\item $\displaystyle (x^2-4)(x^2+4)=(x-2)(x+2)(x^2+4)$
+\item $\displaystyle 3(x^2-x-6)=3(x-3)(x+2)$
+\item $\displaystyle (5a-3b)^2$
+\item $\displaystyle x^2(x+1)-4(x+1)=(x+1)(x^2-4)=(x+1)(x-2)(x+2)$
+\item $\displaystyle 5xy^2(x^2-4)=5xy^2(x-2)(x+2)$
+\item $\displaystyle (x-7)^2$
+\item $\displaystyle (3x-2y)(9x^2+6xy+4y^2)$
+\item $\displaystyle \big[(x+1)-4\big]\big[(x+1)+4\big]=(x-3)(x+5)$
+\item $\displaystyle (x+8)(x-7)\quad(8-7=1,\ 8\cdot(-7)=-56)$
+\item $\displaystyle x^2(x^3-1)=x^2(x-1)(x^2+x+1)$
+\item $\displaystyle \big[2x-(y+3)\big]\big[2x+(y+3)\big]=(2x-y-3)(2x+y+3)$
+\item $\displaystyle a^2(a-b)-b^2(a-b)=(a-b)(a^2-b^2)=(a-b)^2(a+b)$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Poenostavljanje in razstavljanje]
+\begin{enumerate}[a)]
+\item $\displaystyle x^2+4x+4+x^2+2x-15+15=2x^2+6x+4=2(x^2+3x+2)=2(x+1)(x+2)$
+\item $\displaystyle 4x^2+12x+9-(x^2-2x+1)=3x^2+14x+8=(x+4)(3x+2)\quad\text{ali}\quad\big[(2x+3)-(x-1)\big]\big[(2x+3)+(x-1)\big]$
+\item $\displaystyle (x^3+3x^2y+3xy^2+y^3)-(x^3-3x^2y+3xy^2-y^3)=6x^2y+2y^3=2y(3x^2+y^2)$
+\item $\displaystyle x^3+6x^2+12x+8-x^3-8=6x^2+12x=6x(x+2)$
+\item $\displaystyle 4x^2-1-(x^2-6x+9)+10=3x^2+6x=3x(x+2)$
+\item $\displaystyle (x+5)\big[(x+5)-(x-1)\big]=6(x+5)=6x+30$
+\item $\displaystyle a^2-9+a^2-4a+4+5=2a^2-4a=2a(a-2)$
+\item $\displaystyle x^3-3x^2+3x-1+x^3+3x^2+3x+1=2x^3+6x=2x(x^2+3)$
+\item $\displaystyle 4a^2-4ab+b^2-(a^2+2ab+b^2)=3a^2-6ab=3a(a-2b)$
+\item $\displaystyle (x^2+2x+1)(x-1)-(x^2-2x+1)(x+1)=(x^3+x^2-x-1)-(x^3-x^2-x+1)=2x^2-2=2(x-1)(x+1)$
+\end{enumerate}
+\end{resitev}
+
+\end{document}

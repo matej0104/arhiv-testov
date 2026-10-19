@@ -1,0 +1,13 @@
+{
+    "class": "S1AB",
+    "school_year": "2026_27",
+    "subject": "Matematika",
+    "pattern": "Test*.tex",
+    "tags": [
+        "2026_27",
+        "S1AB"
+    ],
+    "teacher": "",
+    "title": "Gradivo",
+    "public": true
+}
