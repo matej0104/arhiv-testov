@@ -1,13 +1,6 @@
 name: Sync Overleaf
 
 on:
-  schedule:
-    # Dvakrat na delovni dan (06:00 in 15:00 po nasem casu = 04:00 in 13:00 UTC).
-    # POZOR: pri zasebnem repozitoriju se minute Actions stejejo v brezplacno
-    # kvoto 2000 min/mesec. Pogostejsi urnik (npr. */30) jo hitro porabi.
-    # Ce urnika ne potrebujes, celoten blok "schedule" mirno zbrisi -
-    # gumb "Sinhroniziraj" v WordPressu deluje neodvisno od njega.
-    - cron: "0 4,13 * * 1-5"
   workflow_dispatch:
   # WordPress vticnik sprozi z: POST /repos/<owner>/<repo>/dispatches
   # body: {"event_type": "sync-overleaf"}
