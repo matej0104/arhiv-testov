@@ -1,0 +1,574 @@
+\documentclass[a4paper,12pt]{letter}
+% POZOR: samo utf8. V starih datotekah je bil za njim se \usepackage[cp1250]{inputenc},
+% kar je prevzelo prednost in lahko pokvari sumnike.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+nobreak=true,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+nobreak=true,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Re\v{s}itev}
+\mdtheorem[style=theoremstyle1]{kriterij}{Kriterij ocenjevanja}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+\everymath{\displaystyle}
+
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{NALOGE 2.N.1} \Huge{}:
+\large{(algebrski) Ulomki, decimalna števila, procent, sorazmerja, enačbe, neenačbe} \hfill $PTI-1$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50,
+  arrondi=0,
+logo =\bcplume,
+  noborder=true]
+{\textsc{{\large{Ime in priimek:}
+\vspace{0.2cm} \rule{15cm}{0.2mm}\hfill }}}
+\end{bclogo}
+\end{minipage}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{kraj\v{s}anje in raz\v{s}irjanje ulomkov}]
+Ulomke a)--e) okraj\v{s}aj do konca. Ulomke f)--j) raz\v{s}iri tako, da bo imenovalec
+(pri i) pa faktor) enak podanemu \v{s}tevilu.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{18}{24}$
+\item $\dfrac{35}{49}$
+\item $\dfrac{45}{60}$
+\item $\dfrac{84}{126}$
+\item $\dfrac{120}{180}$
+\item Raz\v{s}iri $\dfrac{3}{4}$ na imenovalec $20$.
+\item Raz\v{s}iri $\dfrac{5}{7}$ na imenovalec $35$.
+\item Raz\v{s}iri $\dfrac{2}{9}$ na imenovalec $45$.
+\item Raz\v{s}iri $\dfrac{7}{8}$ s faktorjem $6$.
+\item Raz\v{s}iri $\dfrac{4}{11}$ na imenovalec $66$.
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{se\v{s}tevanje in od\v{s}tevanje ulomkov}]
+Izra\v{c}unaj in rezultat okraj\v{s}aj do konca.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{1}{2}+\dfrac{1}{3}$
+\item $\dfrac{3}{4}-\dfrac{1}{6}$
+\item $\dfrac{2}{3}+\dfrac{1}{5}$
+\item $\dfrac{5}{6}-\dfrac{3}{4}$
+\item $\dfrac{1}{3}+\dfrac{1}{4}+\dfrac{1}{6}$
+\item $\dfrac{7}{8}-\dfrac{2}{3}$
+\item $1\,\dfrac{1}{2}+\dfrac{3}{4}$
+\item $2\,\dfrac{1}{3}-\dfrac{5}{6}$
+\item $\dfrac{5}{12}+\dfrac{7}{18}$
+\item $\dfrac{11}{15}-\dfrac{3}{10}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{mno\v{z}enje in deljenje ulomkov}]
+Izra\v{c}unaj in rezultat okraj\v{s}aj do konca.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{2}{3}\cdot\dfrac{3}{4}$
+\item $\dfrac{5}{6}\cdot\dfrac{9}{10}$
+\item $\dfrac{4}{7}\cdot\dfrac{14}{8}$
+\item $\dfrac{3}{8}:\dfrac{3}{4}$
+\item $\dfrac{5}{6}:\dfrac{10}{9}$
+\item $\dfrac{7}{12}\cdot\dfrac{6}{7}$
+\item $\dfrac{9}{10}:\dfrac{3}{5}$
+\item $2\,\dfrac{1}{2}\cdot\dfrac{2}{3}$
+\item $\dfrac{5}{8}:1\,\dfrac{1}{4}$
+\item $\dfrac{4}{9}\cdot\dfrac{3}{8}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{ve\v{c} operacij v istem ra\v{c}unu}]
+Izra\v{c}unaj. Upo\v{s}tevaj vrstni red ra\v{c}unskih operacij.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{1}{2}+\dfrac{2}{3}\cdot\dfrac{3}{4}$
+\item $\left(\dfrac{1}{2}+\dfrac{1}{3}\right)\cdot\dfrac{3}{5}$
+\item $\dfrac{3}{4}-\dfrac{1}{2}:\dfrac{2}{3}$
+\item $\dfrac{2}{3}\cdot\dfrac{3}{4}+\dfrac{1}{6}$
+\item $\left(\dfrac{5}{6}-\dfrac{1}{2}\right):\dfrac{2}{3}$
+\item $1-\dfrac{2}{3}\cdot\dfrac{3}{4}$
+\item $\dfrac{1}{2}:\dfrac{1}{3}+\dfrac{1}{4}$
+\item $\left(\dfrac{3}{4}+\dfrac{1}{4}\right)\cdot\left(\dfrac{2}{3}-\dfrac{1}{3}\right)$
+\item $\dfrac{5}{2}-\dfrac{3}{4}\cdot\dfrac{2}{3}$
+\item $\dfrac{3}{4}:\left(\dfrac{1}{2}+\dfrac{1}{4}\right)$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{kraj\v{s}anje algebrskih ulomkov}]
+Okraj\v{s}aj algebrski ulomek. \v{S}tevec in imenovalec najprej razstavi.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{x^2-9}{x+3}$
+\item $\dfrac{2x^2-8}{x-2}$
+\item $\dfrac{x^2-5x+6}{x-2}$
+\item $\dfrac{3x^2+6x}{x^2-4}$
+\item $\dfrac{x^2-16}{x^2+4x}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{se\v{s}tevanje algebrskih ulomkov}]
+Izra\v{c}unaj vsoto in jo po potrebi okraj\v{s}aj.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{1}{x}+\dfrac{2}{x}$
+\item $\dfrac{x}{x+1}+\dfrac{1}{x+1}$
+\item $\dfrac{2}{x}+\dfrac{3}{y}$
+\item $\dfrac{1}{x-1}+\dfrac{1}{x+1}$
+\item $\dfrac{x}{2}+\dfrac{x}{3}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{od\v{s}tevanje algebrskih ulomkov}]
+Izra\v{c}unaj razliko in jo po potrebi okraj\v{s}aj.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{3}{x}-\dfrac{1}{x}$
+\item $\dfrac{x}{x-2}-\dfrac{2}{x-2}$
+\item $\dfrac{5}{x}-\dfrac{2}{y}$
+\item $\dfrac{1}{x-1}-\dfrac{1}{x+1}$
+\item $\dfrac{x}{4}-\dfrac{x}{6}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{mno\v{z}enje algebrskih ulomkov}]
+Izra\v{c}unaj produkt in ga po potrebi okraj\v{s}aj.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{x}{2}\cdot\dfrac{4}{x}$
+\item $\dfrac{x+1}{x}\cdot\dfrac{x}{x+1}$
+\item $\dfrac{2}{x}\cdot\dfrac{x^2}{6}$
+\item $\dfrac{x-2}{3}\cdot\dfrac{6}{x-2}$
+\item $\dfrac{x^2}{y}\cdot\dfrac{y^2}{x}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{deljenje algebrskih ulomkov}]
+Izra\v{c}unaj koli\v{c}nik in ga po potrebi okraj\v{s}aj.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{x}{3}:\dfrac{x}{6}$
+\item $\dfrac{2}{x}:\dfrac{4}{x^2}$
+\item $\dfrac{x+2}{5}:\dfrac{x+2}{10}$
+\item $\dfrac{x^2}{y}:\dfrac{x}{y^2}$
+\item $\dfrac{3}{x-1}:\dfrac{6}{x+1}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{ena\v{c}be z ulomki}]
+Re\v{s}i ena\v{c}bo.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{x}{2}+\dfrac{x}{3}=5$
+\item $\dfrac{x+1}{3}=\dfrac{x-1}{2}$
+\item $\dfrac{x}{4}-\dfrac{x}{6}=1$
+\item $\dfrac{2x+1}{3}=\dfrac{x+4}{2}$
+\item $\dfrac{x-2}{5}+\dfrac{x}{10}=1$
+\item $\dfrac{3}{x}=\dfrac{1}{4}$
+\item $\dfrac{1}{x-1}=\dfrac{2}{x+2}$
+\item $\dfrac{x}{3}-1=\dfrac{x}{5}+1$
+\item $\dfrac{2}{3}x+\dfrac{1}{2}=\dfrac{5}{6}$
+\item $\dfrac{x+3}{4}-\dfrac{x-1}{6}=2$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{neena\v{c}be z ulomki}]
+Re\v{s}i neena\v{c}bo.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{x}{2}+1>3$
+\item $\dfrac{x-1}{3}\le2$
+\item $\dfrac{2x}{5}-1\ge1$
+\item $\dfrac{x+2}{4}<\dfrac{x}{2}$
+\item $\dfrac{3-x}{2}\ge\dfrac{1}{4}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{besedilne naloge z ulomki}]
+Zapi\v{s}i ra\v{c}un oziroma ena\v{c}bo in reši.
+
+\begin{enumerate}[1.)]
+\item Ana je prvi dan prebrala $\dfrac{2}{5}$ knjige, drugi dan pa \v{s}e $\dfrac{1}{3}$ knjige.
+Kolik\v{s}en del knjige je prebrala v teh dveh dneh? Kolik\v{s}en del ji je \v{s}e ostal?
+\item V razredu je $32$ dijakov. $\dfrac{3}{8}$ dijakov ima rjave o\v{c}i. Koliko dijakov ima rjave o\v{c}i?
+\item O\v{c}e je $\dfrac{3}{4}$ svojega premo\v{z}enja zapisal sinu, preostanek pa \v{z}eni.
+Vrednost premo\v{z}enja je $80\,000$~\euro{}. Koliko \euro{} je prejela \v{z}ena?
+\item Za eno pecivo potrebujemo $\dfrac{3}{4}$ skodelice sladkorja. Koliko skodelic sladkorja
+potrebujemo za $5$ takih pecivov?
+\item Vrv dol\v{z}ine $12$ m razre\v{z}emo na kose dol\v{z}ine $\dfrac{2}{3}$ m. Koliko kosov dobimo?
+\item V ko\v{s}ari je $24$ jabolk. $\dfrac{1}{3}$ jabolk je zelenih. Koliko jabolk je zelenih?
+\item Jan\v{z}e je pojedel $\dfrac{1}{4}$ pice, njegov brat pa \v{s}e $\dfrac{3}{8}$ pice. Kolik\v{s}en del pice sta pojedla skupaj?
+\item Rezervoar, ki v celoti dr\v{z}i $200$ litrov vode, je napolnjen do $\dfrac{3}{4}$. Koliko litrov vode je v rezervoarju?
+\item Ana je imela $40$~\euro{} in je za knjigo porabila $\dfrac{2}{5}$ tega denarja. Koliko \euro{} ji je ostalo?
+\item Pot od doma do \v{s}ole je dolga $\dfrac{5}{6}$ km. Ana je \v{z}e prehodila $\dfrac{1}{2}$ km. Kolik\v{s}en del poti ji \v{s}e preostane?
+\end{enumerate}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{ra\v{c}unanje s potencami s celimi eksponenti}]
+Izra\v{c}unaj oziroma poenostavi izraz. Uporabi pravili $a^{-n}=\dfrac{1}{a^n}$ in $a^0=1$ ($a\neq0$).
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $2^{-3}$
+\item $5^0$
+\item $3^{-2}\cdot3^4$
+\item $\left(\dfrac{2}{3}\right)^{-2}$
+\item $2^{-1}+3^{-1}$
+\item $\dfrac{a^{-3}}{a^{-5}}$
+\item $\big(2^{-2}\big)^3$
+\item $4^{-1}\cdot2^3$
+\item $\left(\dfrac{1}{2}\right)^{-3}$
+\item $x^3\cdot x^{-5}\cdot x^2$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{premo in obratno sorazmerje}]
+Re\v{s}i nalogo s premim ali obratnim sorazmerjem.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item Dol\v{z}ina vrvi je premo sorazmerna njeni te\v{z}i. $5$ m vrvi tehta $2$ kg. Koliko tehta $12$ m enake vrvi?
+\item Avto pri enakomerni hitrosti prevozi $180$ km v $3$ urah. Koliko km prevozi v $5$ urah?
+\item $4$ delavci postavijo ograjo v $6$ dneh. Koliko dni bi za isto delo potrebovalo $8$ delavcev?
+\item Tiskalnik natisne $1500$ strani v $25$ minutah. Koliko minut potrebuje za $3600$ strani?
+\item $6$ enakih cevi napolni bazen v $10$ urah. V koliko urah bi bazen napolnilo $15$ takih cevi?
+\item Re\v{s}i sorazmerje: $x:15=4:5$
+\item Re\v{s}i sorazmerje: $8:x=2:7$
+\item Avto pri hitrosti $80$ km/h prevozi dano pot v $3$ urah. Koliko \v{c}asa bi potreboval pri hitrosti $120$ km/h?
+\item $3$ pleskarji pobarvajo sobo v $8$ urah. Koliko ur bi za isto delo potrebovali $4$ pleskarji?
+\item Recept za $4$ osebe zahteva $250$ g moke. Koliko moke potrebujemo za $10$ oseb?
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{izra\v{z}anje neznank iz ena\v{c}be}]
+Iz obrazca izrazi ozna\v{c}eno koli\v{c}ino.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item Iz obrazca za obseg pravokotnika $o=2(a+b)$ izrazi $b$.
+\item Iz obrazca za plo\v{s}\v{c}ino trikotnika $S=\dfrac{a\cdot v}{2}$ izrazi $v$.
+\item Iz obrazca za hitrost $v=\dfrac{s}{t}$ izrazi $t$.
+\item Iz obrazca za povr\v{s}ino valja $P=2\pi r(r+v)$ izrazi $v$.
+\item Iz obrazca za plo\v{s}\v{c}ino trapeza $S=\dfrac{a+b}{2}\cdot v$ izrazi $a$.
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{odstotki -- osnovni izra\v{c}uni}]
+Izra\v{c}unaj (dele\v{z}, odstotek ali osnovo).
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $15\%$ od $240$
+\item Koliko odstotkov je $18$ od $120$?
+\item $45$ je $30\%$ katerega \v{s}tevila?
+\item $8\%$ od $350$
+\item $63$ je $70\%$ katerega \v{s}tevila?
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{besedilne naloge -- odstotki}]
+Zapi\v{s}i ra\v{c}un oziroma ena\v{c}bo in re\v{s}i.
+
+\begin{enumerate}[1.)]
+\item Cena izdelka je $80$~\euro{}. Zaradi popusta se cena zni\v{z}a za $15\%$. Kolik\v{s}na je nova cena?
+\item Pla\v{c}a delavca se je pove\v{c}ala za $8\%$ in zdaj zna\v{s}a $1080$~\euro{}. Kolik\v{s}na je bila pla\v{c}a pred pove\v{c}anjem?
+\item V trgovini je bilo $250$ izdelkov. Prodali so $40\%$ izdelkov. Koliko izdelkov so prodali in koliko jih je ostalo?
+\item Cena maj\v{c}ke brez DDV je $25$~\euro{}. DDV zna\v{s}a $22\%$. Kolik\v{s}na je cena maj\v{c}ke z DDV?
+\item \v{S}tevilo prebivalcev kraja se je v enem letu zmanj\v{s}alo za $5\%$ in zdaj \v{s}teje $4750$ prebivalcev. Koliko prebivalcev je bilo pred letom dni?
+\item Na testu je bilo $40$ vpra\v{s}anj. Dijak je pravilno odgovoril na $34$ vpra\v{s}anj. Koliko odstotkov nalog je re\v{s}il pravilno?
+\item Nalo\v{z}ba $2000$~\euro{} se je v enem letu pove\v{c}ala za $6\%$. Kolik\v{s}na je vrednost nalo\v{z}be po enem letu?
+\item Od $360$ dijakov jih $65\%$ hodi v \v{s}olo pe\v{s}. Koliko dijakov hodi v \v{s}olo pe\v{s}?
+\item Cena avtomobila se je zni\v{z}ala z $18\,000$~\euro{} na $15\,300$~\euro{}. Za koliko odstotkov se je zni\v{z}ala cena?
+\item V razredu je $28$ dijakov, od tega je $75\%$ deklet. Koliko je deklet in koliko fantov?
+\end{enumerate}
+\end{naloga}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{ra\v{c}unanje z decimalnimi \v{s}tevili}]
+Izra\v{c}unaj.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $3.45+2.78$
+\item $7.6-4.38$
+\item $2.5\cdot1.4$
+\item $12.6:3$
+\item $0.75\cdot0.4$
+\item $5.04:1.2$
+\item $3.2+1.75-0.9$
+\item $4.5\cdot2.2$
+\item $9.6:0.4$
+\item $(2.3+1.7)\cdot0.5$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{periodi\v{c}na \v{s}tevila}]
+Pretvori med ulomkom in decimalnim (periodi\v{c}nim) zapisom \v{s}tevila.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item Zapi\v{s}i $0.\overline{3}$ kot okraj\v{s}an ulomek.
+\item Zapi\v{s}i $0.\overline{45}$ kot okraj\v{s}an ulomek.
+\item Zapi\v{s}i $\dfrac{5}{6}$ kot decimalno \v{s}tevilo.
+\item Zapi\v{s}i $0.1\overline{6}$ kot okraj\v{s}an ulomek.
+\item Izra\v{c}unaj $0.\overline{3}+0.\overline{6}$ tako, da \v{s}tevili najprej pretvori\v{s} v ulomka.
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{me\v{s}ano -- periodi\v{c}na \v{s}tevila in potence s celimi eksponenti}]
+Izra\v{c}unaj. Periodi\v{c}na \v{s}tevila najprej pretvori v ulomke.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\left(2^{-2}+0.\overline{4}\right):\dfrac{1}{36}$
+\item $\left(3^{-1}-0.\overline{1}\right)\cdot18$
+\item $2^{-3}\cdot0.\overline{6}+\dfrac{1}{2}$
+\item $\left(0.\overline{3}+5^{-1}\right):\dfrac{2}{15}$
+\item $4^{-1}+0.1\overline{6}$
+\item $\left(2^{-1}-0.\overline{2}\right)\cdot3^2$
+\item $0.8\overline{3}:2^{-1}-3^{-1}$
+\item $\left(3^{-2}+0.\overline{45}\right)\cdot99$
+\item $0.0\overline{5}\cdot10^{-1}\cdot36$
+\item $\left(2^{-2}+2^{-1}\right):0.2\overline{7}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\vfill
+\begin{center}
+\qrcode[hyperlink,height=0.8in]{http://www.matej.info}
+\end{center}
+
+\newpage
+% Razred "letter" ne pozna ukaza \section, zato naslov napisemo neposredno.
+\begin{center}
+{\Large\textbf{Kon\v{c}ne re\v{s}itve}}
+\end{center}
+\vspace{0.3cm}
+
+\begin{enumerate}
+
+
+\item a.) $\dfrac{3}{4}$ \quad b.) $\dfrac{5}{7}$ \quad c.) $\dfrac{3}{4}$ \quad d.) $\dfrac{2}{3}$ \quad
+      e.) $\dfrac{2}{3}$ \quad f.) $\dfrac{15}{20}$ \quad g.) $\dfrac{25}{35}$ \quad h.) $\dfrac{10}{45}$ \quad
+      i.) $\dfrac{42}{48}$ \quad j.) $\dfrac{24}{66}$
+
+\item a.) $\dfrac{5}{6}$ \quad b.) $\dfrac{7}{12}$ \quad c.) $\dfrac{13}{15}$ \quad d.) $\dfrac{1}{12}$ \quad
+      e.) $\dfrac{3}{4}$ \quad f.) $\dfrac{5}{24}$ \quad g.) $\dfrac{9}{4}$ \quad h.) $\dfrac{3}{2}$ \quad
+      i.) $\dfrac{29}{36}$ \quad j.) $\dfrac{13}{30}$
+
+\item a.) $\dfrac{1}{2}$ \quad b.) $\dfrac{3}{4}$ \quad c.) $1$ \quad d.) $\dfrac{1}{2}$ \quad
+      e.) $\dfrac{3}{4}$ \quad f.) $\dfrac{1}{2}$ \quad g.) $\dfrac{3}{2}$ \quad h.) $\dfrac{5}{3}$ \quad
+      i.) $\dfrac{1}{2}$ \quad j.) $\dfrac{1}{6}$
+
+\item a.) $1$ \quad b.) $\dfrac{1}{2}$ \quad c.) $0$ \quad d.) $\dfrac{2}{3}$ \quad e.) $\dfrac{1}{2}$ \quad
+      f.) $\dfrac{1}{2}$ \quad g.) $\dfrac{7}{4}$ \quad h.) $\dfrac{1}{3}$ \quad i.) $2$ \quad j.) $1$
+
+\item a.) $x-3$ \quad b.) $2x+4$ \quad c.) $x-3$ \quad d.) $\dfrac{3x}{x-2}$ \quad e.) $\dfrac{x-4}{x}$
+
+\item a.) $\dfrac{3}{x}$ \quad b.) $1$ \quad c.) $\dfrac{3x+2y}{xy}$ \quad d.) $\dfrac{2x}{x^2-1}$ \quad
+      e.) $\dfrac{5x}{6}$
+
+\item a.) $\dfrac{2}{x}$ \quad b.) $1$ \quad c.) $\dfrac{5y-2x}{xy}$ \quad d.) $\dfrac{2}{x^2-1}$ \quad
+      e.) $\dfrac{x}{12}$
+
+\item a.) $2$ \quad b.) $1$ \quad c.) $\dfrac{x}{3}$ \quad d.) $2$ \quad e.) $xy$
+
+\item a.) $2$ \quad b.) $\dfrac{x}{2}$ \quad c.) $2$ \quad d.) $xy$ \quad e.) $\dfrac{x+1}{2(x-1)}$
+
+\item a.) $x=6$ \quad b.) $x=5$ \quad c.) $x=12$ \quad d.) $x=10$ \quad e.) $x=\dfrac{14}{3}$ \quad
+      f.) $x=12$ \quad g.) $x=4$ \quad h.) $x=15$ \quad i.) $x=\dfrac{1}{2}$ \quad j.) $x=13$
+
+\item a.) $x>4$ \quad b.) $x\le7$ \quad c.) $x\ge5$ \quad d.) $x>2$ \quad e.) $x\le\dfrac{5}{2}$
+
+\item 1.) prebrala $\dfrac{11}{15}$ knjige, ostane \v{s}e $\dfrac{4}{15}$ \quad
+      2.) $32\cdot\dfrac{3}{8}=12$ dijakov \quad
+      3.) $\dfrac{1}{4}\cdot80\,000=20\,000$~\euro{} \quad
+      4.) $\dfrac{3}{4}\cdot5=\dfrac{15}{4}=3\,\dfrac{3}{4}$ skodelice \quad
+      5.) $12:\dfrac{2}{3}=18$ kosov \quad
+      6.) $24\cdot\dfrac{1}{3}=8$ jabolk \quad
+      7.) $\dfrac{1}{4}+\dfrac{3}{8}=\dfrac{5}{8}$ pice \quad
+      8.) $200\cdot\dfrac{3}{4}=150$ litrov \quad
+      9.) porabila $40\cdot\dfrac{2}{5}=16$~\euro{}, ostane $24$~\euro{} \quad
+      10.) $\dfrac{5}{6}-\dfrac{1}{2}=\dfrac{1}{3}$ km
+
+\item a.) $2^{-3}=\dfrac{1}{8}$ \quad b.) $5^0=1$ \quad c.) $3^{-2}\cdot3^4=3^2=9$ \quad
+      d.) $\left(\dfrac{2}{3}\right)^{-2}=\left(\dfrac{3}{2}\right)^2=\dfrac{9}{4}$ \quad
+      e.) $2^{-1}+3^{-1}=\dfrac{1}{2}+\dfrac{1}{3}=\dfrac{5}{6}$ \quad f.) $\dfrac{a^{-3}}{a^{-5}}=a^2$ \quad
+      g.) $(2^{-2})^3=2^{-6}=\dfrac{1}{64}$ \quad h.) $4^{-1}\cdot2^3=\dfrac{1}{4}\cdot8=2$ \quad
+      i.) $\left(\dfrac{1}{2}\right)^{-3}=2^3=8$ \quad j.) $x^3\cdot x^{-5}\cdot x^2=x^0=1$
+
+\item a.) $4.8$ kg \quad b.) $300$ km \quad c.) $3$ dni \quad d.) $60$ min \quad e.) $4$ ure \quad
+      f.) $x=12$ \quad g.) $x=28$ \quad h.) $2$ uri \quad i.) $6$ ur \quad j.) $625$ g
+
+\item a.) $b=\dfrac{o}{2}-a$ \quad b.) $v=\dfrac{2S}{a}$ \quad c.) $t=\dfrac{s}{v}$ \quad
+      d.) $v=\dfrac{P}{2\pi r}-r$ \quad e.) $a=\dfrac{2S}{v}-b$
+
+\item a.) $36$ \quad b.) $15\%$ \quad c.) $150$ \quad d.) $28$ \quad e.) $90$
+
+\item 1.) zni\v{z}anje $12$~\euro{}, nova cena $68$~\euro{} \quad
+      2.) $1080:1.08=1000$~\euro{} \quad
+      3.) prodali $100$, ostalo $150$ \quad
+      4.) DDV $5.5$~\euro{}, cena z DDV $30.5$~\euro{} \quad
+      5.) $4750:0.95=5000$ prebivalcev \quad
+      6.) $\dfrac{34}{40}=85\%$ \quad
+      7.) $2000\cdot1.06=2120$~\euro{} \quad
+      8.) $360\cdot0.65=234$ dijakov \quad
+      9.) $\dfrac{18\,000-15\,300}{18\,000}=15\%$ \quad
+      10.) dekleta $28\cdot0.75=21$, fantje $28-21=7$
+
+\item a.) $6.23$ \quad b.) $3.22$ \quad c.) $3.5$ \quad d.) $4.2$ \quad e.) $0.3$ \quad
+      f.) $4.2$ \quad g.) $4.05$ \quad h.) $9.9$ \quad i.) $24$ \quad j.) $2$
+
+\item a.) $0.\overline{3}=\dfrac{1}{3}$ \quad b.) $0.\overline{45}=\dfrac{5}{11}$ \quad
+      c.) $\dfrac{5}{6}=0.8\overline{3}$ \quad d.) $0.1\overline{6}=\dfrac{1}{6}$ \quad
+      e.) $\dfrac{1}{3}+\dfrac{2}{3}=1$
+
+\item a.) $\left(\dfrac{1}{4}+\dfrac{4}{9}\right):\dfrac{1}{36}=\dfrac{25}{36}\cdot36=25$ \quad
+      b.) $\left(\dfrac{1}{3}-\dfrac{1}{9}\right)\cdot18=\dfrac{2}{9}\cdot18=4$ \quad
+      c.) $\dfrac{1}{8}\cdot\dfrac{2}{3}+\dfrac{1}{2}=\dfrac{1}{12}+\dfrac{1}{2}=\dfrac{7}{12}$ \quad
+      d.) $\left(\dfrac{1}{3}+\dfrac{1}{5}\right):\dfrac{2}{15}=\dfrac{8}{15}\cdot\dfrac{15}{2}=4$ \quad
+      e.) $\dfrac{1}{4}+\dfrac{1}{6}=\dfrac{5}{12}$ \quad
+      f.) $\left(\dfrac{1}{2}-\dfrac{2}{9}\right)\cdot9=\dfrac{5}{18}\cdot9=\dfrac{5}{2}$ \quad
+      g.) $\dfrac{5}{6}:\dfrac{1}{2}-\dfrac{1}{3}=\dfrac{5}{3}-\dfrac{1}{3}=\dfrac{4}{3}$ \quad
+      h.) $\left(\dfrac{1}{9}+\dfrac{5}{11}\right)\cdot99=\dfrac{56}{99}\cdot99=56$ \quad
+      i.) $\dfrac{1}{18}\cdot\dfrac{1}{10}\cdot36=\dfrac{36}{180}=\dfrac{1}{5}$ \quad
+      j.) $\left(\dfrac{1}{4}+\dfrac{1}{2}\right):\dfrac{5}{18}=\dfrac{3}{4}\cdot\dfrac{18}{5}=\dfrac{27}{10}$
+\end{enumerate}
+\end{document}

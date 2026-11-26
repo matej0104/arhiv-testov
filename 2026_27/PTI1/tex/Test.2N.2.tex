@@ -1,0 +1,239 @@
+\documentclass[a4paper,12pt]{letter}
+% POZOR: samo utf8. V starih datotekah je bil za njim se \usepackage[cp1250]{inputenc},
+% kar je prevzelo prednost in lahko pokvari sumnike.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+nobreak=true,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+nobreak=true,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Re\v{s}itev}
+\mdtheorem[style=theoremstyle1]{kriterij}{Kriterij ocenjevanja}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+\everymath{\displaystyle}
+
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{TEST 2.N.2} \Huge{}:
+\large{(algebrski) Ulomki, decimalna števila, procent, sorazmerja, enačbe, neenačbe} \hfill $PTI-1$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!40,ombre=true, couleurOmbre=gray!50,
+  arrondi=0,
+logo =\bcplume,
+  noborder=true]
+{\textsc{{\large{Ime in priimek:}
+\vspace{0.2cm} \rule{15cm}{0.2mm}\hfill }}}
+\end{bclogo}
+\end{minipage}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{ve\v{c} operacij v istem ra\v{c}unu}]
+Izra\v{c}unaj. Upo\v{s}tevaj vrstni red ra\v{c}unskih operacij.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{3}{4}+\dfrac{1}{2}\cdot\dfrac{2}{3}$
+\item $\left(\dfrac{2}{3}-\dfrac{1}{4}\right):\dfrac{5}{6}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{kraj\v{s}anje algebrskih ulomkov}]
+Okraj\v{s}aj algebrski ulomek. \v{S}tevec in imenovalec najprej razstavi.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\dfrac{x^2-25}{x-5}$
+\item $\dfrac{3x^2-12}{x+2}$
+\item $\dfrac{x^2+x-6}{x^2-4}$
+\item $\dfrac{2x^2-6x}{x^2-9}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{ena\v{c}be z ulomki}]
+Re\v{s}i ena\v{c}bo.
+$$\dfrac{2x-1}{3}=\dfrac{x+3}{2}$$
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{besedilne naloge z ulomki}]
+Zapi\v{s}i ra\v{c}un oziroma ena\v{c}bo in re\v{s}i.
+
+\begin{enumerate}[1.)]
+\item Marko je prvi dan prekolesaril $\dfrac{3}{8}$ poti, drugi dan pa \v{s}e $\dfrac{1}{4}$ poti.
+Kolik\v{s}en del poti je prekolesaril v teh dveh dneh? Kolik\v{s}en del mu je \v{s}e ostal?
+\item Babica je $\dfrac{2}{5}$ svojih prihrankov podarila vnuku, preostanek pa vnukinji.
+Prihranki zna\v{s}ajo $3500$~\euro{}. Koliko \euro{} je prejela vnukinja?
+\item Steklenica drži $\dfrac{3}{4}$ litra. Koliko steklenic napolnimo z $9$ litri soka?
+\end{enumerate}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{premo sorazmerje}]
+Re\v{s}i nalogo s premim ali obratnim sorazmerjem.
+
+Stroj napolni $840$ steklenic v $35$ minutah. Koliko minut potrebuje za $1320$ steklenic?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{besedilne naloge -- odstotki}]
+Zapi\v{s}i ra\v{c}un oziroma ena\v{c}bo in re\v{s}i.
+
+Cena kolesa se je zvi\v{s}ala za $12\%$ in zdaj zna\v{s}a $504$~\euro{}. Kolik\v{s}na je bila cena kolesa pred podra\v{z}itvijo?
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{periodi\v{c}na \v{s}tevila}]
+Pretvori med ulomkom in decimalnim (periodi\v{c}nim) zapisom \v{s}tevila.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item Zapi\v{s}i $0.\overline{7}$ kot okraj\v{s}an ulomek.
+\item Zapi\v{s}i $0.\overline{36}$ kot okraj\v{s}an ulomek.
+\item Zapi\v{s}i $\dfrac{7}{12}$ kot decimalno \v{s}tevilo.
+\item Zapi\v{s}i $0.2\overline{3}$ kot okraj\v{s}an ulomek.
+\item Izra\v{c}unaj $0.\overline{2}+0.\overline{5}$ tako, da \v{s}tevili najprej pretvori\v{s} v ulomka.
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill \textit{me\v{s}ano -- periodi\v{c}na \v{s}tevila in potence s celimi eksponenti}]
+Izra\v{c}unaj. Periodi\v{c}na \v{s}tevila najprej pretvori v ulomke.
+
+\begin{multicols}{2}
+\begin{enumerate}[a.)]
+\item $\left(2^{-1}+0.\overline{7}\right):\dfrac{1}{18}$
+\item $\left(0.\overline{6}+4^{-1}\right):\dfrac{11}{24}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\vfill
+\begin{center}
+\qrcode[hyperlink,height=0.8in]{http://www.matej.info}
+\end{center}
+
+\newpage
+% Razred "letter" ne pozna ukaza \section, zato naslov napisemo neposredno.
+\begin{center}
+{\Large\textbf{Kon\v{c}ne re\v{s}itve}}
+\end{center}
+\vspace{0.3cm}
+
+\begin{enumerate}
+
+\item a.) $\dfrac{3}{4}+\dfrac{1}{3}=\dfrac{13}{12}$ \quad b.) $\dfrac{5}{12}\cdot\dfrac{6}{5}=\dfrac{1}{2}$
+
+\item a.) $x+5$ \quad b.) $3x-6$ \quad c.) $\dfrac{x+3}{x+2}$ \quad d.) $\dfrac{2x}{x+3}$
+
+\item $4x-2=3x+9 \Rightarrow x=11$
+
+\item 1.) prekolesaril $\dfrac{5}{8}$ poti, ostane \v{s}e $\dfrac{3}{8}$ \quad
+2.) $\dfrac{3}{5}\cdot3500=2100$~\euro{} \quad
+3.) $9:\dfrac{3}{4}=12$ steklenic
+
+\item $55$ min
+
+\item $504:1.12=450$~\euro{}
+
+\item a.) $0.\overline{7}=\dfrac{7}{9}$ \quad b.) $0.\overline{36}=\dfrac{4}{11}$ \quad
+c.) $\dfrac{7}{12}=0.58\overline{3}$ \quad d.) $0.2\overline{3}=\dfrac{7}{30}$ \quad
+e.) $\dfrac{2}{9}+\dfrac{5}{9}=\dfrac{7}{9}$
+
+\item a.) $\left(\dfrac{1}{2}+\dfrac{7}{9}\right):\dfrac{1}{18}=\dfrac{23}{18}\cdot18=23$ \quad
+b.) $\left(\dfrac{2}{3}+\dfrac{1}{4}\right):\dfrac{11}{24}=\dfrac{11}{12}\cdot\dfrac{24}{11}=2$
+
+\end{enumerate}
+\end{document}
