@@ -1,0 +1,218 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovene]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage[margin=2.2cm]{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[enumerate,2]{label=\alph*), itemsep=6pt}
+
+\newcommand{\naloga}[1]{\subsection*{#1}}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries Kotne funkcije -- vaje}\\[4pt]
+  Ime in priimek: \underline{\hspace{6cm}} \quad Razred: \underline{\hspace{2cm}}
+\end{center}
+
+%==========================================================
+\naloga{1. naloga: Rotacija točke na enotski krožnici}
+
+Točko zavrtimo okoli izhodišča koordinatnega sistema za dani kot (pozitivni kot pomeni vrtenje
+v nasprotni smeri urinega kazalca). Določi koordinate nove lege točke, kvadrant, v katerem leži,
+in predznake vrednosti $\sin$, $\cos$, $\tan$ in $\cot$ pripadajočega kota.
+
+\begin{enumerate}[label=\alph*), itemsep=6pt]
+  \item Točko $T_0(1,0)$ zavrtimo za kot $\alpha = 150^\circ$.
+  \item Točko $T_0(1,0)$ zavrtimo za kot $\alpha = -225^\circ$.
+  \item Točko $T_0(1,0)$ zavrtimo za kot $\alpha = -\dfrac{17\pi}{4}$.
+  \item Točko $T\!\left(\dfrac{\sqrt{3}}{2}, \dfrac{1}{2}\right)$ zavrtimo za kot $\alpha = -510^\circ$.
+  \item[] \textit{Težji primeri:}
+  \item Točko $T\!\left(-\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right)$ zavrtimo za kot $\alpha = \dfrac{47\pi}{6}$.
+  \item Točko $T\!\left(\dfrac{\sqrt{2}}{2}, -\dfrac{\sqrt{2}}{2}\right)$ najprej zavrtimo za kot $600^\circ$, nato še za kot $-\dfrac{13\pi}{4}$.
+  \item Za kateri najmanjši pozitivni kot moramo zavrteti točko\\ $T\!\left(\dfrac{1}{2}, \dfrac{\sqrt{3}}{2}\right)$,
+        da pride v lego $T'\!\left(-\dfrac{\sqrt{3}}{2}, -\dfrac{1}{2}\right)$? Zapiši tudi vse kote, ki ustrezajo pogoju.
+\end{enumerate}
+
+%==========================================================
+\naloga{2. naloga: Prehod na ostri kot in periodičnost}
+
+Z upoštevanjem periode in formul za prehod na ostri kot izračunaj točne vrednosti
+(brez uporabe računala). Rezultate deli racionaliziraj.
+
+\begin{enumerate}[label=\alph*), itemsep=8pt]
+  \item $\sin 210^\circ$
+  \item $\cos 300^\circ$
+  \item $\tan 135^\circ$
+  \item $\cot 240^\circ$
+  \item $\sin \dfrac{5\pi}{3}$
+  \item $\cos\left(-\dfrac{3\pi}{4}\right)$
+  \item $\tan \dfrac{13\pi}{6}$
+  \item $\sin 1110^\circ$
+  \item $\dfrac{\sin 120^\circ \cdot \cos 330^\circ}{\tan 315^\circ}$
+  \item $\dfrac{2\sin \frac{5\pi}{6} - \cos \frac{4\pi}{3}}{\cot\left(-\frac{5\pi}{4}\right)}$
+  \item[] \textit{Težji primeri:}
+  \item $\sin(-2025^\circ)$
+  \item $\dfrac{\tan\frac{19\pi}{3}\cdot\cos\left(-\frac{29\pi}{6}\right)}{\sin\left(-\frac{31\pi}{4}\right)}$
+  \item $\dfrac{\sin^2 240^\circ + \cos 840^\circ}{\tan 1035^\circ\cdot\cot(-600^\circ)}$
+\end{enumerate}
+
+%==========================================================
+\naloga{3. naloga: Zveze med kotnimi funkcijami istega kota}
+
+Z uporabo zvez
+\[
+\sin^2\alpha + \cos^2\alpha = 1, \qquad
+\tan\alpha = \frac{\sin\alpha}{\cos\alpha}, \qquad
+\tan\alpha\cdot\cot\alpha = 1, \qquad
+1+\tan^2\alpha = \frac{1}{\cos^2\alpha}
+\]
+izračunaj vrednosti ostalih kotnih funkcij kota $\alpha$.
+
+\begin{enumerate}[label=\alph*), itemsep=8pt]
+  \item $\sin\alpha = \dfrac{3}{5}$, \quad $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$
+  \item $\cos\alpha = -\dfrac{5}{13}$, \quad $\alpha \in \left(\pi, \dfrac{3\pi}{2}\right)$
+  \item $\tan\alpha = 2$, \quad $\alpha \in \left(\pi, \dfrac{3\pi}{2}\right)$
+  \item $\cot\alpha = -\dfrac{3}{4}$, \quad $\alpha \in \left(\dfrac{3\pi}{2}, 2\pi\right)$
+  \item $\sin\alpha = -\dfrac{2}{3}$, \quad $\alpha \in \left(\dfrac{3\pi}{2}, 2\pi\right)$
+  \item $\cos\alpha = \dfrac{1}{4}$, \quad $\alpha \in \left(0, \dfrac{\pi}{2}\right)$
+  \item $\tan\alpha = -\dfrac{1}{3}$, \quad $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$
+  \item Velja $\tan\alpha = \dfrac{3}{4}$. Izračunaj vrednost izraza
+        $\dfrac{2\sin\alpha - \cos\alpha}{\sin\alpha + 3\cos\alpha}$.
+  \item[] \textit{Težji primeri:}
+  \item Velja $\sin\alpha + \cos\alpha = \dfrac{1}{5}$ in $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$.
+        Izračunaj $\sin\alpha$, $\cos\alpha$, $\tan\alpha$ in $\cot\alpha$.
+  \item Velja $\tan\alpha = 3$. Brez računanja $\sin\alpha$ in $\cos\alpha$ izračunaj
+        $\sin\alpha\cos\alpha$ in $\sin^2\alpha - \cos^2\alpha$.
+  \item $\cot\alpha = -2\sqrt{2}$, \quad $\alpha \in \left(\dfrac{\pi}{2}, \pi\right)$
+\end{enumerate}
+
+%==========================================================
+\naloga{4. naloga: Poenostavljanje izrazov in dokazovanje enakosti}
+
+Poenostavi izraze (a--d) oziroma dokaži, da enakosti veljajo za vse dopustne kote (e--h).
+
+\begin{enumerate}[label=\alph*), itemsep=8pt]
+  \item $\dfrac{1-\cos^2\alpha}{\sin\alpha\cos\alpha}$
+  \item $\sin(\pi-\alpha)\cos\left(\dfrac{\pi}{2}-\alpha\right) + \cos(\pi+\alpha)\cos(\pi-\alpha)$
+  \item $\tan(\pi+\alpha)\cdot\cot\left(\dfrac{3\pi}{2}-\alpha\right) + 1$
+  \item $\dfrac{\sin(\alpha-\pi)\cdot\tan\left(\frac{\pi}{2}+\alpha\right)}{\cos(2\pi-\alpha)}$
+  \item $\tan\alpha + \cot\alpha = \dfrac{1}{\sin\alpha\cos\alpha}$
+  \item $\dfrac{\sin\alpha}{1+\cos\alpha} + \dfrac{1+\cos\alpha}{\sin\alpha} = \dfrac{2}{\sin\alpha}$
+  \item $\sin^4\alpha - \cos^4\alpha = \sin^2\alpha - \cos^2\alpha$
+  \item $\dfrac{\cos\alpha}{1-\sin\alpha} = \dfrac{1+\sin\alpha}{\cos\alpha}$
+  \item[] \textit{Težji primeri:}
+  \item Poenostavi: $\dfrac{\sin\left(\frac{3\pi}{2}-\alpha\right)\cdot\cot\left(\frac{\pi}{2}+\alpha\right)\cdot\cos(\pi-\alpha)}{\tan(\pi+\alpha)\cdot\sin\left(\frac{\pi}{2}-\alpha\right)}$
+  \item Dokaži: $\dfrac{(\sin\alpha+\cos\alpha)^2 - 1}{\cot\alpha - \sin\alpha\cos\alpha} = 2\tan^2\alpha$
+  \item Dokaži: $\sin^6\alpha + \cos^6\alpha = 1 - 3\sin^2\alpha\cos^2\alpha$
+\end{enumerate}
+
+%==========================================================
+\naloga{5. naloga: Adicijski izreki, dvojni in polovični kot}
+
+Z uporabo adicijskih izrekov ter formul za dvojni in polovični kot poenostavi izraze.
+
+\begin{enumerate}[label=\alph*), itemsep=8pt]
+  \item $\sin(\alpha+\beta) + \sin(\alpha-\beta)$
+  \item $\dfrac{\cot\alpha\cot\beta - 1}{\cot\alpha + \cot\beta}$
+  \item $\dfrac{\tan(\alpha+\beta) - \tan\beta}{1 + \tan(\alpha+\beta)\tan\beta}$
+  \item $\cos\left(\dfrac{\pi}{3}+\alpha\right) + \cos\left(\dfrac{\pi}{3}-\alpha\right)$
+  \item $\dfrac{\sin 2\alpha}{1+\cos 2\alpha}$
+  \item $\dfrac{1-\cos 2\alpha}{1+\cos 2\alpha}$
+  \item $\cos^4\alpha - \sin^4\alpha$
+  \item $2\sin^2\dfrac{\alpha}{2} + \cos\alpha$
+  \item $\cot\alpha - \tan\alpha$ \quad (izrazi s kotno funkcijo dvojnega kota)
+  \item $\dfrac{1+\cos\alpha}{\sin\alpha}$ \quad (izrazi s kotno funkcijo polovičnega kota)
+  \item[] \textit{Težji primeri:}
+  \item Izrazi $\sin 3\alpha$ samo s $\sin\alpha$.
+  \item $\dfrac{\sin\alpha + \sin 3\alpha}{\cos\alpha + \cos 3\alpha}$ \quad (namig: $3\alpha = 2\alpha+\alpha$, $\alpha = 2\alpha - \alpha$)
+  \item $\dfrac{\cos 2\alpha}{1+\sin 2\alpha}$ \quad (izrazi s tangensom razlike kotov)
+\end{enumerate}
+
+%==========================================================
+\newpage
+\section*{Rešitve}
+
+\textbf{1. naloga}
+\begin{enumerate}[label=\alph*)]
+  \item $T'\!\left(-\frac{\sqrt3}{2}, \frac12\right)$, II.\ kvadrant; $\sin>0$, $\cos<0$, $\tan<0$, $\cot<0$.
+  \item $-225^\circ \equiv 135^\circ$: $T'\!\left(-\frac{\sqrt2}{2}, \frac{\sqrt2}{2}\right)$, II.\ kvadrant; $\sin>0$, $\cos<0$, $\tan<0$, $\cot<0$.
+  \item $-\frac{17\pi}{4} \equiv \frac{7\pi}{4}$: $T'\!\left(\frac{\sqrt2}{2}, -\frac{\sqrt2}{2}\right)$, IV.\ kvadrant; $\sin<0$, $\cos>0$, $\tan<0$, $\cot<0$.
+  \item $T$ ustreza kotu $30^\circ$; $30^\circ - 510^\circ = -480^\circ \equiv 240^\circ$:
+        $T'\!\left(-\frac12, -\frac{\sqrt3}{2}\right)$, III.\ kvadrant; $\sin<0$, $\cos<0$, $\tan>0$, $\cot>0$.
+  \item $T$ ustreza kotu $\frac{2\pi}{3}=\frac{4\pi}{6}$; $\frac{4\pi}{6}+\frac{47\pi}{6} = \frac{51\pi}{6} \equiv \frac{\pi}{2}$:
+        $T'(0,1)$ leži na pozitivnem delu osi $y$ (ni v kvadrantu); $\sin=1$, $\cos=0$, $\tan$ ni definiran, $\cot=0$.
+  \item $T$ ustreza kotu $315^\circ$; $-\frac{13\pi}{4} = -585^\circ$; $315^\circ+600^\circ-585^\circ = 330^\circ$:
+        $T'\!\left(\frac{\sqrt3}{2}, -\frac12\right)$, IV.\ kvadrant; $\sin<0$, $\cos>0$, $\tan<0$, $\cot<0$.
+  \item $T$ ustreza kotu $60^\circ$, $T'$ kotu $210^\circ$: najmanjši kot je $150^\circ = \frac{5\pi}{6}$;
+        vsi koti: $\frac{5\pi}{6} + 2k\pi$, $k\in\mathbb{Z}$.
+\end{enumerate}
+
+\textbf{2. naloga}
+\begin{enumerate}[label=\alph*)]
+  \item $-\frac12$ \quad b) $\frac12$ \quad c) $-1$ \quad d) $\frac{\sqrt3}{3}$ \quad e) $-\frac{\sqrt3}{2}$
+  \setcounter{enumii}{5}
+  \item $-\frac{\sqrt2}{2}$ \quad g) $\frac{\sqrt3}{3}$ \quad h) $\frac12$ \quad
+        i) $\frac{\frac{\sqrt3}{2}\cdot\frac{\sqrt3}{2}}{-1} = -\frac34$ \quad
+        j) $\frac{1+\frac12}{-1} = -\frac32$
+  \setcounter{enumii}{10}
+  \item $-2025^\circ \equiv 135^\circ$: \ $\frac{\sqrt2}{2}$
+  \item $\tan\frac{19\pi}{3}=\tan\frac{\pi}{3}=\sqrt3$, \ $\cos\left(-\frac{29\pi}{6}\right)=\cos\frac{5\pi}{6}=-\frac{\sqrt3}{2}$,
+        \ $\sin\left(-\frac{31\pi}{4}\right)=\sin\frac{\pi}{4}=\frac{\sqrt2}{2}$; \
+        rezultat $\frac{-\frac32}{\frac{\sqrt2}{2}} = -\frac{3\sqrt2}{2}$
+  \item $\sin^2 240^\circ=\frac34$, \ $\cos 840^\circ=\cos120^\circ=-\frac12$, \ $\tan1035^\circ=\tan135^\circ=-1$,
+        \ $\cot(-600^\circ)=-\cot60^\circ=-\frac{\sqrt3}{3}$; \ rezultat $\frac{\frac14}{\frac{\sqrt3}{3}} = \frac{\sqrt3}{4}$
+\end{enumerate}
+
+\textbf{3. naloga}
+\begin{enumerate}[label=\alph*)]
+  \item $\cos\alpha=-\frac45$, $\tan\alpha=-\frac34$, $\cot\alpha=-\frac43$
+  \item $\sin\alpha=-\frac{12}{13}$, $\tan\alpha=\frac{12}{5}$, $\cot\alpha=\frac{5}{12}$
+  \item $\cos\alpha=-\frac{\sqrt5}{5}$, $\sin\alpha=-\frac{2\sqrt5}{5}$, $\cot\alpha=\frac12$
+  \item $\tan\alpha=-\frac43$, $\cos\alpha=\frac35$, $\sin\alpha=-\frac45$
+  \item $\cos\alpha=\frac{\sqrt5}{3}$, $\tan\alpha=-\frac{2\sqrt5}{5}$, $\cot\alpha=-\frac{\sqrt5}{2}$
+  \item $\sin\alpha=\frac{\sqrt{15}}{4}$, $\tan\alpha=\sqrt{15}$, $\cot\alpha=\frac{\sqrt{15}}{15}$
+  \item $\cos\alpha=-\frac{3\sqrt{10}}{10}$, $\sin\alpha=\frac{\sqrt{10}}{10}$, $\cot\alpha=-3$
+  \item Števec in imenovalec delimo s $\cos\alpha$: $\frac{2\tan\alpha-1}{\tan\alpha+3} = \frac{\frac12}{\frac{15}{4}} = \frac{2}{15}$
+  \item Kvadriramo: $1+2\sin\alpha\cos\alpha=\frac{1}{25}$, torej $\sin\alpha\cos\alpha=-\frac{12}{25}$.
+        $\sin\alpha$ in $\cos\alpha$ sta rešitvi enačbe $t^2-\frac15 t-\frac{12}{25}=0$, tj.\ $t=\frac45$ in $t=-\frac35$.
+        V II.\ kvadrantu: $\sin\alpha=\frac45$, $\cos\alpha=-\frac35$, $\tan\alpha=-\frac43$, $\cot\alpha=-\frac34$.
+  \item $\sin\alpha\cos\alpha=\frac{\sin\alpha\cos\alpha}{\sin^2\alpha+\cos^2\alpha}=\frac{\tan\alpha}{1+\tan^2\alpha}=\frac{3}{10}$, \quad
+        $\sin^2\alpha-\cos^2\alpha=\frac{\tan^2\alpha-1}{\tan^2\alpha+1}=\frac45$
+  \item $\tan\alpha=-\frac{\sqrt2}{4}$; iz $1+\cot^2\alpha=\frac{1}{\sin^2\alpha}=9$ sledi $\sin\alpha=\frac13$, $\cos\alpha=-\frac{2\sqrt2}{3}$
+\end{enumerate}
+
+\textbf{4. naloga}
+\begin{enumerate}[label=\alph*)]
+  \item $\tan\alpha$
+  \item $\sin^2\alpha + \cos^2\alpha = 1$
+  \item $\tan^2\alpha + 1 = \frac{1}{\cos^2\alpha}$
+  \item $\frac{(-\sin\alpha)(-\cot\alpha)}{\cos\alpha} = 1$
+  \item $\frac{\sin^2\alpha+\cos^2\alpha}{\sin\alpha\cos\alpha}$
+  \item $\frac{\sin^2\alpha + 1 + 2\cos\alpha + \cos^2\alpha}{\sin\alpha(1+\cos\alpha)} = \frac{2(1+\cos\alpha)}{\sin\alpha(1+\cos\alpha)}$
+  \item $(\sin^2\alpha-\cos^2\alpha)(\sin^2\alpha+\cos^2\alpha)$
+  \item Navzkrižno množenje: $\cos^2\alpha = 1-\sin^2\alpha$.
+  \item $\frac{(-\cos\alpha)(-\tan\alpha)(-\cos\alpha)}{\tan\alpha\cdot\cos\alpha} = -\cos\alpha$
+  \item Števec: $2\sin\alpha\cos\alpha$; imenovalec: $\frac{\cos\alpha}{\sin\alpha}(1-\sin^2\alpha)=\frac{\cos^3\alpha}{\sin\alpha}$;
+        kvocient $\frac{2\sin^2\alpha}{\cos^2\alpha}=2\tan^2\alpha$.
+  \item $a^3+b^3=(a+b)\big((a+b)^2-3ab\big)$ za $a=\sin^2\alpha$, $b=\cos^2\alpha$, kjer je $a+b=1$.
+\end{enumerate}
+
+\textbf{5. naloga}
+\begin{enumerate}[label=\alph*)]
+  \item $2\sin\alpha\cos\beta$ \quad b) $\cot(\alpha+\beta)$ \quad c) $\tan\alpha$ \quad d) $\cos\alpha$ \quad e) $\tan\alpha$
+  \setcounter{enumii}{5}
+  \item $\tan^2\alpha$ \quad g) $\cos 2\alpha$ \quad h) $1$ \quad i) $2\cot 2\alpha$ \quad j) $\cot\frac{\alpha}{2}$
+  \setcounter{enumii}{10}
+  \item $\sin3\alpha=\sin2\alpha\cos\alpha+\cos2\alpha\sin\alpha = 2\sin\alpha(1-\sin^2\alpha)+(1-2\sin^2\alpha)\sin\alpha = 3\sin\alpha-4\sin^3\alpha$
+  \item Števec: $2\sin2\alpha\cos\alpha$, imenovalec: $2\cos2\alpha\cos\alpha$; rezultat $\tan2\alpha$
+  \item $\frac{(\cos\alpha-\sin\alpha)(\cos\alpha+\sin\alpha)}{(\cos\alpha+\sin\alpha)^2}=\frac{\cos\alpha-\sin\alpha}{\cos\alpha+\sin\alpha}
+        =\frac{1-\tan\alpha}{1+\tan\alpha}=\tan\left(\frac{\pi}{4}-\alpha\right)$
+\end{enumerate}
+
+\end{document}

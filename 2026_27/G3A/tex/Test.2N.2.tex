@@ -1,0 +1,355 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows,angles,quotes}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+%%%%%%%%%%%%%%%%%%%% podatki testa -- tu spreminjaj
+\def\programletnik{G-3}
+\def\naslov{Kotne funkcije Naloge - 2. del}
+\def\sklop{Adicijski izreki in posledice}
+%%%%%%%%%%%%%%%%%%%% tocke po nalogah
+\def\tockeA{10}
+\def\tockeB{5}
+\def\tockeC{5}
+\def\tockeD{10}
+\def\tockeE{10}
+\def\tockeF{5}
+\def\tockeG{10}
+\def\tockeH{10}
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\numexpr\tockeA\relax}
+Adicijski izreki. Izra\v{c}unaj brez uporabe kalkulatorja (vrednost zapi\v{s}i natan\v{c}no).
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle \sin75\degree$
+\item $\displaystyle \cos15\degree$
+\item $\displaystyle \tan105\degree$
+\item $\displaystyle \cos75\degree$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{4}
+\item $\displaystyle \sin15\degree$
+\item $\displaystyle \sin40\degree\cos20\degree+\cos40\degree\sin20\degree$
+\item $\displaystyle \cos70\degree\cos10\degree+\sin70\degree\sin10\degree$
+\item $\displaystyle \frac{\tan25\degree+\tan20\degree}{1-\tan25\degree\tan20\degree}$
+\end{enumerate}
+\end{multicols}
+\begin{enumerate}[a)]\setcounter{enumi}{8}
+\item Dano je $\sin\alpha=\frac35$, $\alpha\in(90\degree,180\degree)$, in $\cos\beta=\frac{5}{13}$, $\beta\in(0\degree,90\degree)$. Izra\v{c}unaj $\sin(\alpha+\beta)$ in $\cos(\alpha-\beta)$.
+\item Za ostra kota $\alpha$ in $\beta$ velja $\tan\alpha=\frac12$ in $\tan\beta=\frac13$. Izra\v{c}unaj $\tan(\alpha+\beta)$ in dolo\v{c}i kot $\alpha+\beta$.
+\end{enumerate}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\numexpr\tockeB\relax}
+Dvojni koti.
+\begin{enumerate}[a)]
+\item Dano je $\sin\alpha=\frac45$, $\alpha\in(0\degree,90\degree)$. Izra\v{c}unaj $\sin2\alpha$, $\cos2\alpha$ in $\tan2\alpha$.
+\item Dano je $\cos\alpha=-\frac{5}{13}$, $\alpha\in(90\degree,180\degree)$. Izra\v{c}unaj $\sin2\alpha$ in $\cos2\alpha$.
+\item Izra\v{c}unaj brez kalkulatorja: $\displaystyle 2\sin15\degree\cos15\degree$.
+\item Izra\v{c}unaj brez kalkulatorja: $\displaystyle \cos^275\degree-\sin^275\degree$.
+\item Dano je $\tan\alpha=3$. Izra\v{c}unaj $\tan2\alpha$.
+\end{enumerate}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeC$] \addtocounter{tocke}{\numexpr\tockeC\relax}
+Polovi\v{c}ni koti.
+\begin{enumerate}[a)]
+\item S formulo za polovi\v{c}ni kot izra\v{c}unaj $\sin15\degree$.
+\item S formulo za polovi\v{c}ni kot izra\v{c}unaj $\cos22{,}5\degree$.
+\item S formulo za polovi\v{c}ni kot izra\v{c}unaj $\tan22{,}5\degree$.
+\item Dano je $\cos\alpha=\frac{7}{25}$, $\alpha\in(0\degree,90\degree)$. Izra\v{c}unaj $\sin\frac{\alpha}{2}$, $\cos\frac{\alpha}{2}$ in $\tan\frac{\alpha}{2}$.
+\item Dano je $\cos\alpha=-\frac19$, $\alpha\in(180\degree,270\degree)$. Izra\v{c}unaj $\sin\frac{\alpha}{2}$ in $\cos\frac{\alpha}{2}$ (pazi na predznak!).
+\end{enumerate}
+\end{naloga}
+\newpage
+
+\begin{naloga}[\hfill $\tockeD$] \addtocounter{tocke}{\numexpr\tockeD\relax}
+Doka\v{z}i trigonometri\v{c}ne enakosti.
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle (\sin\alpha+\cos\alpha)^2=1+\sin2\alpha$
+\item $\displaystyle \cos^4\alpha-\sin^4\alpha=\cos2\alpha$
+\item $\displaystyle \frac{1-\cos2\alpha}{\sin2\alpha}=\tan\alpha$
+\item $\displaystyle \sin(\alpha+\beta)\sin(\alpha-\beta)=\sin^2\alpha-\sin^2\beta$
+\item $\displaystyle \frac{\sin2\alpha}{1+\cos2\alpha}=\tan\alpha$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle \tan\alpha+\cot\alpha=\frac{2}{\sin2\alpha}$
+\item $\displaystyle \frac{\cos\alpha-\sin\alpha}{\cos\alpha+\sin\alpha}=\frac{1-\sin2\alpha}{\cos2\alpha}$
+\item $\displaystyle \sin3\alpha=3\sin\alpha-4\sin^3\alpha$
+\item $\displaystyle \cos(60\degree+\alpha)+\cos(60\degree-\alpha)=\cos\alpha$
+\item $\displaystyle \tan(45\degree+\alpha)=\frac{1+\tan\alpha}{1-\tan\alpha}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeE$] \addtocounter{tocke}{\numexpr\tockeE\relax}
+Posledice adicijskih izrekov. Izra\v{c}unaj brez kalkulatorja oziroma zapi\v{s}i izraz v zahtevani obliki.
+\begin{multicols}{2}
+\textbf{Faktorizacija} (vsoto/razliko zapi\v{s}i kot produkt)
+\begin{enumerate}[a)]
+\item $\displaystyle \sin75\degree+\sin15\degree$
+\item $\displaystyle \cos75\degree+\cos15\degree$
+\item $\displaystyle \sin75\degree-\sin15\degree$
+\item $\displaystyle \cos105\degree-\cos15\degree$
+\item $\displaystyle \sin5x+\sin3x$
+\end{enumerate}
+\columnbreak
+\textbf{Defaktorizacija} (produkt zapi\v{s}i kot vsoto/razliko)
+\begin{enumerate}[a)]\setcounter{enumi}{5}
+\item $\displaystyle 2\sin75\degree\cos15\degree$
+\item $\displaystyle 2\cos75\degree\cos15\degree$
+\item $\displaystyle 4\sin75\degree\sin15\degree$
+\item $\displaystyle \sin3x\sin x$
+\item $\displaystyle 2\cos3x\cos x$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeF$] \addtocounter{tocke}{\numexpr\tockeF\relax}
+Poenostavi izraze z uporabo adicijskih izrekov.
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\displaystyle \sin\left(x+\frac{\pi}{3}\right)-\cos\left(x+\frac{\pi}{6}\right)$
+\item $\displaystyle \cos\left(x-\frac{\pi}{3}\right)+\sin\left(x-\frac{\pi}{6}\right)$
+\item $\displaystyle \sin\left(x+\frac{\pi}{6}\right)+\cos\left(x+\frac{\pi}{3}\right)$
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[a)]\setcounter{enumi}{3}
+\item $\displaystyle \sin\left(\frac{\pi}{4}+x\right)-\sin\left(\frac{\pi}{4}-x\right)$
+\item $\displaystyle \tan\left(x+\frac{\pi}{4}\right)\cdot\tan\left(x-\frac{\pi}{4}\right)$
+\item $\displaystyle \frac{\sin(x+y)-\cos x\sin y}{\cos(x-y)-\sin x\sin y}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeG$] \addtocounter{tocke}{\numexpr\tockeG\relax}
+Adicijski izreki pri danih vrednostih kotnih funkcij.
+\begin{enumerate}[a)]
+\item Dano je $\sin\alpha=\frac{5}{13}$, $\alpha\in(90\degree,180\degree)$, in $\cos\beta=-\frac35$, $\beta\in(180\degree,270\degree)$. Izra\v{c}unaj $\sin(\alpha-\beta)$ in $\cos(\alpha+\beta)$.
+\item Dano je $\cos\alpha=\frac45$, $\alpha\in(270\degree,360\degree)$, in $\sin\beta=\frac{8}{17}$, $\beta\in(90\degree,180\degree)$. Izra\v{c}unaj $\sin(\alpha+\beta)$ in $\cos(\alpha-\beta)$.
+\item Dano je $\sin\alpha=-\frac{7}{25}$, $\alpha\in\left(\pi,\frac{3\pi}{2}\right)$, in $\cos\beta=\frac{12}{13}$, $\beta\in\left(\frac{3\pi}{2},2\pi\right)$. Izra\v{c}unaj $\cos(\alpha+\beta)$ in $\sin(\alpha-\beta)$.
+\item Za ostra kota $\alpha$ in $\beta$ velja $\tan\alpha=2$ in $\tan\beta=3$. Izra\v{c}unaj $\tan(\alpha+\beta)$ in dolo\v{c}i kot $\alpha+\beta$.
+\item Za ostra kota $\alpha$ in $\beta$ velja $\tan\alpha=3$ in $\tan\beta=\frac12$. Izra\v{c}unaj $\tan(\alpha-\beta)$ in dolo\v{c}i kot $\alpha-\beta$.
+\end{enumerate}
+\end{naloga}
+
+\begin{naloga}[\hfill $\tockeH$] \addtocounter{tocke}{\numexpr\tockeH\relax}
+Izra\v{c}un iz znane vrednosti $\tan x$ oziroma $\cot y$.
+\begin{enumerate}[a)]
+\item Dano je $\tan x=\frac34$, $x\in\left(\pi,\frac{3\pi}{2}\right)$. Izra\v{c}unaj $\sin2x$, $\cos2x$ in $\sin\left(x-\frac{\pi}{4}\right)$.
+\item Dano je $\cot y=-\frac{5}{12}$, $y\in\left(\frac{\pi}{2},\pi\right)$. Izra\v{c}unaj $\sin2y$, $\cos2y$ in $\cos\left(y+\frac{\pi}{3}\right)$.
+\item Dano je $\tan x=-\frac12$, $x\in\left(\frac{3\pi}{2},2\pi\right)$. Izra\v{c}unaj $\sin2x$, $\cos2x$, $\tan2x$ in $\sin\left(x+\frac{\pi}{4}\right)$.
+\item Za ostra kota $x$ in $y$ velja $\tan x=2$ in $\cot y=3$. Izra\v{c}unaj $\tan(x+y)$, $\sin(x-y)$ in $\cos2x$.
+\item Dano je $\tan x=\frac13$, $x\in\left(0,\frac{\pi}{2}\right)$, in $\cot y=2$, $y\in\left(\pi,\frac{3\pi}{2}\right)$. Izra\v{c}unaj $\cos2y$, $\sin\left(y-\frac{\pi}{4}\right)$ in $\tan(x+y)$.
+\end{enumerate}
+\end{naloga}
+
+%\end{document}
+
+\newpage
+\textsc{\Large Re\v{s}itve}
+\vspace{0.5cm}
+
+\begin{resitev}[-- Adicijski izreki]
+\begin{enumerate}[a)]
+\item $\displaystyle \sin(45\degree+30\degree)=\tfrac{\sqrt2}{2}\cdot\tfrac{\sqrt3}{2}+\tfrac{\sqrt2}{2}\cdot\tfrac12=\frac{\sqrt6+\sqrt2}{4}$
+\item $\displaystyle \cos(45\degree-30\degree)=\tfrac{\sqrt2}{2}\cdot\tfrac{\sqrt3}{2}+\tfrac{\sqrt2}{2}\cdot\tfrac12=\frac{\sqrt6+\sqrt2}{4}$
+\item $\displaystyle \tan(60\degree+45\degree)=\frac{\sqrt3+1}{1-\sqrt3}=-(2+\sqrt3)$
+\item $\displaystyle \cos(45\degree+30\degree)=\tfrac{\sqrt2}{2}\cdot\tfrac{\sqrt3}{2}-\tfrac{\sqrt2}{2}\cdot\tfrac12=\frac{\sqrt6-\sqrt2}{4}$
+\item $\displaystyle \sin(45\degree-30\degree)=\tfrac{\sqrt2}{2}\cdot\tfrac{\sqrt3}{2}-\tfrac{\sqrt2}{2}\cdot\tfrac12=\frac{\sqrt6-\sqrt2}{4}$
+\item $\displaystyle \sin(40\degree+20\degree)=\sin60\degree=\frac{\sqrt3}{2}$
+\item $\displaystyle \cos(70\degree-10\degree)=\cos60\degree=\frac12$
+\item $\displaystyle \tan(25\degree+20\degree)=\tan45\degree=1$
+\item $\displaystyle \cos\alpha=-\tfrac45,\ \sin\beta=\tfrac{12}{13};\quad \sin(\alpha+\beta)=\tfrac{15}{65}-\tfrac{48}{65}=-\frac{33}{65},\quad \cos(\alpha-\beta)=-\tfrac{20}{65}+\tfrac{36}{65}=\frac{16}{65}$
+\item $\displaystyle \tan(\alpha+\beta)=\frac{\frac12+\frac13}{1-\frac16}=1\ \Rightarrow\ \alpha+\beta=45\degree$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Dvojni koti]
+\begin{enumerate}[a)]
+\item $\displaystyle \cos\alpha=\tfrac35;\quad \sin2\alpha=\frac{24}{25},\quad \cos2\alpha=-\frac{7}{25},\quad \tan2\alpha=-\frac{24}{7}$
+\item $\displaystyle \sin\alpha=\tfrac{12}{13};\quad \sin2\alpha=-\frac{120}{169},\quad \cos2\alpha=-\frac{119}{169}$
+\item $\displaystyle \sin30\degree=\frac12$
+\item $\displaystyle \cos150\degree=-\frac{\sqrt3}{2}$
+\item $\displaystyle \tan2\alpha=\frac{2\cdot3}{1-9}=-\frac34$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Polovi\v{c}ni koti]
+\begin{enumerate}[a)]
+\item $\displaystyle \sin15\degree=\sqrt{\frac{1-\cos30\degree}{2}}=\frac{\sqrt{2-\sqrt3}}{2}\ \Big(=\frac{\sqrt6-\sqrt2}{4}\Big)$
+\item $\displaystyle \cos22{,}5\degree=\sqrt{\frac{1+\cos45\degree}{2}}=\frac{\sqrt{2+\sqrt2}}{2}$
+\item $\displaystyle \tan22{,}5\degree=\frac{1-\cos45\degree}{\sin45\degree}=\sqrt2-1$
+\item $\displaystyle \sin\tfrac{\alpha}{2}=\frac35,\quad \cos\tfrac{\alpha}{2}=\frac45,\quad \tan\tfrac{\alpha}{2}=\frac34$
+\item $\displaystyle \tfrac{\alpha}{2}\in(90\degree,135\degree):\quad \sin\tfrac{\alpha}{2}=\frac{\sqrt5}{3},\quad \cos\tfrac{\alpha}{2}=-\frac23$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Dokazovanje enakosti (klju\v{c}ni korak)]
+\begin{enumerate}[a)]
+\item $\displaystyle \sin^2\alpha+2\sin\alpha\cos\alpha+\cos^2\alpha=1+\sin2\alpha$
+\item $\displaystyle (\cos^2\alpha-\sin^2\alpha)(\cos^2\alpha+\sin^2\alpha)=\cos2\alpha\cdot1$
+\item $\displaystyle \frac{2\sin^2\alpha}{2\sin\alpha\cos\alpha}=\frac{\sin\alpha}{\cos\alpha}=\tan\alpha$
+\item $\displaystyle \sin^2\alpha\cos^2\beta-\cos^2\alpha\sin^2\beta=\sin^2\alpha(1-\sin^2\beta)-(1-\sin^2\alpha)\sin^2\beta=\sin^2\alpha-\sin^2\beta$
+\item $\displaystyle \frac{2\sin\alpha\cos\alpha}{2\cos^2\alpha}=\tan\alpha$
+\item $\displaystyle \frac{\sin^2\alpha+\cos^2\alpha}{\sin\alpha\cos\alpha}=\frac{1}{\sin\alpha\cos\alpha}=\frac{2}{\sin2\alpha}$
+\item $\displaystyle \frac{(\cos\alpha-\sin\alpha)^2}{(\cos\alpha+\sin\alpha)(\cos\alpha-\sin\alpha)}=\frac{1-2\sin\alpha\cos\alpha}{\cos^2\alpha-\sin^2\alpha}=\frac{1-\sin2\alpha}{\cos2\alpha}$
+\item $\displaystyle \sin(2\alpha+\alpha)=2\sin\alpha\cos^2\alpha+(1-2\sin^2\alpha)\sin\alpha=2\sin\alpha(1-\sin^2\alpha)+\sin\alpha-2\sin^3\alpha=3\sin\alpha-4\sin^3\alpha$
+\item $\displaystyle 2\cos60\degree\cos\alpha=2\cdot\tfrac12\cos\alpha=\cos\alpha$
+\item $\displaystyle \frac{\tan45\degree+\tan\alpha}{1-\tan45\degree\tan\alpha}=\frac{1+\tan\alpha}{1-\tan\alpha}$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Faktorizacija in defaktorizacija]
+\begin{enumerate}[a)]
+\item $\displaystyle 2\sin45\degree\cos30\degree=2\cdot\tfrac{\sqrt2}{2}\cdot\tfrac{\sqrt3}{2}=\frac{\sqrt6}{2}$
+\item $\displaystyle 2\cos45\degree\cos30\degree=\frac{\sqrt6}{2}$
+\item $\displaystyle 2\cos45\degree\sin30\degree=2\cdot\tfrac{\sqrt2}{2}\cdot\tfrac12=\frac{\sqrt2}{2}$
+\item $\displaystyle -2\sin60\degree\sin45\degree=-2\cdot\tfrac{\sqrt3}{2}\cdot\tfrac{\sqrt2}{2}=-\frac{\sqrt6}{2}$
+\item $\displaystyle 2\sin4x\cos x$
+\item $\displaystyle \sin90\degree+\sin60\degree=1+\frac{\sqrt3}{2}=\frac{2+\sqrt3}{2}$
+\item $\displaystyle \cos60\degree+\cos90\degree=\frac12$
+\item $\displaystyle 2\big(\cos60\degree-\cos90\degree\big)=2\cdot\tfrac12=1$
+\item $\displaystyle \tfrac12\big(\cos2x-\cos4x\big)$
+\item $\displaystyle \cos4x+\cos2x$
+\end{enumerate}
+\end{resitev}
+
+
+\begin{resitev}[-- Poenostavljanje]
+\begin{enumerate}[a)]
+\item $\displaystyle \tfrac12\sin x+\tfrac{\sqrt3}{2}\cos x-\big(\tfrac{\sqrt3}{2}\cos x-\tfrac12\sin x\big)=\sin x$
+\item $\displaystyle \tfrac12\cos x+\tfrac{\sqrt3}{2}\sin x+\tfrac{\sqrt3}{2}\sin x-\tfrac12\cos x=\sqrt3\sin x$
+\item $\displaystyle \tfrac{\sqrt3}{2}\sin x+\tfrac12\cos x+\tfrac12\cos x-\tfrac{\sqrt3}{2}\sin x=\cos x$
+\item $\displaystyle \tfrac{\sqrt2}{2}(\cos x+\sin x)-\tfrac{\sqrt2}{2}(\cos x-\sin x)=\sqrt2\sin x$
+\item $\displaystyle \frac{\tan x+1}{1-\tan x}\cdot\frac{\tan x-1}{1+\tan x}=-1$
+\item $\displaystyle \frac{\sin x\cos y}{\cos x\cos y}=\tan x$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Adicijski izreki pri danih vrednostih]
+\begin{enumerate}[a)]
+\item $\displaystyle \cos\alpha=-\tfrac{12}{13},\ \sin\beta=-\tfrac45;\quad \sin(\alpha-\beta)=-\tfrac{15}{65}-\tfrac{48}{65}=-\frac{63}{65},\quad \cos(\alpha+\beta)=\tfrac{36}{65}+\tfrac{20}{65}=\frac{56}{65}$
+\item $\displaystyle \sin\alpha=-\tfrac35,\ \cos\beta=-\tfrac{15}{17};\quad \sin(\alpha+\beta)=\tfrac{45}{85}+\tfrac{32}{85}=\frac{77}{85},\quad \cos(\alpha-\beta)=-\tfrac{60}{85}-\tfrac{24}{85}=-\frac{84}{85}$
+\item $\displaystyle \cos\alpha=-\tfrac{24}{25},\ \sin\beta=-\tfrac{5}{13};\quad \cos(\alpha+\beta)=-\tfrac{288}{325}-\tfrac{35}{325}=-\frac{323}{325},\quad \sin(\alpha-\beta)=-\tfrac{84}{325}-\tfrac{120}{325}=-\frac{204}{325}$
+\item $\displaystyle \tan(\alpha+\beta)=\frac{2+3}{1-6}=-1\ \Rightarrow\ \alpha+\beta=135\degree$
+\item $\displaystyle \tan(\alpha-\beta)=\frac{3-\frac12}{1+\frac32}=1\ \Rightarrow\ \alpha-\beta=45\degree$
+\end{enumerate}
+\end{resitev}
+
+\begin{resitev}[-- Izra\v{c}un iz $\tan x$ in $\cot y$]
+\begin{enumerate}[a)]
+\item $\displaystyle \sin x=-\tfrac35,\ \cos x=-\tfrac45;\quad \sin2x=\frac{24}{25},\ \cos2x=\frac{7}{25},\ \sin\left(x-\tfrac{\pi}{4}\right)=\tfrac{\sqrt2}{2}(\sin x-\cos x)=\frac{\sqrt2}{10}$
+\item $\displaystyle \sin y=\tfrac{12}{13},\ \cos y=-\tfrac{5}{13};\quad \sin2y=-\frac{120}{169},\ \cos2y=-\frac{119}{169},\ \cos\left(y+\tfrac{\pi}{3}\right)=-\frac{5+12\sqrt3}{26}$
+\item $\displaystyle \sin x=-\tfrac{\sqrt5}{5},\ \cos x=\tfrac{2\sqrt5}{5};\quad \sin2x=-\frac45,\ \cos2x=\frac35,\ \tan2x=-\frac43,\ \sin\left(x+\tfrac{\pi}{4}\right)=\frac{\sqrt{10}}{10}$
+\item $\displaystyle \tan y=\tfrac13;\quad \tan(x+y)=\frac{2+\frac13}{1-\frac23}=7,\ \sin(x-y)=\tfrac{2}{\sqrt5}\cdot\tfrac{3}{\sqrt{10}}-\tfrac{1}{\sqrt5}\cdot\tfrac{1}{\sqrt{10}}=\frac{\sqrt2}{2},\ \cos2x=\frac{1-4}{1+4}=-\frac35$
+\item $\displaystyle \tan y=\tfrac12,\ \sin y=-\tfrac{\sqrt5}{5},\ \cos y=-\tfrac{2\sqrt5}{5};\quad \cos2y=\frac35,\ \sin\left(y-\tfrac{\pi}{4}\right)=\frac{\sqrt{10}}{10},\ \tan(x+y)=\frac{\frac13+\frac12}{1-\frac16}=1$
+\end{enumerate}
+\end{resitev}
+\end{document}

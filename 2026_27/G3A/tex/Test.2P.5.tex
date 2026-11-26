@@ -1,0 +1,497 @@
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\documentclass[a4paper,12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,slovene]{babel}
+\usepackage[tikz]{bclogo}
+\usepackage{qrcode,marvosym}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows,angles,quotes}
+\usepackage{graphicx}
+\newcommand{\ds}{\displaystyle}
+\usepackage{fancybox}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{hyperref}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{fancyhdr,enumerate}
+\newcommand{\ora}{\overrightarrow}
+\renewcommand{\headrulewidth}{3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{gray}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{2pt}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\usepackage{gensymb}
+\usepackage{amssymb}
+  \textwidth 20 true cm
+  \oddsidemargin -2 true cm
+  \evensidemargin -2 true cm
+  \topmargin -3.5 true cm
+  \textheight 27.5 true cm
+  \linespread{1.2}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{1.9pt}
+\definecolor{qqwuqq}{rgb}{1,0,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzuxux}{rgb}{0,0,0}
+\usepackage{mdframed}
+\usepackage{multicol}
+\definecolor{bgblue}{RGB}{0,0,253}
+\usepackage{eurosym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{tocke}
+\setcounter{tocke}{0}
+\usepackage{tikz-3dplot}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mdfdefinestyle{theoremstyle}{%
+linecolor=brown!40,linewidth=1pt,%
+frametitlerule=true,%
+frametitlebackgroundcolor=brown!50,
+innertopmargin=\topskip,
+}
+\mdfdefinestyle{theoremstyle1}{%
+linecolor=brown,middlelinewidth=1pt,%
+frametitlerule=true,%
+apptotikzsetting={\tikzset{mdfframetitlebackground/.append style={%
+shade,left color=black!40, right color=gray!10},
+mdfbackground/.append style={
+top color=white!100!white,
+bottom color=black!5
+},
+}},
+frametitlerulecolor=gray,
+frametitlerulewidth=2pt,
+innertopmargin=\topskip,
+innerbottommargin=\topskip,
+}
+\mdtheorem[style=theoremstyle1]{naloga}{Naloga}
+\mdtheorem[style=theoremstyle]{resitev}{Analiza Naloge}
+\mdtheorem[style=theoremstyle]{kriterij}{\v{S}tevilo dose\v{z}enih to\v{c}k na testu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[table]{xcolor}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=brown!2,angle=45,scale=5,
+xpos=-5,ypos=0]{matej.info}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}
+\lhead{}\chead{}\rhead{}
+\rfoot{\vspace*{-2\baselineskip}}
+\renewcommand{\vec}{\overrightarrow}
+%%%%%%%%%%%%%%%%%%%% podatki testa -- tu spreminjaj
+\def\programletnik{G-3}
+\def\naslov{Preverjanje 2.5 - }
+\def\sklop{Kotne funkcije}
+%%%%%%%%%%%%%%%%%%%% tocke po nalogah
+\def\tockeA{2+2+3}
+\def\tockeB{2+2}
+\def\tockeC{2+3}
+\def\tockeD{2+3}
+\def\tockeE{1+1+1+1+1+1}
+\def\tockeF{2+2+3}
+%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\Large{\naslov \sklop} \Huge{}
+\large{} \hfill $\programletnik$}}}
+\end{bclogo}
+\end{minipage}
+\begin{minipage}{20cm}
+\begin{bclogo}[couleur=brown!30,
+  arrondi=0,ombre=true, couleurOmbre=gray!50,
+logo =\bcplume,
+  noborder=true]
+{\textrm{{\raisebox{-0.3cm}{\large{Ime in Priimek: \rule{10cm}{0.1mm}} \Huge{}
+\large{} \hfill $ $}}}}
+\end{bclogo}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeA$] \addtocounter{tocke}{\numexpr\tockeA\relax}
+Re\v{s}i ena\v{c}be.
+\begin{enumerate}[a)]
+\item $\ds\sin\Big(2x-\frac{7\pi}{6}\Big)=\frac12$
+\item $\ds\tan^2x+\tan x=0$
+\item $\ds\cos2x+\sin^2x=3\cos x-2$
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeB$] \addtocounter{tocke}{\numexpr\tockeB\relax}
+Nari\v{s}i graf funkcije $\ds f(x)=\tan\Big(x+\frac{\pi}{4}\Big)$. Dolo\v{c}i ni\v{c}le in pole funkcije na intervalu $(-4\pi,4\pi)$.
+\begin{center}
+\begin{tikzpicture}[xscale=1.6,yscale=0.9,>=stealth]
+\draw[very thin,gray!30,xstep=0.785398,ystep=0.5] (-3.1416,-3) grid (6.2832,3);
+\draw[->,thick] (-3.4415999999999998,0) -- (6.7832,0) node[below left] {$x$};
+\draw[->,thick] (0,-3.3) -- (0,3.5) node[below left] {$y$};
+\draw (-3.1416,0.1143) -- (-3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-3.1416,-0.1429) {\scriptsize $-\pi$};
+\draw (-1.5708,0.1143) -- (-1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-1.5708,-0.1429) {\scriptsize $-\tfrac{\pi}{2}$};
+\draw (1.5708,0.1143) -- (1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (1.5708,-0.1429) {\scriptsize $\tfrac{\pi}{2}$};
+\draw (3.1416,0.1143) -- (3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (3.1416,-0.1429) {\scriptsize $\pi$};
+\draw (4.7124,0.1143) -- (4.7124,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (4.7124,-0.1429) {\scriptsize $\tfrac{3\pi}{2}$};
+\draw (6.2832,0.1143) -- (6.2832,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (6.2832,-0.1429) {\scriptsize $2\pi$};
+\draw (0.0800,-3) -- (-0.0800,-3) node[left,inner sep=2pt] {\scriptsize $-3$};
+\draw (0.0800,-2) -- (-0.0800,-2) node[left,inner sep=2pt] {\scriptsize $-2$};
+\draw (0.0800,-1) -- (-0.0800,-1) node[left,inner sep=2pt] {\scriptsize $-1$};
+\draw (0.0800,1) -- (-0.0800,1) node[left,inner sep=2pt] {\scriptsize $1$};
+\draw (0.0800,2) -- (-0.0800,2) node[left,inner sep=2pt] {\scriptsize $2$};
+\draw (0.0800,3) -- (-0.0800,3) node[left,inner sep=2pt] {\scriptsize $3$};
+\node[below left,inner sep=2pt] at (0,0) {\scriptsize $0$};
+\end{tikzpicture}
+\end{center}
+\vspace{0.3cm}
+Ni\v{c}le: \rule{12cm}{0.1mm}\\[0.6cm]
+Poli: \rule{12.5cm}{0.1mm}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeC$] \addtocounter{tocke}{\numexpr\tockeC\relax}
+To\v{c}ko $T\Big(\frac12,\frac{\sqrt3}{2}\Big)$ na enotski kro\v{z}nici zavrtimo okoli izhodi\v{s}\v{c}a. Dolo\v{c}i natan\v{c}ni koordinati nove to\v{c}ke $T'$, \v{c}e jo zavrtimo za kot:
+\begin{enumerate}[a)]
+\item $\ds-\frac{4\pi}{3}$
+\vspace{4.5cm}
+\item $465\degree$
+\end{enumerate}
+\vspace{5cm}
+\end{naloga}
+
+ \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeD$] \addtocounter{tocke}{\numexpr\tockeD\relax}
+Poenostavi izraza.
+\begin{enumerate}[a)]
+\item $\ds\cos\Big(\frac{\pi}{3}+x\Big)+\cos\Big(\frac{\pi}{3}-x\Big)$
+\item $\ds\frac{1-\cos2x+\sin2x}{1+\cos2x+\sin2x}$
+\end{enumerate}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeE$] \addtocounter{tocke}{\numexpr\tockeE\relax}
+Dano je $\cos x=-\frac{12}{13}$, $x\in\left(\pi,\frac{3\pi}{2}\right)$, in $\sin y=-\frac{3}{5}$, $y\in\left(\frac{3\pi}{2},2\pi\right)$. Brez kalkulatorja izra\v{c}unaj (vrednosti zapi\v{s}i natan\v{c}no):
+\begin{multicols}{3}
+\begin{enumerate}[a)]
+\item $\ds\sin(x-y)$
+\item $\ds\cos(x+y)$
+\item $\ds\tan\left(x-\frac{\pi}{4}\right)$
+\item $\ds\sin2y$
+\item $\ds\cos\frac{x}{2}$
+\item $\ds\tan\frac{y}{2}$
+\end{enumerate}
+\end{multicols}
+\end{naloga}\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{naloga}[\hfill $\tockeF$] \addtocounter{tocke}{\numexpr\tockeF\relax}
+Na sliki je graf funkcije $f$ in premica $y=1$.
+\begin{center}
+\begin{tikzpicture}[xscale=1.15,yscale=0.8,>=stealth]
+\draw[very thin,gray!30,xstep=0.785398,ystep=0.5] (-6.2832,-2.5) grid (6.2832,2.5);
+\draw[->,thick] (-6.5832,0) -- (6.7832,0) node[below left] {$x$};
+\draw[->,thick] (0,-2.8) -- (0,3) node[below left] {$y$};
+\draw (-6.2832,0.1143) -- (-6.2832,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-6.2832,-0.1429) {\scriptsize $-2\pi$};
+\draw (-4.7124,0.1143) -- (-4.7124,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-4.7124,-0.1429) {\scriptsize $-\tfrac{3\pi}{2}$};
+\draw (-3.1416,0.1143) -- (-3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-3.1416,-0.1429) {\scriptsize $-\pi$};
+\draw (-1.5708,0.1143) -- (-1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-1.5708,-0.1429) {\scriptsize $-\tfrac{\pi}{2}$};
+\draw (1.5708,0.1143) -- (1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (1.5708,-0.1429) {\scriptsize $\tfrac{\pi}{2}$};
+\draw (3.1416,0.1143) -- (3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (3.1416,-0.1429) {\scriptsize $\pi$};
+\draw (4.7124,0.1143) -- (4.7124,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (4.7124,-0.1429) {\scriptsize $\tfrac{3\pi}{2}$};
+\draw (6.2832,0.1143) -- (6.2832,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (6.2832,-0.1429) {\scriptsize $2\pi$};
+\draw (0.0800,-2) -- (-0.0800,-2) node[left,inner sep=2pt] {\scriptsize $-2$};
+\draw (0.0800,-1) -- (-0.0800,-1) node[left,inner sep=2pt] {\scriptsize $-1$};
+\draw (0.0800,1) -- (-0.0800,1) node[left,inner sep=2pt] {\scriptsize $1$};
+\draw (0.0800,2) -- (-0.0800,2) node[left,inner sep=2pt] {\scriptsize $2$};
+\node[below left,inner sep=2pt] at (0,0) {\scriptsize $0$};
+\begin{scope}
+\clip (-6.2832,-2.5) rectangle (6.2832,2.5);
+\draw[red,line width=1.6pt,domain=-6.2832:6.2832,samples=120,smooth] plot (\x,{2*cos(deg(\x-pi/4))});
+\end{scope}
+\draw[blue,thick,dashed] (-6.2832,1) -- (6.2832,1) node[above left] {\scriptsize $y=1$};
+\end{tikzpicture}
+\end{center}
+\begin{enumerate}[a)]
+\item Iz grafa razberi funkcijski predpis oblike $f(x)=A\cos(bx+c)$. \hfill $f(x)=$\,\rule{5cm}{0.1mm}
+\item Izra\v{c}unaj ordinato to\v{c}ke na grafu z absciso $\ds x=\frac{13\pi}{12}$.
+\vspace{2.5cm}
+\item Z re\v{s}evanjem ena\v{c}be izra\v{c}unaj abscise vseh presečišč grafa s premico $y=1$ na intervalu $[-2\pi,2\pi]$.
+\end{enumerate}
+\vspace{4cm}
+\end{naloga}
+
+
+\end{document}
+\vfill
+\begin{kriterij*} \begin{center} \renewcommand{\arraystretch}{2.5}
+\begin{tabular}{|>{\columncolor{gray!20}}c||c|c|c|c|c||c|c|c|} \hline Odstotki &$[0,45)$ & $[45,60)$ & $[60,75)$ & $[75,90)$ & $[90,100]$& \v{S}t. mo\v{z}nih to\v{c}k& Dose\v{z}ene to\v{c}ke & OCENA \\ \hline Ocena & 1 & 2 & 3 & 4 & 5 &\cellcolor{gray!20} $\thetocke$&\cellcolor{gray!20} \phantom{ocena} & \cellcolor{gray!20} \phantom{a} \\ \hline \end{tabular} \end{center} \vspace{0.3cm}  \end{kriterij*}
+
+
+
+\newpage
+\textsc{\Large Re\v{s}itve s postopki}
+\vspace{0.4cm}
+
+%%%%%%%%%%%%%%%%%%%% pregled rezultatov
+\begin{center}
+\small
+\renewcommand{\arraystretch}{2.1}
+\begin{tabular}{|>{\columncolor{gray!20}}c|l|}
+\hline
+\textbf{Naloga} & \textbf{Rezultati} \\ \hline
+\textbf{1} & a) $x=\frac{2\pi}{3}+k\pi$, $x=k\pi$\quad b) $x=k\pi$, $x=-\frac{\pi}{4}+k\pi$\quad c) $x=2k\pi$ \\ \hline
+\textbf{2} & ni\v{c}le $x=-\frac{\pi}{4}+k\pi$, poli $x=\frac{\pi}{4}+k\pi$ (po 8 na $(-4\pi,4\pi)$) \\ \hline
+\textbf{3} & a) $T'(-1,0)$\quad b) $T'\big(-\frac{\sqrt6+\sqrt2}{4},\frac{\sqrt6-\sqrt2}{4}\big)$ \\ \hline
+\textbf{4} & a) $\cos x$\quad b) $\tan x$ \\ \hline
+\textbf{5} & a) $-\frac{56}{65}$\quad b) $-\frac{63}{65}$\quad c) $-\frac{7}{17}$\quad d) $-\frac{24}{25}$\quad e) $-\frac{\sqrt{26}}{26}$\quad f) $-\frac13$ \\ \hline
+\textbf{6} & a) $f(x)=2\cos\big(x-\frac{\pi}{4}\big)$\quad b) $-\sqrt3$\quad c) $-\frac{17\pi}{12},-\frac{\pi}{12},\frac{7\pi}{12},\frac{23\pi}{12}$ \\ \hline
+\end{tabular}
+\end{center}
+\vspace{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%% naloga 1
+\begin{resitev}[-- trigonometri\v{c}ne ena\v{c}be]
+\textbf{a)} Uvedemo $t=2x-\frac{7\pi}{6}$: $\sin t=\frac12\Rightarrow t=\frac{\pi}{6}+2k\pi$ ali $t=\frac{5\pi}{6}+2k\pi$.
+\[
+2x-\frac{7\pi}{6}=\frac{\pi}{6}+2k\pi\Rightarrow 2x=\frac{4\pi}{3}+2k\pi\Rightarrow x=\frac{2\pi}{3}+k\pi,
+\]
+\[
+2x-\frac{7\pi}{6}=\frac{5\pi}{6}+2k\pi\Rightarrow 2x=2\pi+2k\pi\Rightarrow x=\pi+k\pi=k\pi.
+\]
+\[
+\boxed{x=\frac{2\pi}{3}+k\pi\quad\text{ali}\quad x=k\pi,\quad k\in\mathbb{Z}}
+\]
+\textbf{b)} Izpostavimo: $\tan x\,(\tan x+1)=0$.
+\[
+\tan x=0\Rightarrow x=k\pi,\qquad \tan x=-1\Rightarrow x=-\frac{\pi}{4}+k\pi.
+\]
+\[
+\boxed{x=k\pi\quad\text{ali}\quad x=-\frac{\pi}{4}+k\pi,\quad k\in\mathbb{Z}}
+\]
+\textbf{c)} $\cos2x=\cos^2x-\sin^2x$:
+\[
+\cos^2x-\sin^2x+\sin^2x=3\cos x-2\Rightarrow\cos^2x-3\cos x+2=0\Rightarrow(\cos x-1)(\cos x-2)=0.
+\]
+$\cos x=2$ nima re\v{s}itve, $\cos x=1$:
+\[
+\boxed{x=2k\pi,\quad k\in\mathbb{Z}}
+\]
+\end{resitev}
+
+%%%%%%%%%%%%%%%%%%%% naloga 2
+\begin{resitev}[-- graf funkcije tangens, ni\v{c}le in poli]
+Graf $y=\tan x$ premaknemo za $\frac{\pi}{4}$ v levo.
+\begin{center}
+\begin{tikzpicture}[xscale=1.4,yscale=0.8,>=stealth]
+\draw[very thin,gray!30,xstep=0.785398,ystep=0.5] (-3.1416,-3) grid (6.2832,3);
+\draw[->,thick] (-3.4415999999999998,0) -- (6.7832,0) node[below left] {$x$};
+\draw[->,thick] (0,-3.3) -- (0,3.5) node[below left] {$y$};
+\draw (-3.1416,0.1143) -- (-3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-3.1416,-0.1429) {\scriptsize $-\pi$};
+\draw (-1.5708,0.1143) -- (-1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-1.5708,-0.1429) {\scriptsize $-\tfrac{\pi}{2}$};
+\draw (1.5708,0.1143) -- (1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (1.5708,-0.1429) {\scriptsize $\tfrac{\pi}{2}$};
+\draw (3.1416,0.1143) -- (3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (3.1416,-0.1429) {\scriptsize $\pi$};
+\draw (4.7124,0.1143) -- (4.7124,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (4.7124,-0.1429) {\scriptsize $\tfrac{3\pi}{2}$};
+\draw (6.2832,0.1143) -- (6.2832,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (6.2832,-0.1429) {\scriptsize $2\pi$};
+\draw (0.0800,-3) -- (-0.0800,-3) node[left,inner sep=2pt] {\scriptsize $-3$};
+\draw (0.0800,-2) -- (-0.0800,-2) node[left,inner sep=2pt] {\scriptsize $-2$};
+\draw (0.0800,-1) -- (-0.0800,-1) node[left,inner sep=2pt] {\scriptsize $-1$};
+\draw (0.0800,1) -- (-0.0800,1) node[left,inner sep=2pt] {\scriptsize $1$};
+\draw (0.0800,2) -- (-0.0800,2) node[left,inner sep=2pt] {\scriptsize $2$};
+\draw (0.0800,3) -- (-0.0800,3) node[left,inner sep=2pt] {\scriptsize $3$};
+\node[below left,inner sep=2pt] at (0,0) {\scriptsize $0$};
+\begin{scope}
+\clip (-3.1416,-3) rectangle (6.2832,3);
+\draw[gray,dashed,domain=-1.4708:1.4708,samples=40,smooth] plot (\x,{tan(deg(\x))});
+\end{scope}
+\begin{scope}
+\clip (-3.1416,-3) rectangle (6.2832,3);
+\draw[red,line width=1.6pt,domain=-3.1416:-2.4762,samples=50,smooth] plot (\x,{tan(deg(\x+pi/4))});
+\end{scope}
+\begin{scope}
+\clip (-3.1416,-3) rectangle (6.2832,3);
+\draw[red,line width=1.6pt,domain=-2.2362:0.6654,samples=50,smooth] plot (\x,{tan(deg(\x+pi/4))});
+\end{scope}
+\begin{scope}
+\clip (-3.1416,-3) rectangle (6.2832,3);
+\draw[red,line width=1.6pt,domain=0.9054:3.8070,samples=50,smooth] plot (\x,{tan(deg(\x+pi/4))});
+\end{scope}
+\begin{scope}
+\clip (-3.1416,-3) rectangle (6.2832,3);
+\draw[red,line width=1.6pt,domain=4.0470:6.2832,samples=50,smooth] plot (\x,{tan(deg(\x+pi/4))});
+\end{scope}
+\draw[blue,dashed,thick] (-2.3562,-3) -- (-2.3562,3);
+\draw[blue,dashed,thick] (0.7854,-3) -- (0.7854,3);
+\draw[blue,dashed,thick] (3.927,-3) -- (3.927,3);
+\foreach \p in {-0.7854,2.3562,5.4978} \fill[red] (\p,0) circle (2.2pt);
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+\item Ni\v{c}le: $x+\frac{\pi}{4}=k\pi\Rightarrow x=-\frac{\pi}{4}+k\pi$. Na $(-4\pi,4\pi)$:
+\[
+\boxed{x\in\Big\{-\frac{13\pi}{4},-\frac{9\pi}{4},-\frac{5\pi}{4},-\frac{\pi}{4},\frac{3\pi}{4},\frac{7\pi}{4},\frac{11\pi}{4},\frac{15\pi}{4}\Big\}}
+\]
+\item Poli: $x+\frac{\pi}{4}=\frac{\pi}{2}+k\pi\Rightarrow x=\frac{\pi}{4}+k\pi$. Na $(-4\pi,4\pi)$:
+\[
+\boxed{x\in\Big\{-\frac{15\pi}{4},-\frac{11\pi}{4},-\frac{7\pi}{4},-\frac{3\pi}{4},\frac{\pi}{4},\frac{5\pi}{4},\frac{9\pi}{4},\frac{13\pi}{4}\Big\}}
+\]
+\end{itemize}
+\end{resitev}
+
+%%%%%%%%%%%%%%%%%%%% naloga 3
+\begin{resitev}[-- vrtenje to\v{c}ke po enotski kro\v{z}nici]
+To\v{c}ka le\v{z}i na enotski kro\v{z}nici, saj je $\big(\frac12\big)^2+\big(\frac{\sqrt3}{2}\big)^2=1$. Zato je $T(\cos\varphi,\sin\varphi)$ s $\cos\varphi=\frac12$, $\sin\varphi=\frac{\sqrt3}{2}$, torej $\varphi=\frac{\pi}{3}$.
+
+\textbf{a)} Po vrtenju za $\theta=-\frac{4\pi}{3}$ ima nova to\v{c}ka polarni kot
+\[
+\varphi'=\varphi+\theta=\frac{\pi}{3}-\frac{4\pi}{3}=-\pi,
+\]
+zato
+\[
+T'\big(\cos(-\pi),\sin(-\pi)\big)=T'(-1,0).
+\]
+Kontrola z adicijskima izrekoma: $\cos\theta=-\frac12$, $\sin\theta=\frac{\sqrt3}{2}$,
+\[
+x'=\cos(\varphi+\theta)=\cos\varphi\cos\theta-\sin\varphi\sin\theta=\frac12\cdot\Big(-\frac12\Big)-\frac{\sqrt3}{2}\cdot\frac{\sqrt3}{2}=-1,
+\]
+\[
+y'=\sin(\varphi+\theta)=\sin\varphi\cos\theta+\cos\varphi\sin\theta=\frac{\sqrt3}{2}\cdot\Big(-\frac12\Big)+\frac12\cdot\frac{\sqrt3}{2}=0.
+\]
+\[
+\boxed{T'(-1,0)}
+\]
+
+\textbf{b)} $465\degree=360\degree+105\degree$, zato je polarni kot nove to\v{c}ke
+\[
+\varphi'=60\degree+465\degree=525\degree=360\degree+165\degree\ \Rightarrow\ \varphi'\equiv165\degree.
+\]
+S prehodom na ostri kot in adicijskim izrekom ($15\degree=45\degree-30\degree$):
+\[
+\cos165\degree=-\cos15\degree=-\Big(\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}+\frac{\sqrt2}{2}\cdot\frac12\Big)=-\frac{\sqrt6+\sqrt2}{4},
+\]
+\[
+\sin165\degree=\sin15\degree=\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}-\frac{\sqrt2}{2}\cdot\frac12=\frac{\sqrt6-\sqrt2}{4}.
+\]
+\[
+\boxed{T'\Big(-\frac{\sqrt6+\sqrt2}{4},\ \frac{\sqrt6-\sqrt2}{4}\Big)\approx T'(-0{,}966;\ 0{,}259)}
+\]
+\end{resitev}
+
+%%%%%%%%%%%%%%%%%%%% naloga 4
+\begin{resitev}[-- poenostavljanje izrazov]
+\textbf{a)}
+\[
+\cos\frac{\pi}{3}\cos x-\sin\frac{\pi}{3}\sin x+\cos\frac{\pi}{3}\cos x+\sin\frac{\pi}{3}\sin x=2\cdot\frac12\cos x=\boxed{\cos x}
+\]
+\textbf{b)} $1-\cos2x=2\sin^2x$, \ $1+\cos2x=2\cos^2x$, \ $\sin2x=2\sin x\cos x$:
+\[
+\frac{2\sin^2x+2\sin x\cos x}{2\cos^2x+2\sin x\cos x}=\frac{2\sin x\,(\sin x+\cos x)}{2\cos x\,(\cos x+\sin x)}=\boxed{\tan x}
+\]
+\end{resitev}
+
+%%%%%%%%%%%%%%%%%%%% naloga 5
+\begin{resitev}[-- adicijski izreki, dvojni in polovi\v{c}ni koti]
+Manjkajo\v{c}e vrednosti: $x$ le\v{z}i v III. kvadrantu, $y$ v IV. kvadrantu:
+\[
+\sin x=-\sqrt{1-\tfrac{144}{169}}=-\frac{5}{13},\quad \tan x=\frac{5}{12},\qquad \cos y=\sqrt{1-\tfrac{9}{25}}=\frac45,\quad \tan y=-\frac34.
+\]
+\textbf{a)} $\ds\sin(x-y)=\sin x\cos y-\cos x\sin y=-\frac{5}{13}\cdot\frac45-\Big(-\frac{12}{13}\Big)\Big(-\frac35\Big)=\frac{-20-36}{65}=\boxed{-\frac{56}{65}}$
+
+\textbf{b)} $\ds\cos(x+y)=\cos x\cos y-\sin x\sin y=-\frac{12}{13}\cdot\frac45-\Big(-\frac{5}{13}\Big)\Big(-\frac35\Big)=\frac{-48-15}{65}=\boxed{-\frac{63}{65}}$
+
+\textbf{c)} $\ds\tan\Big(x-\frac{\pi}{4}\Big)=\frac{\tan x-1}{1+\tan x}=\frac{\frac{5}{12}-1}{1+\frac{5}{12}}=\frac{-\frac{7}{12}}{\frac{17}{12}}=\boxed{-\frac{7}{17}}$
+
+\textbf{d)} $\ds\sin2y=2\sin y\cos y=2\cdot\Big(-\frac35\Big)\cdot\frac45=\boxed{-\frac{24}{25}}$
+
+\textbf{e)} $\frac{x}{2}\in\left(\frac{\pi}{2},\frac{3\pi}{4}\right)$, zato je $\cos\frac x2<0$:
+$\ds\cos\frac{x}{2}=-\sqrt{\frac{1+\cos x}{2}}=-\sqrt{\frac{1-\frac{12}{13}}{2}}=-\sqrt{\frac{1}{26}}=\boxed{-\frac{\sqrt{26}}{26}}$
+
+\textbf{f)} $\frac{y}{2}\in\left(\frac{3\pi}{4},\pi\right)$, zato je $\tan\frac y2<0$:
+$\ds\tan\frac{y}{2}=\frac{\sin y}{1+\cos y}=\frac{-\frac35}{1+\frac45}=\frac{-\frac35}{\frac95}=\boxed{-\frac13}$
+\end{resitev}
+
+%%%%%%%%%%%%%%%%%%%% naloga 6
+\begin{resitev}[-- predpis iz grafa, to\v{c}ka na grafu, presečišča s premico]
+\textbf{a)} Najve\v{c}ja vrednost $2$, najmanj\v{s}a $-2$, zato $A=2$. Maksimum je pri $x=\frac{\pi}{4}$, minimum pri $x=\frac{5\pi}{4}$, torej je polovica periode $\pi$, perioda $\omega=2\pi$ in $b=1$. Iz $\cos\big(\frac{\pi}{4}+c\big)=1$ sledi $c=-\frac{\pi}{4}$.
+\[
+\boxed{f(x)=2\cos\Big(x-\frac{\pi}{4}\Big)}
+\]
+\textbf{b)}
+\[
+f\Big(\frac{13\pi}{12}\Big)=2\cos\Big(\frac{13\pi}{12}-\frac{3\pi}{12}\Big)=2\cos\frac{5\pi}{6}=2\cdot\Big(-\frac{\sqrt3}{2}\Big)=-\sqrt3,\qquad \boxed{T\Big(\frac{13\pi}{12},-\sqrt3\Big)}
+\]
+\textbf{c)}
+\[
+2\cos\Big(x-\frac{\pi}{4}\Big)=1\Rightarrow\cos\Big(x-\frac{\pi}{4}\Big)=\frac12\Rightarrow x-\frac{\pi}{4}=\pm\frac{\pi}{3}+2k\pi\Rightarrow x=\frac{7\pi}{12}+2k\pi\ \text{ ali }\ x=-\frac{\pi}{12}+2k\pi.
+\]
+Na $[-2\pi,2\pi]$:
+\[
+\boxed{x\in\Big\{-\frac{17\pi}{12},\ -\frac{\pi}{12},\ \frac{7\pi}{12},\ \frac{23\pi}{12}\Big\}}
+\]
+\begin{center}
+\begin{tikzpicture}[xscale=1.15,yscale=0.8,>=stealth]
+\draw[very thin,gray!30,xstep=0.785398,ystep=0.5] (-6.2832,-2.5) grid (6.2832,2.5);
+\draw[->,thick] (-6.5832,0) -- (6.7832,0) node[below left] {$x$};
+\draw[->,thick] (0,-2.8) -- (0,3) node[below left] {$y$};
+\draw (-6.2832,0.1143) -- (-6.2832,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-6.2832,-0.1429) {\scriptsize $-2\pi$};
+\draw (-4.7124,0.1143) -- (-4.7124,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-4.7124,-0.1429) {\scriptsize $-\tfrac{3\pi}{2}$};
+\draw (-3.1416,0.1143) -- (-3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-3.1416,-0.1429) {\scriptsize $-\pi$};
+\draw (-1.5708,0.1143) -- (-1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (-1.5708,-0.1429) {\scriptsize $-\tfrac{\pi}{2}$};
+\draw (1.5708,0.1143) -- (1.5708,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (1.5708,-0.1429) {\scriptsize $\tfrac{\pi}{2}$};
+\draw (3.1416,0.1143) -- (3.1416,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (3.1416,-0.1429) {\scriptsize $\pi$};
+\draw (4.7124,0.1143) -- (4.7124,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (4.7124,-0.1429) {\scriptsize $\tfrac{3\pi}{2}$};
+\draw (6.2832,0.1143) -- (6.2832,-0.1143);
+\node[below,inner sep=2pt,fill=white] at (6.2832,-0.1429) {\scriptsize $2\pi$};
+\draw (0.0800,-2) -- (-0.0800,-2) node[left,inner sep=2pt] {\scriptsize $-2$};
+\draw (0.0800,-1) -- (-0.0800,-1) node[left,inner sep=2pt] {\scriptsize $-1$};
+\draw (0.0800,1) -- (-0.0800,1) node[left,inner sep=2pt] {\scriptsize $1$};
+\draw (0.0800,2) -- (-0.0800,2) node[left,inner sep=2pt] {\scriptsize $2$};
+\node[below left,inner sep=2pt] at (0,0) {\scriptsize $0$};
+\begin{scope}
+\clip (-6.2832,-2.5) rectangle (6.2832,2.5);
+\draw[red,line width=1.6pt,domain=-6.2832:6.2832,samples=120,smooth] plot (\x,{2*cos(deg(\x-pi/4))});
+\end{scope}
+\draw[blue,thick,dashed] (-6.2832,1) -- (6.2832,1) node[above left] {\scriptsize $y=1$};
+\foreach \p in {(-4.4506,1),(-0.2618,1),(1.8326,1),(6.0214,1)} \fill[blue] \p circle (2.2pt);
+\fill[red] (3.4034,-1.7321) circle (2.2pt) node[below right] {\scriptsize $T$};
+\end{tikzpicture}
+\end{center}
+\end{resitev}
+
+\end{document}
